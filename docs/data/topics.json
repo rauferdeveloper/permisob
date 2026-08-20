@@ -1,1 +1,110 @@
-[{"id":"T00","name":"Definiciones y tipos de vehículo","description":"Vehículos, masas, categorías y conceptos básicos.","count":27,"nativeTopic":-1},{"id":"T01","name":"Uso de la vía y normas de circulación","description":"Carriles, arcén, peatones, ciclistas, prioridades y normas generales.","count":425,"nativeTopic":1},{"id":"T02","name":"Maniobras, adelantamientos e inmovilizaciones","description":"Giros, incorporación, adelantamiento, marcha atrás, parada y estacionamiento.","count":372,"nativeTopic":2},{"id":"T03","name":"Señalización","description":"Agentes, semáforos, señales verticales, balizamiento y marcas viales.","count":393,"nativeTopic":3},{"id":"T04","name":"Alumbrado y señalización óptica","description":"Cruce, carretera, posición, antiniebla y uso de luces.","count":112,"nativeTopic":4},{"id":"T05","name":"Transporte, carga y pasajeros","description":"Personas, mercancías, remolques, carga y distintivos del vehículo.","count":152,"nativeTopic":5},{"id":"T06","name":"Documentación, permisos, ITV y puntos","description":"Permisos, documentación, seguros, ITV y permiso por puntos.","count":104,"nativeTopic":6},{"id":"T07","name":"Seguridad, factor humano y ADAS","description":"Seguridad activa/pasiva, alcohol, fatiga, distracciones y ayudas a la conducción.","count":861,"nativeTopic":7},{"id":"T08","name":"Accidentes y primeros auxilios","description":"Conducta PAS, heridos, emergencias y actuación en accidentes.","count":56,"nativeTopic":8},{"id":"T09","name":"Mecánica y equipamiento","description":"Mantenimiento, neumáticos, frenos, aceite y elementos obligatorios.","count":45,"nativeTopic":9},{"id":"T10","name":"Conducción eficiente y medio ambiente","description":"Consumo, contaminación, conducción preventiva y eficiencia.","count":93,"nativeTopic":10}]
+[
+  {
+    "id": "T00",
+    "name": "Definiciones, vehículos, masas y tipos de vía",
+    "description": "Conceptos básicos, clases de vehículos, masas y tipos de vía.",
+    "count": 23
+  },
+  {
+    "id": "T01",
+    "name": "Documentación, permisos, puntos, ITV y seguro",
+    "description": "Permisos, documentación, ITV, seguro obligatorio y permiso por puntos.",
+    "count": 104
+  },
+  {
+    "id": "T02",
+    "name": "Señalización: agentes, semáforos y señales verticales",
+    "description": "Orden de prioridad, agentes, semáforos y señales verticales.",
+    "count": 362
+  },
+  {
+    "id": "T03",
+    "name": "Marcas viales y balizamiento",
+    "description": "Marcas sobre la calzada y dispositivos de balizamiento.",
+    "count": 33
+  },
+  {
+    "id": "T04",
+    "name": "Alumbrado y señalización óptica",
+    "description": "Luces, antinieblas, señalización óptica y cuándo utilizar cada alumbrado.",
+    "count": 112
+  },
+  {
+    "id": "T05",
+    "name": "Uso de la vía: carriles, arcén, peatones, ciclistas y carriles especiales",
+    "description": "Posición en la vía, carriles, arcén, usuarios vulnerables y carriles especiales.",
+    "count": 326
+  },
+  {
+    "id": "T06",
+    "name": "Velocidad, distancias y frenado",
+    "description": "Velocidades, distancia de reacción, frenado, detención y separación.",
+    "count": 124
+  },
+  {
+    "id": "T07",
+    "name": "Incorporaciones, desplazamientos y adelantamientos",
+    "description": "Incorporación, cambios de carril, desplazamientos laterales y adelantamientos.",
+    "count": 132
+  },
+  {
+    "id": "T08",
+    "name": "Giros, cambio de sentido y marcha atrás",
+    "description": "Giros, cambio de dirección, cambio de sentido y marcha atrás.",
+    "count": 56
+  },
+  {
+    "id": "T09",
+    "name": "Detención, parada, estacionamiento, averías y V16",
+    "description": "Inmovilizaciones, parada, estacionamiento, averías y señal V16.",
+    "count": 91
+  },
+  {
+    "id": "T10",
+    "name": "Prioridad de paso y estrechamientos",
+    "description": "Intersecciones, prioridad, estrechamientos y pendientes.",
+    "count": 70
+  },
+  {
+    "id": "T11",
+    "name": "Transporte de personas, carga, mercancías y remolques",
+    "description": "Pasajeros, carga, mercancías, remolques y señalización de la carga.",
+    "count": 152
+  },
+  {
+    "id": "T12",
+    "name": "Seguridad del vehículo: frenos, neumáticos, cinturón, casco y SRI",
+    "description": "Seguridad activa y pasiva, frenos, neumáticos, cinturón, casco y sistemas infantiles.",
+    "count": 130
+  },
+  {
+    "id": "T13",
+    "name": "Motor, mantenimiento, equipamiento y mecánica básica",
+    "description": "Motor, mantenimiento, equipamiento y nociones mecánicas que aparecen en test.",
+    "count": 51
+  },
+  {
+    "id": "T14",
+    "name": "Estado psicofísico: alcohol, drogas, sueño, fatiga y distracciones",
+    "description": "Alcohol, drogas, medicamentos, sueño, fatiga, distracciones y percepción del riesgo.",
+    "count": 563
+  },
+  {
+    "id": "T15",
+    "name": "Accidentes, primeros auxilios y grupos de riesgo",
+    "description": "Conducta PAS, accidentes, primeros auxilios y grupos especialmente vulnerables.",
+    "count": 206
+  },
+  {
+    "id": "T16",
+    "name": "Conducción eficiente, medio ambiente y conducción preventiva",
+    "description": "Consumo, contaminación, conducción eficiente, preventiva y anticipación.",
+    "count": 98
+  },
+  {
+    "id": "T17",
+    "name": "ADAS y ayudas a la conducción",
+    "description": "Sistemas avanzados de ayuda a la conducción y su función.",
+    "count": 7
+  }
+]
