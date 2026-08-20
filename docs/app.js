@@ -126,7 +126,27 @@ function stats() {
   const answered = h.reduce((a, x) => a + Number(x.total || 0), 0);
   const correct = h.reduce((a, x) => a + Number(x.correct || 0), 0);
   const wrong = answered - correct;
-  return { attempts: h.length, accuracy: answered ? correct / answered * 100 : 0, avg30: answered ? wrong / answered * 30 : 0, best: h.length ? Math.min(...h.map(x => x.wrong / x.total * 30)) : null };
+  return {
+    attempts: h.length,
+    answered,
+    correct,
+    wrong,
+    accuracy: answered ? correct / answered * 100 : 0,
+    avg30: answered ? wrong / answered * 30 : 0,
+    best: h.length ? Math.min(...h.map(x => x.wrong / x.total * 30)) : null
+  };
+}
+function levelFor30(v, hasData = true) {
+  if (!hasData) return { cls: 'neutral', title: 'Sin datos todavía', detail: 'Haz tu primer test para calcular tu nivel.' };
+  if (v === 0) return { cls: 'green', title: 'Objetivo final: 0 fallos', detail: 'Estás en 0,00 fallos equivalentes por examen de 30.' };
+  if (v <= 3) return { cls: 'yellow', title: 'En rango de aprobado', detail: `Nivel actual: ${v.toFixed(2)} fallos / 30 · meta final: 0.` };
+  return { cls: 'red', title: 'Todavía por encima de 3', detail: `Nivel actual: ${v.toFixed(2)} fallos / 30 · primero baja a 3 o menos y después a 0.` };
+}
+function levelStrip(s) {
+  const l = levelFor30(s.avg30, s.answered > 0);
+  const capped = Math.max(0, Math.min(30, s.avg30));
+  const towardsZero = s.answered ? Math.max(0, Math.min(100, (30 - capped) / 30 * 100)) : 0;
+  return `<article class="level-strip level-${l.cls}"><div><span class="level-eyebrow">Nivel actual</span><b>${esc(l.title)}</b><p>${esc(l.detail)}</p></div><div class="level-meter-wrap"><div class="level-meter-label"><span>30 fallos</span><strong>${s.answered ? s.avg30.toFixed(2) : '—'}</strong><span>0 fallos</span></div><div class="level-meter"><div style="width:${towardsZero}%"></div></div><div class="level-targets"><span>Objetivo aprobado: ≤ 3</span><span>Objetivo final: 0</span></div></div></article>`;
 }
 
 // Banco de fallos: conserva el historial, pero considera pendiente una pregunta si su resultado más reciente conocido fue incorrecto.
@@ -172,7 +192,8 @@ function go(view) { state.view = view; state.test = null; state.attemptId = null
 function home() {
   const s = stats(), pending = pendingMistakes().length, ever = everMistakes().length;
   return `<section class="hero"><h1>Practica el permiso B</h1><p>2.640 preguntas AEOL: los mismos 18 temas del PDF, los 88 simulacros originales y un repaso inteligente de tus fallos.</p></section>
-  <div class="kpis"><div class="kpi"><span>Intentos</span><strong>${s.attempts}</strong></div><div class="kpi"><span>Acierto global</span><strong>${s.accuracy.toFixed(1)}%</strong></div><div class="kpi"><span>Media fallos / 30</span><strong>${s.avg30.toFixed(2)}</strong></div><div class="kpi"><span>Falladas pendientes</span><strong>${pending}</strong></div></div>
+  <div class="kpis"><div class="kpi"><span>Intentos</span><strong>${s.attempts}</strong></div><div class="kpi"><span>Acierto global</span><strong>${s.accuracy.toFixed(1)}%</strong></div><div class="kpi"><span>Fallos equivalentes / 30</span><strong>${s.avg30.toFixed(2)}</strong></div><div class="kpi"><span>Falladas pendientes</span><strong>${pending}</strong></div></div>
+  ${levelStrip(s)}
   <div class="grid grid-3"><article class="card mode-card" data-action="topics"><span class="badge">Modo estudio</span><h2>Por temas</h2><p>Los 18 temas coinciden exactamente con el PDF. Elige 10, 20, 30, 50 o todas.</p></article>
   <article class="card mode-card" data-action="sims"><span class="badge">Modo examen</span><h2>88 simulacros</h2><p>Los 30 enunciados originales, en su orden y con resultado verde/amarillo/rojo.</p></article>
   <article class="card mode-card mistake-mode ${pending ? '' : 'disabled-card'}" data-action="mistakes"><span class="badge badge-warn">Repaso inteligente</span><h2>Falladas</h2><p>${pending ? `Tienes <b>${pending}</b> preguntas pendientes (${ever} falladas alguna vez). Practica solo esas.` : 'Cuando falles preguntas aparecerán aquí para repasarlas después.'}</p></article></div>
@@ -248,9 +269,9 @@ function attemptView(id) {
 function statsView() {
   const s = stats(), h = [...completedHistory()].reverse(), pending = pendingMistakes();
   return `<div class="row"><button class="secondary" data-go="home">← Inicio</button><span class="spacer"></span>${pending.length ? `<button class="primary" data-action="mistakes">Repasar ${pending.length} falladas</button>` : ''}${h.length ? '<button class="danger" data-action="clear-history">Borrar historial</button>' : ''}</div>
-  <h1 class="section-title">Tu progreso</h1><div class="kpis"><div class="kpi"><span>Tests completados</span><strong>${s.attempts}</strong></div><div class="kpi"><span>Acierto global</span><strong>${s.accuracy.toFixed(1)}%</strong></div><div class="kpi"><span>Media fallos / 30</span><strong>${s.avg30.toFixed(2)}</strong></div><div class="kpi"><span>Falladas pendientes</span><strong>${pending.length}</strong></div></div>
+  <h1 class="section-title">Tu progreso</h1><div class="kpis"><div class="kpi"><span>Tests completados</span><strong>${s.attempts}</strong></div><div class="kpi"><span>Acierto global</span><strong>${s.accuracy.toFixed(1)}%</strong></div><div class="kpi"><span>Fallos equivalentes / 30</span><strong>${s.avg30.toFixed(2)}</strong></div><div class="kpi"><span>Falladas pendientes</span><strong>${pending.length}</strong></div></div>${levelStrip(s)}
   <article class="card" style="margin-top:18px"><h2>Historial</h2>${h.length ? `<div class="history-wrap"><table class="history"><thead><tr><th>Fecha</th><th>Test</th><th>Acierto</th><th>Fallos</th><th></th></tr></thead><tbody>${h.map(x => `<tr><td>${new Date(x.date).toLocaleDateString('es-ES')}</td><td>${esc(x.title)}</td><td>${Number(x.accuracy).toFixed(1)}%</td><td><span class="badge status-${status(x.wrong)}">${x.wrong}</span></td><td><button class="mini-btn" data-attempt="${esc(x.id)}">${x.wrong ? 'Ver fallos' : 'Ver'}</button></td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">Aún no has terminado ningún test.</div>'}</article>
-  <p class="footer-note">Pulsa “Ver fallos” para saber exactamente qué pregunta original fallaste, en qué intento y cuál era la correcta. La media /30 normaliza todos los intentos.</p>`;
+  <p class="footer-note">Pulsa “Ver fallos” para saber exactamente qué pregunta original fallaste, en qué intento y cuál era la correcta. Los fallos equivalentes /30 normalizan sesiones de 10, 20, 30, 50 o más preguntas al formato de un examen de 30.</p>`;
 }
 
 function render() {
