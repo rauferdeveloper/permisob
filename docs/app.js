@@ -594,7 +594,7 @@ async function boot() {
     QUESTIONS = q; TOPICS = t;
     render();
     if (getSyncKey() && syncConfigured()) setTimeout(() => syncNow(true), 600);
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=72').catch(() => {});
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=73').catch(() => {});
   } catch (err) {
     console.error(err);
     showBootError('No se pudo cargar el banco', err?.message || err);

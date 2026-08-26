@@ -1,11 +1,64 @@
-const CACHE='aeol-b-v72';
-const CORE=['./','index.html','styles.css?v=71','app.js?v=71','manifest.webmanifest','icon.svg'];
-self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE).catch(()=>{})))});
-self.addEventListener('activate',e=>e.waitUntil(Promise.all([caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))),self.clients.claim()])));
-self.addEventListener('fetch',e=>{
-  const u=new URL(e.request.url);
-  if(e.request.method!=='GET') return;
-  const isImage=u.pathname.includes('/images/');
-  if(isImage){e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(resp=>{if(resp.ok)caches.open(CACHE).then(c=>c.put(e.request,resp.clone()));return resp})));return;}
-  e.respondWith(fetch(e.request).then(resp=>{if(resp.ok&&u.origin===location.origin)caches.open(CACHE).then(c=>c.put(e.request,resp.clone()));return resp}).catch(()=>caches.match(e.request)));
+const CACHE = 'aeol-b-v73';
+const CORE = ['./', 'index.html', 'styles.css?v=72', 'app.js?v=73', 'manifest.webmanifest', 'icon.svg'];
+
+self.addEventListener('install', event => {
+  self.skipWaiting();
+  event.waitUntil(
+    caches.open(CACHE).then(cache => cache.addAll(CORE).catch(() => {}))
+  );
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    Promise.all([
+      caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key)))),
+      self.clients.claim(),
+    ])
+  );
+});
+
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
+
+  const url = new URL(event.request.url);
+  const sameOrigin = url.origin === self.location.origin;
+  const isImage = sameOrigin && url.pathname.includes('/images/');
+
+  if (isImage) {
+    event.respondWith((async () => {
+      const cached = await caches.match(event.request);
+      if (cached) return cached;
+
+      try {
+        const response = await fetch(event.request);
+        if (response.ok) {
+          const copy = response.clone();
+          event.waitUntil(caches.open(CACHE).then(cache => cache.put(event.request, copy)).catch(() => {}));
+        }
+        return response;
+      } catch (error) {
+        return new Response('', { status: 504, statusText: 'Offline' });
+      }
+    })());
+    return;
+  }
+
+  // Network-first for HTML/JS/JSON so a stale PWA cannot trap an old release.
+  event.respondWith((async () => {
+    try {
+      const response = await fetch(event.request);
+      if (response.ok && sameOrigin) {
+        const copy = response.clone();
+        event.waitUntil(caches.open(CACHE).then(cache => cache.put(event.request, copy)).catch(() => {}));
+      }
+      return response;
+    } catch (error) {
+      const cached = await caches.match(event.request);
+      if (cached) return cached;
+      return new Response('Sin conexion', {
+        status: 503,
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      });
+    }
+  })());
 });
