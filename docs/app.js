@@ -1,5 +1,12 @@
 const $ = (s, e = document) => e.querySelector(s);
 const app = $('#app');
+function showBootError(title, msg) {
+  if (!app) return;
+  const safe = String(msg || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  app.innerHTML = `<div class="card"><h2>${title}</h2><p>${safe}</p><p class="small muted">Tu progreso sigue guardado. Recarga con Ctrl+Shift+R.</p></div>`;
+}
+window.addEventListener('error', e => showBootError('Error al iniciar la web', e.message || 'Error JavaScript'));
+window.addEventListener('unhandledrejection', e => showBootError('Error al cargar', e.reason?.message || String(e.reason || 'Error no controlado')));
 const LS = 'aeolB_v1';
 const SYNC_LS = 'aeolB_syncKey';
 const API_BASE = String(window.AEOL_CONFIG?.API_BASE || '').replace(/\/$/, '');
@@ -541,11 +548,24 @@ $('#statsBtn').addEventListener('click', () => go('stats'));
 $('#syncBtn').addEventListener('click', () => go('sync'));
 document.addEventListener('input', e => { if (e.target.id === 'topicSearch') { const v = e.target.value.toLowerCase(); document.querySelectorAll('.topic').forEach(x => x.style.display = x.textContent.toLowerCase().includes(v) ? 'block' : 'none'); } });
 
-Promise.all([
-  fetch('data/questions.json?v=7').then(r => r.json()),
-  fetch('data/topics.json?v=7').then(r => r.json())
-]).then(([q, t]) => {
-  QUESTIONS = q; TOPICS = t; render();
-  if (getSyncKey() && syncConfigured()) setTimeout(() => syncNow(true), 600);
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=7').catch(() => {});
-}).catch(err => { app.innerHTML = `<div class="card"><h2>No se pudo cargar el banco</h2><p>${esc(err.message)}</p></div>`; });
+async function boot() {
+  try {
+    const [qr, tr] = await Promise.all([
+      fetch('data/questions.json?v=71', {cache:'no-store'}),
+      fetch('data/topics.json?v=71', {cache:'no-store'})
+    ]);
+    if (!qr.ok) throw new Error(`questions.json: HTTP ${qr.status}`);
+    if (!tr.ok) throw new Error(`topics.json: HTTP ${tr.status}`);
+    const [q, t] = await Promise.all([qr.json(), tr.json()]);
+    if (!Array.isArray(q) || !q.length) throw new Error('El banco de preguntas está vacío o no es válido');
+    if (!Array.isArray(t) || !t.length) throw new Error('El listado de temas está vacío o no es válido');
+    QUESTIONS = q; TOPICS = t;
+    render();
+    if (getSyncKey() && syncConfigured()) setTimeout(() => syncNow(true), 600);
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=71').catch(() => {});
+  } catch (err) {
+    console.error(err);
+    showBootError('No se pudo cargar el banco', err?.message || err);
+  }
+}
+boot();
