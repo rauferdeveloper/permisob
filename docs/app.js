@@ -188,6 +188,63 @@ function attemptWrongRows(rec) {
   return (rec.wrongIds || []).map(id => ({ q: questionById(id), choice: '', correct: questionById(id)?.correct || '' })).filter(x => x.q);
 }
 
+
+
+// v5 · Entrenador 0 Fallos: analiza el historial local/sincronizado sin usar IA ni enviar datos fuera.
+function trainerAnalytics() {
+  const h = completedHistory();
+  const ledger = failureLedger();
+  const byTopic = TOPICS.map(t => {
+    let answered = 0, wrong = 0, correct = 0;
+    const failedIds = new Set(), seenIds = new Set();
+    for (const rec of h) {
+      if (Array.isArray(rec.results) && rec.results.length) {
+        for (const r of rec.results) {
+          const q = questionById(r.id); if (!q || q.topicId !== t.id) continue;
+          answered++; seenIds.add(q.id);
+          if (r.correct) correct++; else { wrong++; failedIds.add(q.id); }
+        }
+      } else {
+        for (const id of (rec.wrongIds || [])) {
+          const q = questionById(id); if (!q || q.topicId !== t.id) continue;
+          answered++; wrong++; failedIds.add(q.id); seenIds.add(q.id);
+        }
+      }
+    }
+    const pending = [...ledger.values()].filter(x => x.lastCorrect === false && questionById(x.id)?.topicId === t.id).length;
+    const rate = answered ? wrong / answered * 100 : 0;
+    return { t, answered, correct, wrong, rate, pending, failedUnique: failedIds.size, seenUnique: seenIds.size };
+  }).filter(x => x.answered > 0 || x.pending > 0);
+  byTopic.sort((a,b) => b.rate-a.rate || b.pending-a.pending || b.wrong-a.wrong);
+  const recurrent = [...ledger.values()].filter(x => x.failCount > 0 && questionById(x.id)).sort((a,b) => b.failCount-a.failCount || (b.seenCount ? b.failCount/b.seenCount : 0)-(a.seenCount ? a.failCount/a.seenCount : 0));
+  const recent = h.slice(-10);
+  const recentAnswered = recent.reduce((a,x)=>a+Number(x.total||0),0), recentWrong = recent.reduce((a,x)=>a+Number(x.wrong||0),0);
+  return { byTopic, recurrent, recentAnswered, recentWrong, recentEq30: recentAnswered ? recentWrong/recentAnswered*30 : 0 };
+}
+function trainerLevel(row) {
+  if (!row.answered) return { cls:'neutral', label:'Sin datos' };
+  if (row.rate <= 5) return { cls:'green', label:'Dominado' };
+  if (row.rate <= 10) return { cls:'yellow', label:'Vigilar' };
+  return { cls:'red', label:'Débil' };
+}
+function trainerView() {
+  const a = trainerAnalytics(), pending = pendingMistakes(), s = stats();
+  if (!s.answered) return `<div class="row"><button class="secondary" data-go="home">← Inicio</button></div><h1 class="section-title">Entrenador 0 Fallos</h1><div class="card empty">Todavía no hay datos suficientes. Haz algún test y aquí te diré automáticamente dónde fallas más y qué conviene entrenar primero.</div>`;
+  const weak = a.byTopic[0], second = a.byTopic[1];
+  const weakIds = weak ? [...failureLedger().values()].filter(x=>x.lastCorrect===false && questionById(x.id)?.topicId===weak.t.id).map(x=>x.id) : [];
+  const priorityIds = weakIds.length ? weakIds : a.recurrent.slice(0,15).map(x=>x.id);
+  const targetText = weak ? `${weak.t.id} · ${weak.t.name}` : 'Tus fallos pendientes';
+  return `<div class="row"><button class="secondary" data-go="home">← Inicio</button><span class="spacer"></span><button class="secondary" data-go="stats">Historial</button></div>
+  <section class="trainer-hero"><div><span class="badge">Análisis automático</span><h1>Entrenador 0 Fallos</h1><p>La web analiza tus respuestas guardadas y te marca qué debes reforzar primero. No usa IA ni envía preguntas a ningún servicio externo.</p></div><div class="trainer-score"><span>Últimos 10 intentos</span><strong>${a.recentAnswered ? a.recentEq30.toFixed(2) : '—'}</strong><small>fallos equivalentes / 30</small></div></section>
+  <div class="trainer-grid"><article class="card trainer-priority"><span class="trainer-kicker">Prioridad nº 1</span><h2>${esc(targetText)}</h2>${weak ? `<p><b>${weak.wrong}</b> fallos en <b>${weak.answered}</b> respuestas (${weak.rate.toFixed(1)}% error) · ${weak.pending} pendientes.</p>` : ''}<p class="muted">${weak && weak.rate > 10 ? 'Aquí estás perdiendo más puntos. Conviene corregir este bloque antes de repartir el estudio.' : 'Vas bastante bien: céntrate ahora en limpiar las preguntas que todavía tienes pendientes.'}</p>${priorityIds.length ? `<button class="primary" data-trainer-ids="${priorityIds.slice(0,15).join(',')}">Entrenar prioridad (${Math.min(priorityIds.length,15)})</button>` : `<button class="secondary" data-action="mistakes">Ver falladas</button>`}</article>
+  <article class="card"><span class="trainer-kicker">Pendientes ahora</span><div class="trainer-big">${pending.length}</div><p class="muted">Preguntas cuyo último resultado sigue siendo incorrecto.</p>${pending.length ? `<button class="secondary" data-action="mistakes">Ver pendientes</button>` : '<span class="badge status-green">Todo limpio</span>'}</article>
+  <article class="card"><span class="trainer-kicker">Pregunta más rebelde</span>${a.recurrent.length ? (()=>{const x=a.recurrent[0],q=questionById(x.id);return `<h3>S${String(q.sim).padStart(2,'0')} · P${String(q.num).padStart(2,'0')}</h3><p>${esc(q.question)}</p><p class="small muted">La has fallado ${x.failCount} ${x.failCount===1?'vez':'veces'} de ${x.seenCount} registradas.</p><button class="secondary" data-trainer-ids="${q.id}">Practicarla</button>`})() : '<p class="muted">Todavía no has fallado ninguna pregunta.</p>'}</article></div>
+  <h2 class="section-title">Dónde fallas más</h2><p class="muted">Ordenado por porcentaje de error sobre las respuestas que ya has hecho de cada tema. Con pocas respuestas, tómalo como una señal provisional.</p>
+  <div class="trainer-topic-list">${a.byTopic.map((x,i)=>{const l=trainerLevel(x);const ids=[...failureLedger().values()].filter(r=>r.lastCorrect===false&&questionById(r.id)?.topicId===x.t.id).map(r=>r.id);return `<article class="card trainer-topic"><div class="trainer-rank">${i+1}</div><div class="trainer-topic-main"><div class="row"><b>${x.t.id} · ${esc(x.t.name)}</b><span class="badge status-${l.cls}">${l.label}</span></div><div class="trainer-bar"><div class="trainer-bar-fill ${l.cls}" style="width:${Math.min(100,x.rate)}%"></div></div><div class="small muted">${x.wrong} fallos / ${x.answered} respuestas · <b>${x.rate.toFixed(1)}%</b> error · ${x.pending} pendientes</div></div>${ids.length?`<button class="mini-btn" data-trainer-ids="${ids.slice(0,30).join(',')}">Entrenar</button>`:''}</article>`}).join('')}</div>
+  <h2 class="section-title">Preguntas que más se repiten</h2><div class="mistakes">${a.recurrent.slice(0,12).map((x,i)=>{const q=questionById(x.id),rate=x.seenCount?x.failCount/x.seenCount*100:0;return `<div class="mistake"><div class="row"><b>#${i+1} · S${String(q.sim).padStart(2,'0')} · P${String(q.num).padStart(2,'0')}</b><span class="badge">${q.topicId}</span><span class="spacer"></span><span class="badge badge-warn">${x.failCount} fallos</span></div><div class="mistake-question">${esc(q.question)}</div><div class="row"><span class="small muted">Error histórico: ${rate.toFixed(0)}% · último resultado: ${x.lastCorrect?'correcto':'fallo'}</span><span class="spacer"></span><button class="mini-btn" data-trainer-ids="${q.id}">Practicar</button></div></div>`}).join('') || '<div class="card empty">Sin preguntas repetidamente falladas.</div>'}</div>
+  ${second ? `<p class="footer-note">Después de ${esc(weak.t.name)}, tu siguiente bloque a vigilar es ${esc(second.t.name)} (${second.rate.toFixed(1)}% de error).</p>` : ''}`;
+}
+
 function go(view) { state.view = view; state.test = null; state.attemptId = null; render(); }
 function home() {
   const s = stats(), pending = pendingMistakes().length, ever = everMistakes().length;
@@ -196,7 +253,7 @@ function home() {
   ${levelStrip(s)}
   <div class="grid grid-3"><article class="card mode-card" data-action="topics"><span class="badge">Modo estudio</span><h2>Por temas</h2><p>Los 18 temas coinciden exactamente con el PDF. Elige 10, 20, 30, 50 o todas.</p></article>
   <article class="card mode-card" data-action="sims"><span class="badge">Modo examen</span><h2>88 simulacros</h2><p>Los 30 enunciados originales, en su orden y con resultado verde/amarillo/rojo.</p></article>
-  <article class="card mode-card mistake-mode ${pending ? '' : 'disabled-card'}" data-action="mistakes"><span class="badge badge-warn">Repaso inteligente</span><h2>Falladas</h2><p>${pending ? `Tienes <b>${pending}</b> preguntas pendientes (${ever} falladas alguna vez). Practica solo esas.` : 'Cuando falles preguntas aparecerán aquí para repasarlas después.'}</p></article></div>
+  <article class="card mode-card mistake-mode ${pending ? '' : 'disabled-card'}" data-action="mistakes"><span class="badge badge-warn">Repaso inteligente</span><h2>Falladas</h2><p>${pending ? `Tienes <b>${pending}</b> preguntas pendientes (${ever} falladas alguna vez). Practica solo esas.` : 'Cuando falles preguntas aparecerán aquí para repasarlas después.'}</p></article></div><article class="card trainer-home" data-action="trainer"><div><span class="badge">Nuevo · análisis automático</span><h2>Entrenador 0 Fallos</h2><p>Te dice qué temas y preguntas te hacen perder más puntos y te prepara el siguiente repaso automáticamente.</p></div><button class="primary">Ver mi análisis →</button></article>
   ${store.current ? `<article class="card resume"><div class="row"><div><b>Hay un test en curso</b><div class="muted small">${esc(store.current.title)} · pregunta ${store.current.index + 1}/${store.current.ids.length}</div></div><span class="spacer"></span><button class="primary" data-action="resume">Continuar</button></div></article>` : ''}
   <p class="footer-note">${getSyncKey() ? 'Progreso local + sincronizacion remota activada.' : 'El progreso se guarda localmente. Pulsa Sincronizar para compartirlo entre móvil y PC.'}</p>`;
 }
@@ -280,6 +337,7 @@ function render() {
   else if (state.view === 'sims') app.innerHTML = simsView();
   else if (state.view === 'mistakes') app.innerHTML = mistakesView();
   else if (state.view === 'stats') app.innerHTML = statsView();
+  else if (state.view === 'trainer') app.innerHTML = trainerView();
   else if (state.view === 'attempt') app.innerHTML = attemptView(state.attemptId);
   else if (state.view === 'sync') app.innerHTML = syncView();
 }
@@ -305,7 +363,7 @@ function repeat(mode, key) {
 }
 
 document.addEventListener('click', e => {
-  const el = e.target.closest('[data-go],[data-action],[data-topic],[data-sim],[data-choice],[data-start-topic],[data-mode],[data-attempt],[data-review-ids],[data-mistake-topic]');
+  const el = e.target.closest('[data-go],[data-action],[data-topic],[data-sim],[data-choice],[data-start-topic],[data-mode],[data-attempt],[data-review-ids],[data-mistake-topic],[data-trainer-ids]');
   if (!el) return;
   if (el.dataset.go) return go(el.dataset.go);
   if (el.dataset.choice) return answer(el.dataset.choice);
@@ -315,11 +373,13 @@ document.addEventListener('click', e => {
   if (el.dataset.attempt) { state.attemptId = el.dataset.attempt; state.view = 'attempt'; return render(); }
   if (el.dataset.reviewIds !== undefined) return reviewIds((el.dataset.reviewIds || '').split(',').filter(Boolean));
   if (el.dataset.mistakeTopic) return startMistakes('all', el.dataset.mistakeTopic);
+  if (el.dataset.trainerIds !== undefined) return reviewIds((el.dataset.trainerIds || '').split(',').filter(Boolean));
 
   const a = el.dataset.action;
   if (a === 'topics') go('topics');
   else if (a === 'sims') go('sims');
   else if (a === 'mistakes') go('mistakes');
+  else if (a === 'trainer') go('trainer');
   else if (a === 'start-mistakes') startMistakes($('#mistakeCount')?.value || 'all');
   else if (a === 'resume') resume();
   else if (a === 'next') next();
@@ -339,10 +399,10 @@ $('#syncBtn').addEventListener('click', () => go('sync'));
 document.addEventListener('input', e => { if (e.target.id === 'topicSearch') { const v = e.target.value.toLowerCase(); document.querySelectorAll('.topic').forEach(x => x.style.display = x.textContent.toLowerCase().includes(v) ? 'block' : 'none'); } });
 
 Promise.all([
-  fetch('data/questions.json?v=3').then(r => r.json()),
-  fetch('data/topics.json?v=3').then(r => r.json())
+  fetch('data/questions.json?v=5').then(r => r.json()),
+  fetch('data/topics.json?v=5').then(r => r.json())
 ]).then(([q, t]) => {
   QUESTIONS = q; TOPICS = t; render();
   if (getSyncKey() && syncConfigured()) setTimeout(() => syncNow(true), 600);
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=3').catch(() => {});
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=5').catch(() => {});
 }).catch(err => { app.innerHTML = `<div class="card"><h2>No se pudo cargar el banco</h2><p>${esc(err.message)}</p></div>`; });
