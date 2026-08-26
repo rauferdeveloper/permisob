@@ -6,7 +6,7 @@ const API_BASE = String(window.AEOL_CONFIG?.API_BASE || '').replace(/\/$/, '');
 
 let QUESTIONS = [];
 let TOPICS = [];
-let state = { view: 'home', test: null, attemptId: null };
+let state = { view: 'home', test: null, attemptId: null, lesson: null };
 let syncMeta = { busy: false, lastOk: 0, error: '' };
 let syncTimer = null;
 
@@ -240,9 +240,134 @@ function trainerView() {
   <article class="card"><span class="trainer-kicker">Pendientes ahora</span><div class="trainer-big">${pending.length}</div><p class="muted">Preguntas cuyo último resultado sigue siendo incorrecto.</p>${pending.length ? `<button class="secondary" data-action="mistakes">Ver pendientes</button>` : '<span class="badge status-green">Todo limpio</span>'}</article>
   <article class="card"><span class="trainer-kicker">Pregunta más rebelde</span>${a.recurrent.length ? (()=>{const x=a.recurrent[0],q=questionById(x.id);return `<h3>S${String(q.sim).padStart(2,'0')} · P${String(q.num).padStart(2,'0')}</h3><p>${esc(q.question)}</p><p class="small muted">La has fallado ${x.failCount} ${x.failCount===1?'vez':'veces'} de ${x.seenCount} registradas.</p><button class="secondary" data-trainer-ids="${q.id}">Practicarla</button>`})() : '<p class="muted">Todavía no has fallado ninguna pregunta.</p>'}</article></div>
   <h2 class="section-title">Dónde fallas más</h2><p class="muted">Ordenado por porcentaje de error sobre las respuestas que ya has hecho de cada tema. Con pocas respuestas, tómalo como una señal provisional.</p>
-  <div class="trainer-topic-list">${a.byTopic.map((x,i)=>{const l=trainerLevel(x);const ids=[...failureLedger().values()].filter(r=>r.lastCorrect===false&&questionById(r.id)?.topicId===x.t.id).map(r=>r.id);return `<article class="card trainer-topic"><div class="trainer-rank">${i+1}</div><div class="trainer-topic-main"><div class="row"><b>${x.t.id} · ${esc(x.t.name)}</b><span class="badge status-${l.cls}">${l.label}</span></div><div class="trainer-bar"><div class="trainer-bar-fill ${l.cls}" style="width:${Math.min(100,x.rate)}%"></div></div><div class="small muted">${x.wrong} fallos / ${x.answered} respuestas · <b>${x.rate.toFixed(1)}%</b> error · ${x.pending} pendientes</div></div>${ids.length?`<button class="mini-btn" data-trainer-ids="${ids.slice(0,30).join(',')}">Entrenar</button>`:''}</article>`}).join('')}</div>
+  <div class="trainer-topic-list">${a.byTopic.map((x,i)=>{const l=trainerLevel(x);const ids=[...failureLedger().values()].filter(r=>r.lastCorrect===false&&questionById(r.id)?.topicId===x.t.id).map(r=>r.id);return `<article class="card trainer-topic"><div class="trainer-rank">${i+1}</div><div class="trainer-topic-main"><div class="row"><b>${x.t.id} · ${esc(x.t.name)}</b><span class="badge status-${l.cls}">${l.label}</span></div><div class="trainer-bar"><div class="trainer-bar-fill ${l.cls}" style="width:${Math.min(100,x.rate)}%"></div></div><div class="small muted">${x.wrong} fallos / ${x.answered} respuestas · <b>${x.rate.toFixed(1)}%</b> error · ${x.pending} pendientes</div></div><div class="learn-actions">${ids.length?`<button class="mini-btn" data-trainer-ids="${ids.slice(0,30).join(',')}">Entrenar</button>`:''}<button class="mini-btn learn-btn" data-learn-topic="${x.t.id}">No me entra 😵‍💫</button></div></article>`}).join('')}</div>
   <h2 class="section-title">Preguntas que más se repiten</h2><div class="mistakes">${a.recurrent.slice(0,12).map((x,i)=>{const q=questionById(x.id),rate=x.seenCount?x.failCount/x.seenCount*100:0;return `<div class="mistake"><div class="row"><b>#${i+1} · S${String(q.sim).padStart(2,'0')} · P${String(q.num).padStart(2,'0')}</b><span class="badge">${q.topicId}</span><span class="spacer"></span><span class="badge badge-warn">${x.failCount} fallos</span></div><div class="mistake-question">${esc(q.question)}</div><div class="row"><span class="small muted">Error histórico: ${rate.toFixed(0)}% · último resultado: ${x.lastCorrect?'correcto':'fallo'}</span><span class="spacer"></span><button class="mini-btn" data-trainer-ids="${q.id}">Practicar</button></div></div>`}).join('') || '<div class="card empty">Sin preguntas repetidamente falladas.</div>'}</div>
   ${second ? `<p class="footer-note">Después de ${esc(weak.t.name)}, tu siguiente bloque a vigilar es ${esc(second.t.name)} (${second.rate.toFixed(1)}% de error).</p>` : ''}`;
+}
+
+
+// v6 · Modo Aprender: micro-sesiones para entender sin saturarse.
+function coachForTopic(topicName = '') {
+  const n = topicName.toLowerCase();
+  const rules = [
+    [['document','permiso','itv','puntos','seguro'], ['Separa siempre conductor, vehículo y trámite.', 'Busca primero qué documento, permiso o plazo te están preguntando.', 'Si aparecen masas o años, identifica antes el tipo de vehículo.']],
+    [['señal','baliza','semáforo','marca vial'], ['Primero identifica la familia de la señal.', 'Después mira forma, color y a quién afecta.', 'Si hay varias señales, piensa antes en el orden de prioridad.']],
+    [['alumbr','luz','niebla'], ['Piensa en tres cosas: dónde estás, cuánta visibilidad hay y si puedes deslumbrar.', 'Cruce = ver sin molestar; carretera = ver lejos cuando se puede.', 'Antiniebla trasera: reserva mentalmente la idea de condiciones realmente malas.']],
+    [['veloc'], ['Primero identifica vía y vehículo; después busca máxima o mínima.', 'No mezcles turismo/moto con furgoneta, camión o remolque.', 'Si preguntan velocidad adecuada, manda la situación aunque el límite permita más.']],
+    [['prioridad','interse','estrech'], ['Antes de pensar en la derecha, busca agente, semáforo o señal.', 'En un estrechamiento importa quién entró primero y, si llegan a la vez, el tipo de vehículo.', 'En glorieta, piensa quién ya circula dentro.']],
+    [['adelant'], ['Primero pregunta: ¿está permitido aquí?', 'Después: ¿a quién adelanto y qué separación necesito?', 'Ojo con excepciones: algunas prohibiciones generales cambian según el usuario adelantado.']],
+    [['parada','estacion','inmovil'], ['Distingue: detenerse por tráfico, parar voluntariamente y estacionar.', 'Busca lugar prohibido y si obstaculiza o crea peligro.', 'Menos de 2 minutos no basta por sí solo: importa también abandonar o no el vehículo.']],
+    [['maniobra','giro','marcha atrás','incorpor'], ['Orden mental: observar → señalizar → colocarse → ejecutar.', 'La marcha atrás es excepcional, no una maniobra libre.', 'En incorporaciones, quien entra normalmente debe ceder.']],
+    [['carga','remol','pasaj'], ['Identifica primero qué vehículo transporta la carga.', 'Luego mira si sobresale delante, detrás o lateralmente.', 'Separa límites de carga de requisitos de señalización.']],
+    [['alcohol','droga','fatiga','sueño','distrac'], ['Piensa si la pregunta habla de percepción, reacción o conducción.', 'Alcohol/drogas y fatiga suelen empeorar antes tu capacidad de reaccionar que la mecánica del coche.', 'Busca palabras absolutas como siempre/nunca: suelen esconder la trampa.']],
+    [['accidente','auxilio','v16','emerg'], ['Recuerda el orden PAS: Proteger, Avisar, Socorrer.', 'Primero evita crear otro accidente.', 'No hagas una maniobra médica si la pregunta no la justifica claramente.']],
+    [['neum','freno','mecán','seguridad'], ['Separa seguridad activa (evitar accidente) de pasiva (reducir daños).', 'En neumáticos piensa agarre, presión, dibujo y estado.', 'Si hay avería, distingue síntoma, causa y actuación segura.']],
+    [['peat','cicli','moto','ciclomotor','vulner'], ['Identifica exactamente el usuario: bicicleta, ciclomotor y motocicleta no son lo mismo.', 'Con usuarios vulnerables, piensa en visibilidad, separación y prioridad.', 'No apliques automáticamente una regla de turismo a un vehículo de dos ruedas.']],
+    [['vía','autopista','autovía','travesía','carril'], ['Primero ubícate: dentro/fuera de poblado y tipo de vía.', 'Después identifica calzada, carril y arcén.', 'Muchas reglas cambian solo por el tipo de vía, aunque la situación parezca igual.']],
+    [['adas'], ['El ADAS ayuda, pero el responsable sigue siendo el conductor.', 'Identifica qué detecta el sistema y qué acción realiza.', 'No atribuyas a un asistente funciones de conducción autónoma que no tiene.']],
+  ];
+  for (const [keys, tips] of rules) if (keys.some(k => n.includes(k))) return tips;
+  return ['Lee primero qué dato concreto te pide el enunciado.', 'Descarta opciones que respondan a otra situación distinta.', 'Busca la excepción antes de aplicar una regla general de memoria.'];
+}
+function learnHint(q) {
+  const tips = coachForTopic(q.topicName || '');
+  const idx = (Number(q.num || 1) + Number(q.sim || 1)) % tips.length;
+  return tips[idx];
+}
+function learnPool(topicId) {
+  const pool = QUESTIONS.filter(q => q.topicId === topicId);
+  const ledger = failureLedger();
+  return [...pool].sort((a,b) => {
+    const A=ledger.get(a.id), B=ledger.get(b.id);
+    const ap=A ? (A.lastCorrect===false?100:0)+A.failCount*10 : 0;
+    const bp=B ? (B.lastCorrect===false?100:0)+B.failCount*10 : 0;
+    return bp-ap || Math.random()-.5;
+  });
+}
+function startLearn(topicId) {
+  const t = TOPICS.find(x => x.id === topicId); if (!t) return;
+  const pool = learnPool(topicId);
+  const ids = pool.slice(0, Math.min(5,pool.length)).map(q=>q.id);
+  if (!ids.length) return toast('No hay preguntas en este tema');
+  startTest(ids, { mode:'learn', key:topicId, title:`Aprender · ${t.id} · ${t.name}` });
+}
+function learnView() {
+  const a = trainerAnalytics();
+  const map = new Map(a.byTopic.map(x=>[x.t.id,x]));
+  return `<div class="row"><button class="secondary" data-go="home">← Inicio</button></div>
+  <section class="learn-hero"><div><span class="badge">5 minutos · sin saturarte</span><h1>Modo Aprender</h1><p>Una pista corta, una pregunta y una regla para recordar. Las sesiones son de solo 5 preguntas y priorizan lo que más te cuesta.</p></div></section>
+  <h2 class="section-title">¿Qué quieres entender hoy?</h2><div class="learn-topic-list">${TOPICS.map(t=>{const x=map.get(t.id); const rate=x?.rate||0; const lvl=!x?'Nuevo':rate>10?'Me cuesta':rate>5?'Reforzar':'Bien'; const cls=!x?'neutral':rate>10?'red':rate>5?'yellow':'green'; return `<article class="card learn-topic"><div><span class="topic-code">${t.id}</span><h3>${esc(t.name)}</h3><p class="small muted">${x?`${x.wrong} fallos en ${x.answered} respuestas · ${rate.toFixed(1)}% error`:'Todavía sin datos de este tema.'}</p></div><span class="badge status-${cls}">${lvl}</span><button class="primary" data-learn-topic="${t.id}">Aprender 5</button></article>`}).join('')}</div>`;
+}
+
+
+// v7 · Clase visual: primero entender, después practicar.
+function visualTrapForTopic(topicName='') {
+  const n=topicName.toLowerCase();
+  const rows=[
+    [['document','permiso','itv','puntos','seguro'],'No mezcles lo que necesita el conductor con lo que pertenece al vehículo. Antes de responder, identifica de quién habla la pregunta.'],
+    [['señal','baliza','semáforo','marca vial'],'No empieces por memorizar el dibujo. Primero identifica quién manda y la familia de señal; después interpreta el detalle.'],
+    [['alumbr','luz','niebla'],'La trampa suele ser confundir ver mejor con no deslumbrar. Sitúate: vía, visibilidad y usuarios que tienes delante.'],
+    [['veloc'],'No respondas una cifra hasta identificar vehículo y vía. Después decide si preguntan máxima, mínima o velocidad adecuada.'],
+    [['prioridad','interse','estrech'],'La derecha no es siempre el primer paso. Antes busca agente, semáforo, señal y circunstancias especiales.'],
+    [['adelant'],'Que adelantar esté permitido no significa que puedas hacerlo de cualquier forma. Separa lugar, usuario adelantado y separación.'],
+    [['parada','estacion','inmovil'],'Detención, parada y estacionamiento parecen iguales pero no lo son. Pregúntate siempre por qué está parado y durante cuánto tiempo.'],
+    [['maniobra','giro','marcha atrás','incorpor'],'No pienses solo en el movimiento final. En test suele importar observar, señalizar, colocarse y ceder antes de ejecutar.'],
+    [['carga','remol','pasaj'],'Primero identifica el vehículo y la carga. Las reglas cambian según dónde sobresale y qué conjunto estás conduciendo.'],
+    [['alcohol','droga','fatiga','sueño','distrac'],'Distingue efecto sobre ti de efecto sobre el vehículo. Casi siempre la pregunta busca percepción, atención o tiempo de reacción.'],
+    [['accidente','auxilio','v16','emerg'],'No corras a socorrer sin proteger primero. El orden mental PAS evita muchas respuestas impulsivas.'],
+    [['neum','freno','mecán','seguridad'],'No confundas evitar el accidente con reducir sus daños. Esa separación activa/pasiva resuelve muchas preguntas.'],
+    [['peat','cicli','moto','ciclomotor','vulner'],'Identifica exactamente al usuario. Bicicleta, ciclomotor y motocicleta tienen reglas distintas aunque visualmente se parezcan.'],
+    [['vía','autopista','autovía','travesía','carril'],'Antes de aplicar una norma, ubícate. Dentro/fuera de poblado y tipo de vía cambian muchas respuestas.'],
+    [['adas'],'Un ADAS ayuda; no sustituye al conductor. Mira qué detecta y qué acción concreta puede realizar.']
+  ];
+  for(const [keys,text] of rows) if(keys.some(k=>n.includes(k))) return text;
+  return 'La trampa suele estar en una palabra que cambia la situación. Identifica primero qué te están preguntando exactamente.';
+}
+function visualMemoryForTopic(topicName='') {
+  const tips=coachForTopic(topicName);
+  return `${tips[0]} ${tips[1] || ''}`.trim();
+}
+function representativeQuestion(topicId) {
+  const ledger=failureLedger();
+  const pool=QUESTIONS.filter(q=>q.topicId===topicId && q.image);
+  return [...pool].sort((a,b)=>{
+    const A=ledger.get(a.id), B=ledger.get(b.id);
+    return ((B?.failCount||0)*10+(B?.lastCorrect===false?100:0))-((A?.failCount||0)*10+(A?.lastCorrect===false?100:0));
+  })[0] || null;
+}
+function visualLessonSlides(topicId) {
+  const t=TOPICS.find(x=>x.id===topicId); if(!t) return [];
+  const tips=coachForTopic(t.name || '');
+  const q=representativeQuestion(topicId);
+  const slides=[
+    {kicker:'1 · Entiende la idea',title:`${t.id} · ${t.name}`,body:t.description || 'Vamos a reducir este tema a las pocas decisiones que necesitas reconocer en un test.',callout:'En cristiano',big:tips[0]},
+    {kicker:'2 · Tu orden mental',title:'No intentes recordarlo todo a la vez',body:'Cuando aparezca una pregunta de este tema, recorre siempre el mismo camino.',steps:tips.slice(0,3)},
+    {kicker:'3 · La trampa que quiero evitar',title:'Aquí es donde más fácil es liarse',body:visualTrapForTopic(t.name),callout:'Haz esta pausa mental',big:'¿Qué detalle del enunciado cambia la regla?'},
+  ];
+  if(q) slides.push({kicker:'4 · Mira antes de responder',title:'Aprende a leer la imagen',body:'No busques todavía A, B o C. Mira la escena y decide primero qué elemento de este tema está intentando comprobar.',image:q.image,caption:`Ejemplo real: S${String(q.sim).padStart(2,'0')} · P${String(q.num).padStart(2,'0')} — ${q.question}`});
+  slides.push({kicker:`${q?'5':'4'} · Qué debe saltarte en la cabeza`,title:'Una frase para llevarte',body:'No memorices una letra. Memoriza el disparador que te lleva a la regla.',callout:'RECUERDA',big:visualMemoryForTopic(t.name)});
+  slides.push({kicker:`${q?'6':'5'} · Compruébalo`,title:'Ahora sí: 5 preguntas y fuera',body:'Haz una micro-sesión. Si fallas, vuelve a esta clase y mira qué paso mental te saltaste.',cta:true});
+  return slides;
+}
+function classView(){
+  const a=trainerAnalytics(); const map=new Map(a.byTopic.map(x=>[x.t.id,x]));
+  return `<div class="row"><button class="secondary" data-go="home">← Inicio</button></div>
+  <section class="class-hero"><div><span class="badge">Explicación visual · sin examen</span><h1>Clase visual</h1><p>Primero entiende el tema en 5-6 pantallas. Una idea cada vez, poco texto y una imagen real cuando ayuda. Después, si quieres, haces 5 preguntas.</p></div></section>
+  <h2 class="section-title">Elige un tema</h2><div class="class-topic-list">${TOPICS.map(t=>{const x=map.get(t.id);return `<article class="card class-topic"><div><span class="topic-code">${t.id}</span><h3>${esc(t.name)}</h3><p class="small muted">${x?`${x.rate.toFixed(1)}% de error en tus respuestas`:'Todavía sin datos: puedes aprenderlo igualmente.'}</p></div><button class="primary" data-class-topic="${t.id}">Ver clase →</button></article>`}).join('')}</div>`;
+}
+function openClass(topicId){ state.lesson={topicId,index:0}; state.view='classSlide'; render(); }
+function classSlideView(){
+  const L=state.lesson; if(!L) return classView();
+  const slides=visualLessonSlides(L.topicId); const i=Math.max(0,Math.min(L.index||0,slides.length-1)); L.index=i; const s=slides[i];
+  const dots=slides.map((_,n)=>`<span class="class-dot ${n===i?'active':''}"></span>`).join('');
+  return `<div class="row"><button class="secondary" data-action="class-list">← Temas</button><span class="spacer"></span><span class="badge">${i+1}/${slides.length}</span></div>
+  <section class="class-stage"><div class="class-progress">${dots}</div><article class="class-slide">
+  <span class="class-kicker">${esc(s.kicker)}</span><h1>${esc(s.title)}</h1><p class="class-body">${esc(s.body)}</p>
+  ${s.steps?`<div class="class-steps">${s.steps.map((x,n)=>`<div><span>${n+1}</span><b>${esc(x)}</b></div>`).join('')}</div>`:''}
+  ${s.callout?`<div class="class-callout"><small>${esc(s.callout)}</small><strong>${esc(s.big||'')}</strong></div>`:''}
+  ${s.image?`<figure class="class-figure"><img src="${s.image}" alt="Ejemplo visual del tema" loading="eager"><figcaption>${esc(s.caption||'')}</figcaption></figure>`:''}
+  ${s.cta?`<div class="class-finish"><span>¿Te suena ya la lógica?</span><button class="primary" data-action="class-practice">Ahora compruébalo con 5 →</button></div>`:''}
+  </article><div class="class-nav"><button class="secondary" data-action="class-prev" ${i===0?'disabled':''}>← Anterior</button><button class="primary" data-action="class-next" ${i===slides.length-1?'disabled':''}>Siguiente →</button></div></section>`;
 }
 
 function go(view) { state.view = view; state.test = null; state.attemptId = null; render(); }
@@ -253,7 +378,7 @@ function home() {
   ${levelStrip(s)}
   <div class="grid grid-3"><article class="card mode-card" data-action="topics"><span class="badge">Modo estudio</span><h2>Por temas</h2><p>Los 18 temas coinciden exactamente con el PDF. Elige 10, 20, 30, 50 o todas.</p></article>
   <article class="card mode-card" data-action="sims"><span class="badge">Modo examen</span><h2>88 simulacros</h2><p>Los 30 enunciados originales, en su orden y con resultado verde/amarillo/rojo.</p></article>
-  <article class="card mode-card mistake-mode ${pending ? '' : 'disabled-card'}" data-action="mistakes"><span class="badge badge-warn">Repaso inteligente</span><h2>Falladas</h2><p>${pending ? `Tienes <b>${pending}</b> preguntas pendientes (${ever} falladas alguna vez). Practica solo esas.` : 'Cuando falles preguntas aparecerán aquí para repasarlas después.'}</p></article></div><article class="card trainer-home" data-action="trainer"><div><span class="badge">Nuevo · análisis automático</span><h2>Entrenador 0 Fallos</h2><p>Te dice qué temas y preguntas te hacen perder más puntos y te prepara el siguiente repaso automáticamente.</p></div><button class="primary">Ver mi análisis →</button></article>
+  <article class="card mode-card mistake-mode ${pending ? '' : 'disabled-card'}" data-action="mistakes"><span class="badge badge-warn">Repaso inteligente</span><h2>Falladas</h2><p>${pending ? `Tienes <b>${pending}</b> preguntas pendientes (${ever} falladas alguna vez). Practica solo esas.` : 'Cuando falles preguntas aparecerán aquí para repasarlas después.'}</p></article></div><article class="card class-home" data-action="class"><div><span class="badge">Primero entender</span><h2>🎞️ Clase visual</h2><p>Te explico un tema en 5-6 diapositivas: una idea por pantalla, trampas, regla mental e imagen cuando ayuda.</p></div><button class="primary">Ver una clase →</button></article><article class="card learn-home" data-action="learn"><div><span class="badge">Después practicar</span><h2>🧠 Modo Aprender</h2><p>Sesiones de 5 preguntas con pistas simples y reglas para recordar. Ideal para los temas que se atascan.</p></div><button class="primary">Elegir tema →</button></article><article class="card trainer-home" data-action="trainer"><div><span class="badge">Nuevo · análisis automático</span><h2>Entrenador 0 Fallos</h2><p>Te dice qué temas y preguntas te hacen perder más puntos y te prepara el siguiente repaso automáticamente.</p></div><button class="primary">Ver mi análisis →</button></article>
   ${store.current ? `<article class="card resume"><div class="row"><div><b>Hay un test en curso</b><div class="muted small">${esc(store.current.title)} · pregunta ${store.current.index + 1}/${store.current.ids.length}</div></div><span class="spacer"></span><button class="primary" data-action="resume">Continuar</button></div></article>` : ''}
   <p class="footer-note">${getSyncKey() ? 'Progreso local + sincronizacion remota activada.' : 'El progreso se guarda localmente. Pulsa Sincronizar para compartirlo entre móvil y PC.'}</p>`;
 }
@@ -293,10 +418,16 @@ function renderTest() {
   app.innerHTML = `<div class="test-shell"><div class="test-head"><div class="test-title"><h1>${esc(t.title)}</h1><p>${t.index + 1} de ${t.ids.length} · Simulacro ${q.sim}, pregunta ${q.num}</p></div><div class="row"><button class="secondary" data-action="quit">Salir</button><button class="danger" data-action="restart">Reiniciar</button></div></div>
   <div class="progress"><div style="width:${pct}%"></div></div><article class="card question-card"><div class="q-meta"><span class="badge">S${String(q.sim).padStart(2,'0')} · P${String(q.num).padStart(2,'0')}</span><span class="badge">${q.topicId}</span><span class="badge">${esc(q.topicName)}</span></div><h2 class="q-title">${esc(q.question)}</h2>
   ${q.image ? `<img class="q-image" src="${q.image}" alt="Imagen asociada a la pregunta ${q.num}" loading="eager">` : ''}
+  ${t.mode === 'learn' ? `<div class="learn-hint"><span>👀 Antes de responder, fíjate en esto</span><b>${esc(learnHint(q))}</b></div>` : ''}
   <div class="options">${q.options.map(o => { let cls = 'option'; if (ans) { if (o.key === q.correct) cls += ' correct'; else if (o.key === ans.choice) cls += ' wrong'; } return `<button class="${cls}" data-choice="${o.key}" ${ans ? 'disabled' : ''}><span class="opt-key">${o.key}</span><span>${esc(o.text)}</span></button>`; }).join('')}</div>${ans ? feedback(q, ans) : ''}</article>
   ${ans ? `<div class="next-row"><span class="muted small">${ans.correct ? 'Correcta' : 'Fallada'} · La correcta queda marcada en verde.</span><button class="primary" data-action="next">${t.index === t.ids.length - 1 ? 'Ver resultado' : 'Siguiente →'}</button></div>` : ''}</div>`;
 }
-function feedback(q, a) { return `<div class="feedback ${a.correct ? 'ok' : 'bad'}"><b>${a.correct ? '✓ Correcto' : '✕ Incorrecto'}</b>${!a.correct ? ` · Correcta: ${q.correct}` : ''}${q.explanation ? `<div class="explain">${esc(q.explanation)}</div>` : ''}</div>`; }
+function feedback(q, a) {
+  const base = `<div class="feedback ${a.correct ? 'ok' : 'bad'}"><b>${a.correct ? '✓ Bien visto' : '✕ Aquí estaba la trampa'}</b>${!a.correct ? ` · Correcta: ${q.correct}` : ''}${q.explanation ? `<div class="explain">${esc(q.explanation)}</div>` : ''}`;
+  if (state.test?.mode !== 'learn') return base + `</div>`;
+  const tips = coachForTopic(q.topicName || '');
+  return base + `<div class="learn-rule"><span>🧠 Qué quiero que recuerdes</span><b>${esc(q.explanation || tips[0])}</b></div><div class="learn-mini">No memorices la letra. La próxima vez busca primero el detalle del enunciado que activa esta regla.</div></div>`;
+}
 function answer(choice) { const t = state.test, q = questionById(t.ids[t.index]); if (t.answers[q.id]) return; t.answers[q.id] = { choice, correct: choice === q.correct }; persistCurrent(); renderTest(); }
 function next() { const t = state.test; if (t.index >= t.ids.length - 1) return finish(); t.index++; persistCurrent(); renderTest(); }
 function finish() {
@@ -338,6 +469,9 @@ function render() {
   else if (state.view === 'mistakes') app.innerHTML = mistakesView();
   else if (state.view === 'stats') app.innerHTML = statsView();
   else if (state.view === 'trainer') app.innerHTML = trainerView();
+  else if (state.view === 'learn') app.innerHTML = learnView();
+  else if (state.view === 'class') app.innerHTML = classView();
+  else if (state.view === 'classSlide') app.innerHTML = classSlideView();
   else if (state.view === 'attempt') app.innerHTML = attemptView(state.attemptId);
   else if (state.view === 'sync') app.innerHTML = syncView();
 }
@@ -360,10 +494,11 @@ function repeat(mode, key) {
   if (mode === 'sim') return startSim(Number(key));
   if (mode === 'topic') { const t = TOPICS.find(x => x.id === key); app.innerHTML = topicSetup(t.id); state.view = 'topicSetup'; return; }
   if (mode === 'mistakes') return startMistakes('all', key !== 'pending' && key !== 'selection' ? key : '');
+  if (mode === 'learn') return startLearn(key);
 }
 
 document.addEventListener('click', e => {
-  const el = e.target.closest('[data-go],[data-action],[data-topic],[data-sim],[data-choice],[data-start-topic],[data-mode],[data-attempt],[data-review-ids],[data-mistake-topic],[data-trainer-ids]');
+  const el = e.target.closest('[data-go],[data-action],[data-topic],[data-sim],[data-choice],[data-start-topic],[data-mode],[data-attempt],[data-review-ids],[data-mistake-topic],[data-trainer-ids],[data-learn-topic],[data-class-topic]');
   if (!el) return;
   if (el.dataset.go) return go(el.dataset.go);
   if (el.dataset.choice) return answer(el.dataset.choice);
@@ -374,12 +509,20 @@ document.addEventListener('click', e => {
   if (el.dataset.reviewIds !== undefined) return reviewIds((el.dataset.reviewIds || '').split(',').filter(Boolean));
   if (el.dataset.mistakeTopic) return startMistakes('all', el.dataset.mistakeTopic);
   if (el.dataset.trainerIds !== undefined) return reviewIds((el.dataset.trainerIds || '').split(',').filter(Boolean));
+  if (el.dataset.learnTopic) return startLearn(el.dataset.learnTopic);
+  if (el.dataset.classTopic) return openClass(el.dataset.classTopic);
 
   const a = el.dataset.action;
   if (a === 'topics') go('topics');
   else if (a === 'sims') go('sims');
   else if (a === 'mistakes') go('mistakes');
   else if (a === 'trainer') go('trainer');
+  else if (a === 'learn') go('learn');
+  else if (a === 'class') go('class');
+  else if (a === 'class-list') go('class');
+  else if (a === 'class-prev') { if(state.lesson && state.lesson.index>0){state.lesson.index--;render();} }
+  else if (a === 'class-next') { if(state.lesson){const n=visualLessonSlides(state.lesson.topicId).length;if(state.lesson.index<n-1){state.lesson.index++;render();}} }
+  else if (a === 'class-practice') { if(state.lesson) startLearn(state.lesson.topicId); }
   else if (a === 'start-mistakes') startMistakes($('#mistakeCount')?.value || 'all');
   else if (a === 'resume') resume();
   else if (a === 'next') next();
@@ -399,10 +542,10 @@ $('#syncBtn').addEventListener('click', () => go('sync'));
 document.addEventListener('input', e => { if (e.target.id === 'topicSearch') { const v = e.target.value.toLowerCase(); document.querySelectorAll('.topic').forEach(x => x.style.display = x.textContent.toLowerCase().includes(v) ? 'block' : 'none'); } });
 
 Promise.all([
-  fetch('data/questions.json?v=5').then(r => r.json()),
-  fetch('data/topics.json?v=5').then(r => r.json())
+  fetch('data/questions.json?v=7').then(r => r.json()),
+  fetch('data/topics.json?v=7').then(r => r.json())
 ]).then(([q, t]) => {
   QUESTIONS = q; TOPICS = t; render();
   if (getSyncKey() && syncConfigured()) setTimeout(() => syncNow(true), 600);
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=5').catch(() => {});
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=7').catch(() => {});
 }).catch(err => { app.innerHTML = `<div class="card"><h2>No se pudo cargar el banco</h2><p>${esc(err.message)}</p></div>`; });
