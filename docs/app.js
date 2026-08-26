@@ -14,7 +14,7 @@ const API_BASE = String(window.AEOL_CONFIG?.API_BASE || '').replace(/\/$/, '');
 let QUESTIONS = [];
 let TOPICS = [];
 let state = { view: 'home', test: null, attemptId: null, lesson: null };
-let syncMeta = { busy: false, lastOk: 0, error: '' };
+let syncMeta = { busy: false, lastOk: 0, error: '', diag: null };
 let syncTimer = null;
 
 function normalizeStore(x) {
@@ -70,19 +70,50 @@ async function syncApi(path, opts = {}) {
   return data;
 }
 function scheduleSync() { if (!getSyncKey() || !syncConfigured()) return; clearTimeout(syncTimer); syncTimer = setTimeout(() => syncNow(true), 900); }
+function decodeRemoteState(raw) {
+  let x = raw;
+  for (let i = 0; i < 2 && typeof x === 'string'; i++) {
+    try { x = JSON.parse(x); } catch { break; }
+  }
+  return normalizeStore(x);
+}
+function storeDiag(s) {
+  const n = normalizeStore(s);
+  const completed = n.history.filter(x => x && x.completed).length;
+  return { history: n.history.length, completed, hasCurrent: !!n.current, updatedAt: n.updatedAt || 0 };
+}
 async function syncNow(silent = false) {
   if (syncMeta.busy || !getSyncKey() || !syncConfigured()) return;
   syncMeta.busy = true; syncMeta.error = '';
   try {
-    const remote = await syncApi('/api/state');
-    store = mergeStores(store, remote.state); saveStore(store, { noSync: true });
-    const pushed = await syncApi('/api/state', { method: 'PUT', body: JSON.stringify({ state: store }) });
-    store = normalizeStore(pushed.state); saveStore(store, { noSync: true });
+    const before = storeDiag(store);
+    const remotePayload = await syncApi('/api/state');
+    const remoteStore = decodeRemoteState(remotePayload.state);
+    const remoteInfo = storeDiag(remoteStore);
+    const merged = mergeStores(store, remoteStore);
+    const mergedInfo = storeDiag(merged);
+    store = merged; saveStore(store, { noSync: true });
+
+    // Seguridad: nunca subir un estado totalmente vacío sobre un remoto que también
+    // parece vacío durante una recuperación. Primero mostramos el diagnóstico.
+    let pushedInfo = null;
+    if (mergedInfo.history > 0 || mergedInfo.hasCurrent) {
+      const pushed = await syncApi('/api/state', { method: 'PUT', body: JSON.stringify({ state: store }) });
+      if (pushed && pushed.state != null) {
+        store = decodeRemoteState(pushed.state); saveStore(store, { noSync: true });
+      }
+      pushedInfo = storeDiag(store);
+    }
+    syncMeta.diag = { localBefore: before, remote: remoteInfo, merged: mergedInfo, final: pushedInfo || mergedInfo };
     syncMeta.lastOk = Date.now();
-    if (!silent) toast('Progreso sincronizado');
+    if (!silent) toast(remoteInfo.history ? 'Progreso remoto recuperado' : 'Sincronización completada');
     if (['home', 'stats', 'sync', 'attempt'].includes(state.view)) render();
-  } catch (e) { syncMeta.error = e.message; if (!silent) toast('No se pudo sincronizar'); }
-  finally { syncMeta.busy = false; }
+  } catch (e) {
+    syncMeta.error = e.message;
+    syncMeta.diag = { error: e.message, localBefore: storeDiag(store) };
+    if (!silent) toast('No se pudo sincronizar');
+    if (state.view === 'sync') render();
+  } finally { syncMeta.busy = false; }
 }
 function newSyncKey() { const a = new Uint8Array(32); crypto.getRandomValues(a); const b = btoa(String.fromCharCode(...a)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); return 'aeol_' + b; }
 async function createSync() {
@@ -124,6 +155,7 @@ function syncView() {
   <div class="sync-key">${esc(key)}</div><div class="sync-actions"><button class="primary" data-action="sync-now">Sincronizar ahora</button><button class="secondary" data-action="copy-key">Copiar clave</button><button class="danger" data-action="unlink-sync">Desvincular este dispositivo</button></div>` :
   `<div class="success-box"><b>Primera vez:</b> crea una clave para subir tu progreso actual.</div><div class="sync-actions"><button class="primary" data-action="create-sync">Crear sincronizacion</button></div>
   <hr class="sep"><h2>Ya tengo una clave</h2><div class="form-row"><label for="syncKeyInput"><b>Clave de sincronizacion</b></label><input id="syncKeyInput" autocomplete="off" placeholder="aeol_..."></div><button class="primary" data-action="link-sync">Vincular este dispositivo</button>`}
+  ${key ? `<hr class="sep"><h2>Diagnóstico de sincronización</h2><p class="muted small">Pulsa <b>Sincronizar ahora</b>. Aquí verás cuántos intentos existen en este dispositivo y cuántos devuelve Turso antes de mezclar nada.</p>${syncMeta.diag ? `<div class="sync-diag">${syncMeta.diag.error ? `<div class="warning-box"><b>Error:</b> ${esc(syncMeta.diag.error)}</div>` : ''}<div><b>Local antes:</b> ${syncMeta.diag.localBefore?.history ?? '—'} registros (${syncMeta.diag.localBefore?.completed ?? '—'} tests)</div><div><b>Remoto / Turso:</b> ${syncMeta.diag.remote?.history ?? '—'} registros (${syncMeta.diag.remote?.completed ?? '—'} tests)</div><div><b>Tras fusionar:</b> ${syncMeta.diag.merged?.history ?? '—'} registros (${syncMeta.diag.merged?.completed ?? '—'} tests)</div><div><b>Final:</b> ${syncMeta.diag.final?.history ?? '—'} registros (${syncMeta.diag.final?.completed ?? '—'} tests)</div></div>` : `<div class="sync-diag muted">Todavía sin diagnóstico.</div>`}` : ''}
   <div id="newKeyBox" style="margin-top:14px"><span id="newSyncKey"></span></div></article>`;
 }
 
@@ -551,8 +583,8 @@ document.addEventListener('input', e => { if (e.target.id === 'topicSearch') { c
 async function boot() {
   try {
     const [qr, tr] = await Promise.all([
-      fetch('data/questions.json?v=71', {cache:'no-store'}),
-      fetch('data/topics.json?v=71', {cache:'no-store'})
+      fetch('data/questions.json?v=72', {cache:'no-store'}),
+      fetch('data/topics.json?v=72', {cache:'no-store'})
     ]);
     if (!qr.ok) throw new Error(`questions.json: HTTP ${qr.status}`);
     if (!tr.ok) throw new Error(`topics.json: HTTP ${tr.status}`);
@@ -562,7 +594,7 @@ async function boot() {
     QUESTIONS = q; TOPICS = t;
     render();
     if (getSyncKey() && syncConfigured()) setTimeout(() => syncNow(true), 600);
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=71').catch(() => {});
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js?v=72').catch(() => {});
   } catch (err) {
     console.error(err);
     showBootError('No se pudo cargar el banco', err?.message || err);

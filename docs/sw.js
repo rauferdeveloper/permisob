@@ -1,4 +1,4 @@
-const CACHE='aeol-b-v71';
+const CACHE='aeol-b-v72';
 const CORE=['./','index.html','styles.css?v=71','app.js?v=71','manifest.webmanifest','icon.svg'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE).catch(()=>{})))});
 self.addEventListener('activate',e=>e.waitUntil(Promise.all([caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))),self.clients.claim()])));
