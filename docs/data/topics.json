@@ -1,110 +1,197 @@
-[
-  {
-    "id": "T00",
-    "name": "Definiciones, vehículos, masas y tipos de vía",
-    "description": "Conceptos básicos, clases de vehículos, masas y tipos de vía.",
-    "count": 23
-  },
-  {
-    "id": "T01",
-    "name": "Documentación, permisos, puntos, ITV y seguro",
-    "description": "Permisos, documentación, ITV, seguro obligatorio y permiso por puntos.",
-    "count": 104
-  },
-  {
-    "id": "T02",
-    "name": "Señalización: agentes, semáforos y señales verticales",
-    "description": "Orden de prioridad, agentes, semáforos y señales verticales.",
-    "count": 362
-  },
-  {
-    "id": "T03",
-    "name": "Marcas viales y balizamiento",
-    "description": "Marcas sobre la calzada y dispositivos de balizamiento.",
-    "count": 33
-  },
-  {
-    "id": "T04",
-    "name": "Alumbrado y señalización óptica",
-    "description": "Luces, antinieblas, señalización óptica y cuándo utilizar cada alumbrado.",
-    "count": 112
-  },
-  {
-    "id": "T05",
-    "name": "Uso de la vía: carriles, arcén, peatones, ciclistas y carriles especiales",
-    "description": "Posición en la vía, carriles, arcén, usuarios vulnerables y carriles especiales.",
-    "count": 326
-  },
-  {
-    "id": "T06",
-    "name": "Velocidad, distancias y frenado",
-    "description": "Velocidades, distancia de reacción, frenado, detención y separación.",
-    "count": 124
-  },
-  {
-    "id": "T07",
-    "name": "Incorporaciones, desplazamientos y adelantamientos",
-    "description": "Incorporación, cambios de carril, desplazamientos laterales y adelantamientos.",
-    "count": 132
-  },
-  {
-    "id": "T08",
-    "name": "Giros, cambio de sentido y marcha atrás",
-    "description": "Giros, cambio de dirección, cambio de sentido y marcha atrás.",
-    "count": 56
-  },
-  {
-    "id": "T09",
-    "name": "Detención, parada, estacionamiento, averías y V16",
-    "description": "Inmovilizaciones, parada, estacionamiento, averías y señal V16.",
-    "count": 91
-  },
-  {
-    "id": "T10",
-    "name": "Prioridad de paso y estrechamientos",
-    "description": "Intersecciones, prioridad, estrechamientos y pendientes.",
-    "count": 70
-  },
-  {
-    "id": "T11",
-    "name": "Transporte de personas, carga, mercancías y remolques",
-    "description": "Pasajeros, carga, mercancías, remolques y señalización de la carga.",
-    "count": 152
-  },
-  {
-    "id": "T12",
-    "name": "Seguridad del vehículo: frenos, neumáticos, cinturón, casco y SRI",
-    "description": "Seguridad activa y pasiva, frenos, neumáticos, cinturón, casco y sistemas infantiles.",
-    "count": 130
-  },
-  {
-    "id": "T13",
-    "name": "Motor, mantenimiento, equipamiento y mecánica básica",
-    "description": "Motor, mantenimiento, equipamiento y nociones mecánicas que aparecen en test.",
-    "count": 51
-  },
-  {
-    "id": "T14",
-    "name": "Estado psicofísico: alcohol, drogas, sueño, fatiga y distracciones",
-    "description": "Alcohol, drogas, medicamentos, sueño, fatiga, distracciones y percepción del riesgo.",
-    "count": 563
-  },
-  {
-    "id": "T15",
-    "name": "Accidentes, primeros auxilios y grupos de riesgo",
-    "description": "Conducta PAS, accidentes, primeros auxilios y grupos especialmente vulnerables.",
-    "count": 206
-  },
-  {
-    "id": "T16",
-    "name": "Conducción eficiente, medio ambiente y conducción preventiva",
-    "description": "Consumo, contaminación, conducción eficiente, preventiva y anticipación.",
-    "count": 98
-  },
-  {
-    "id": "T17",
-    "name": "ADAS y ayudas a la conducción",
-    "description": "Sistemas avanzados de ayuda a la conducción y su función.",
-    "count": 7
-  }
-]
+{
+  "topics": [
+    {
+      "id": 0,
+      "title": "Conceptos básicos",
+      "icon": "🚘",
+      "description": "Vehículos, vías y palabras que cambian una respuesta.",
+      "aeol_temas": [
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Señales y prioridad",
+      "icon": "🚦",
+      "description": "Quién manda y en qué orden.",
+      "aeol_temas": [
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Velocidad y vías",
+      "icon": "🛣️",
+      "description": "Límites y casos que más confunden.",
+      "aeol_temas": [
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Maniobras",
+      "icon": "↔️",
+      "description": "Giros, cambios de carril, marcha atrás y adelantamientos.",
+      "aeol_temas": [
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Alumbrado",
+      "icon": "💡",
+      "description": "Qué luces usar y cuándo.",
+      "aeol_temas": [
+        5
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Alcohol y drogas",
+      "icon": "🍺",
+      "description": "Tasas, riesgos y preguntas trampa.",
+      "aeol_temas": [
+        6
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Seguridad",
+      "icon": "🛡️",
+      "description": "Cinturón, casco, SRI y protección.",
+      "aeol_temas": [
+        7
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Vehículo",
+      "icon": "🔧",
+      "description": "Neumáticos, frenos, mantenimiento y averías.",
+      "aeol_temas": [
+        8
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Documentación",
+      "icon": "📄",
+      "description": "Permisos, ITV, seguro y puntos.",
+      "aeol_temas": [
+        9
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Accidentes",
+      "icon": "🚑",
+      "description": "PAS, emergencias y primeros pasos.",
+      "aeol_temas": [
+        10
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Conducción adversa",
+      "icon": "🌧️",
+      "description": "Lluvia, nieve, niebla y viento.",
+      "keywords": [
+        "lluvia",
+        "nieve",
+        "niebla",
+        "hielo",
+        "viento",
+        "adherencia"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Usuarios vulnerables",
+      "icon": "🚶",
+      "description": "Peatones, ciclistas y motos.",
+      "keywords": [
+        "peatón",
+        "peatones",
+        "ciclista",
+        "ciclistas",
+        "bicicleta",
+        "ciclomotor",
+        "motocicleta"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Conducción segura",
+      "icon": "🧠",
+      "description": "Fatiga, distracciones y percepción.",
+      "keywords": [
+        "fatiga",
+        "sueño",
+        "distracción",
+        "móvil",
+        "telefono",
+        "teléfono",
+        "somnolencia"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "ADAS",
+      "icon": "🤖",
+      "description": "Ayudas a la conducción y sus límites.",
+      "keywords": [
+        "ADAS",
+        "sistema",
+        "asistente",
+        "frenado automático",
+        "ángulo muerto",
+        "carril"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Carga y pasajeros",
+      "icon": "🚚",
+      "description": "Colocación, dimensiones y seguridad.",
+      "keywords": [
+        "carga",
+        "pasajero",
+        "ocupante",
+        "equipaje",
+        "transportar"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Parada y estacionamiento",
+      "icon": "🅿️",
+      "description": "Dónde se puede, dónde no y por qué.",
+      "keywords": [
+        "parada",
+        "estacionamiento",
+        "estacionar",
+        "detención"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Señalización especial",
+      "icon": "🔺",
+      "description": "Obras, agentes, balizamiento y V16.",
+      "keywords": [
+        "obras",
+        "agente",
+        "balizamiento",
+        "V16",
+        "emergencia"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Repaso final",
+      "icon": "🏁",
+      "description": "Trampas recurrentes y mezcla de todos los temas.",
+      "all": true
+    }
+  ]
+}

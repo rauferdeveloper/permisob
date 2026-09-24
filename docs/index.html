@@ -1,23 +1,159 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<meta name="theme-color" content="#0b6bcb" />
-<meta name="description" content="Banco AEOL permiso B: simulacros y práctica por temas." />
-<link rel="manifest" href="manifest.webmanifest" />
-<link rel="icon" href="icon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="styles.css?v=72" />
-<title>AEOL · Permiso B</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#58cc02" />
+  <title>PermisoB · Aprende y aprueba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="topbar">
-  <button class="brand" data-go="home" aria-label="Inicio"><span class="logo">B</span><span>AEOL · Permiso B</span></button>
-  <div class="top-actions"><button id="syncBtn" class="ghost">Sincronizar</button><button id="statsBtn" class="ghost">Progreso</button></div>
-</header>
-<main id="app" class="app" aria-live="polite"><div class="card"><h2>Cargando banco AEOL…</h2><p>Si tarda más de unos segundos, la propia web mostrará el error.</p></div></main>
-<div id="toast" class="toast" role="status"></div>
-<script src="config.js?v=4"></script>
-<script src="app.js?v=73" defer></script>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <div class="brand" data-route="home">
+        <div class="brand-mark">P</div>
+        <div>
+          <strong>PermisoB</strong>
+          <span>Aprueba entendiendo</span>
+        </div>
+      </div>
+
+      <nav class="nav-list">
+        <button class="nav-item active" data-route="home"><span>🏠</span><b>Inicio</b></button>
+        <button class="nav-item" data-route="topics"><span>🧭</span><b>Por temas</b></button>
+        <button class="nav-item" data-route="simulators"><span>📝</span><b>Simulacros</b></button>
+        <button class="nav-item" data-route="mistakes"><span>🎯</span><b>Falladas</b><em id="mistakesBadge">0</em></button>
+        <button class="nav-item" data-route="progress"><span>📈</span><b>Progreso</b></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="sync-button" id="syncButton">↻ <span>Sincronizar</span></button>
+        <div class="profile-mini">
+          <div class="avatar">R</div>
+          <div><strong>Permiso B</strong><span id="syncMini">Guardado local</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><div class="brand-mark">P</div><strong>PermisoB</strong></div>
+        <div class="top-stats">
+          <button class="stat-chip" title="Racha"><span>🔥</span><b id="streakTop">0</b></button>
+          <button class="stat-chip" title="Puntos"><span>⚡</span><b id="xpTop">0</b></button>
+          <button class="stat-chip" title="Corazones"><span>❤️</span><b>5</b></button>
+        </div>
+      </header>
+
+      <section id="view-home" class="view active">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="eyebrow">TU RUTA AL TEÓRICO</div>
+            <h1>Aprende poco.<br><span>Practica mucho.</span></h1>
+            <p>Teoría en cristiano, preguntas AEOL y repaso inteligente de tus fallos.</p>
+            <div class="hero-actions">
+              <button class="btn primary" id="continueButton">Continuar</button>
+              <button class="btn ghost" data-route="simulators">Hacer simulacro</button>
+            </div>
+            <div class="today-line"><span>Meta de hoy</span><strong id="dailyText">0 / 20 XP</strong></div>
+            <div class="progress-track"><i id="dailyBar"></i></div>
+          </div>
+
+          <aside class="right-stack">
+            <div class="compact-card streak-card">
+              <div class="compact-title"><span>🔥</span><div><strong>Racha</strong><small>Haz algo hoy para mantenerla</small></div><b id="streakCard">0 días</b></div>
+              <div class="week-dots" id="weekDots"></div>
+            </div>
+            <div class="compact-card level-card">
+              <div><span class="level-icon">🏁</span><div><small>NIVEL ACTUAL</small><strong id="levelLabel">Empezando</strong></div></div>
+              <div class="level-number" id="levelNumber">1</div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="learning-section">
+          <div class="section-head">
+            <div><span class="section-kicker">RUTA DE APRENDIZAJE</span><h2>Tu camino hacia el aprobado</h2></div>
+            <button class="text-button" data-route="topics">Ver los 18 temas →</button>
+          </div>
+
+          <div class="path-layout">
+            <div class="learning-path" id="learningPath"></div>
+            <aside class="path-side">
+              <div class="side-card zero-card">
+                <span class="side-emoji">🎯</span>
+                <h3>Entrenador 0 fallos</h3>
+                <p>Practica solo lo que más te cuesta hasta limpiarlo.</p>
+                <button class="btn small primary" id="zeroMistakesButton">Entrenar</button>
+              </div>
+              <div class="side-card test-card">
+                <span class="side-emoji">⏱️</span>
+                <h3>Simulacro DGT</h3>
+                <p>30 preguntas. Como el examen. Resultado al final.</p>
+                <button class="btn small dark" data-route="simulators">Empezar</button>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </section>
+
+      <section id="view-topics" class="view">
+        <div class="page-heading"><div><span class="section-kicker">APRENDE POR BLOQUES</span><h1>18 temas, explicados fácil</h1><p>Cada tema combina Clase visual, práctica corta y preguntas AEOL.</p></div></div>
+        <div class="topics-grid" id="topicsGrid"></div>
+      </section>
+
+      <section id="view-simulators" class="view">
+        <div class="page-heading"><div><span class="section-kicker">MODO EXAMEN</span><h1>88 simulacros AEOL</h1><p>30 preguntas por test. Corrige al final y convierte cada fallo en una regla.</p></div></div>
+        <div class="simulator-toolbar">
+          <div class="filter-pill active">Todos</div><div class="filter-pill">Pendientes</div><div class="filter-pill">Hechos</div><div class="filter-pill">Aprobados</div>
+        </div>
+        <div class="sim-grid" id="simGrid"></div>
+      </section>
+
+      <section id="view-mistakes" class="view">
+        <div class="page-heading"><div><span class="section-kicker">REPASO INTELIGENTE</span><h1>Tus preguntas falladas</h1><p>No repitas por repetir: practica justo donde estás perdiendo puntos.</p></div></div>
+        <div class="mistake-summary">
+          <div><strong id="mistakeCountBig">0</strong><span>falladas pendientes</span></div>
+          <button class="btn primary" id="mistakesTrainButton">Practicar falladas</button>
+        </div>
+        <div id="mistakesList" class="empty-state"><span>🎯</span><h3>Aquí aparecerán tus fallos</h3><p>Cuando falles una pregunta, quedará guardada para repasarla.</p></div>
+      </section>
+
+      <section id="view-progress" class="view">
+        <div class="page-heading"><div><span class="section-kicker">TU EVOLUCIÓN</span><h1>Progreso y estadísticas</h1><p>Datos locales + estado remoto recuperado desde Turso cuando esté disponible.</p></div></div>
+        <div class="stats-grid">
+          <div class="metric-card"><span>⚡</span><div><small>XP TOTAL</small><strong id="xpMetric">0</strong></div></div>
+          <div class="metric-card"><span>🔥</span><div><small>RACHA</small><strong id="streakMetric">0 días</strong></div></div>
+          <div class="metric-card"><span>✅</span><div><small>TEST HECHOS</small><strong id="testsMetric">0</strong></div></div>
+          <div class="metric-card"><span>🎯</span><div><small>ACIERTO</small><strong id="accuracyMetric">—</strong></div></div>
+        </div>
+        <div class="progress-grid">
+          <div class="panel"><h3>Temas</h3><div id="topicProgressList"></div></div>
+          <div class="panel sync-panel"><div class="panel-head"><h3>Sincronización</h3><button class="btn tiny ghost" id="syncButton2">Sincronizar ahora</button></div><div id="syncDiagnostics"></div></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <button class="active" data-route="home">🏠<span>Inicio</span></button>
+    <button data-route="topics">🧭<span>Temas</span></button>
+    <button data-route="simulators">📝<span>Tests</span></button>
+    <button data-route="mistakes">🎯<span>Fallos</span></button>
+    <button data-route="progress">📈<span>Progreso</span></button>
+  </nav>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

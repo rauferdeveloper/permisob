@@ -1,5 +1,9 @@
-window.AEOL_CONFIG = {
-  // Pega aqui la URL de tu Cloudflare Worker DESPUES de desplegarlo.
-  // Ejemplo: "https://aeol-sync.tuusuario.workers.dev"
-  API_BASE: "https://aeol-progress-sync.rauletecolegio.workers.dev"
+window.PERMISOB_CONFIG = {
+  // Déjalo vacío si solo quieres guardar el progreso en este navegador.
+  // Si ya tienes tu Worker/Turso, pega aquí su URL, por ejemplo: "https://tu-worker.workers.dev"
+  apiBase: "",
+  userKey: "aeol_local",
+  dailyGoalXp: 20,
+  questionsUrl: "data/questions.json",
+  topicsUrl: "data/topics.json"
 };
