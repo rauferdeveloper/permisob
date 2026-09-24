@@ -1,0 +1,110 @@
+{
+  "topics": [
+    {
+      "id": 0,
+      "title": "Diccionario y tipos de vehículo",
+      "icon": "🚘",
+      "description": "Conceptos, definiciones y tipos de vehículo.",
+      "aeol_temas": [
+        -1
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Circulación, vías, velocidad, prioridad y usuarios vulnerables",
+      "icon": "🛣️",
+      "description": "Circulación, límites, prioridad, peatones, ciclistas y otros usuarios vulnerables.",
+      "aeol_temas": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Carriles, maniobras, adelantamiento, parada y estacionamiento",
+      "icon": "↔️",
+      "description": "Uso de carriles, maniobras, adelantamientos, parada y estacionamiento.",
+      "aeol_temas": [
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Señales, semáforos y marcas viales",
+      "icon": "🚦",
+      "description": "Jerarquía, señales verticales, semáforos y marcas viales.",
+      "aeol_temas": [
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Alumbrado y visibilidad",
+      "icon": "💡",
+      "description": "Luces, visibilidad y condiciones de uso.",
+      "aeol_temas": [
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Ocupantes, cinturón, casco, SRI, carga y señalización del vehículo",
+      "icon": "🛡️",
+      "description": "Protección de ocupantes, sistemas de retención, carga y señalización.",
+      "aeol_temas": [
+        5
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Permisos, puntos, documentación, seguro e ITV",
+      "icon": "📄",
+      "description": "Permisos, sistema de puntos, documentación, seguro e inspecciones.",
+      "aeol_temas": [
+        6
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Riesgo, conductor, seguridad, mecánica básica y ADAS",
+      "icon": "🧠",
+      "description": "Factores de riesgo, conducción segura, mecánica básica y ayudas ADAS.",
+      "aeol_temas": [
+        7
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Accidentes, PAS y primeros auxilios",
+      "icon": "🚑",
+      "description": "Actuación ante accidentes, PAS y primeros auxilios.",
+      "aeol_temas": [
+        8
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Mantenimiento y equipamiento del vehículo",
+      "icon": "🔧",
+      "description": "Mantenimiento preventivo y equipamiento obligatorio.",
+      "aeol_temas": [
+        9
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Conducción preventiva, eficiente, medio ambiente y ZBE",
+      "icon": "🌱",
+      "description": "Conducción preventiva y eficiente, medio ambiente y zonas de bajas emisiones.",
+      "aeol_temas": [
+        10
+      ]
+    },
+    {
+      "id": 99,
+      "title": "Preguntas sin tema asignado",
+      "icon": "🧩",
+      "description": "Preguntas del banco que el PDF deja fuera de los temas principales.",
+      "unassigned": true
+    }
+  ]
+}

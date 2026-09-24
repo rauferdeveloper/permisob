@@ -1,0 +1,933 @@
+{
+  "topics": {
+    "0": {
+      "cards": [
+        {
+          "title": "Primero clasifica",
+          "body": "Antes de pensar en la norma, identifica persona + vehículo + vía.",
+          "memory": "QUIÉN · QUÉ · DÓNDE"
+        },
+        {
+          "title": "Turismo no es cualquier automóvil",
+          "body": "Fíjate en masa, plazas y uso. Remolque ligero/no ligero y ciclomotor cambian muchas respuestas.",
+          "memory": "El nombre del vehículo decide la regla"
+        },
+        {
+          "title": "MMA y tara no son lo mismo",
+          "body": "Cuando aparezca una cifra de masa, lee exactamente qué masa te están pidiendo.",
+          "memory": "Masa = palabra trampa frecuente"
+        },
+        {
+          "title": "Peatón también puede empujar",
+          "body": "Una persona que empuja determinados vehículos puede tener consideración de peatón.",
+          "memory": "No respondas por apariencia; responde por definición"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p002.webp",
+        "study_pages/p003.webp",
+        "study_pages/p004.webp",
+        "study_pages/p005.webp",
+        "study_pages/p006.webp",
+        "study_pages/p007.webp",
+        "study_pages/p008.webp",
+        "study_pages/p009.webp",
+        "study_pages/p010.webp",
+        "study_pages/p011.webp",
+        "study_pages/p012.webp"
+      ],
+      "manual_page_numbers": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "1": {
+      "cards": [
+        {
+          "title": "Los 3 papeles base",
+          "body": "Permiso de conducción, permiso de circulación y tarjeta ITV: distingue quién acredita qué.",
+          "memory": "CONDUCTOR · VEHÍCULO · ESTADO TÉCNICO"
+        },
+        {
+          "title": "Puntos: no confundas saldo con permiso",
+          "body": "Ser novel, perder puntos y recuperar puntos son preguntas distintas.",
+          "memory": "Lee si pregunta saldo, pérdida o recuperación"
+        },
+        {
+          "title": "ITV: desfavorable ≠ negativa",
+          "body": "Las consecuencias y posibilidad de circular cambian según el resultado.",
+          "memory": "Desfavorable y negativa no son sinónimos"
+        },
+        {
+          "title": "Seguro: piensa en responsabilidad",
+          "body": "El obligatorio protege frente a daños a terceros dentro de sus límites.",
+          "memory": "Seguro obligatorio → terceros"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p013.webp",
+        "study_pages/p014.webp",
+        "study_pages/p015.webp",
+        "study_pages/p016.webp",
+        "study_pages/p017.webp",
+        "study_pages/p018.webp",
+        "study_pages/p019.webp"
+      ],
+      "manual_page_numbers": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "2": {
+      "cards": [
+        {
+          "title": "Jerarquía de señales",
+          "body": "Cuando varias órdenes chocan, aplica primero la que tenga mayor prioridad.",
+          "memory": "AGENTE → BALIZAMIENTO → SEMÁFORO → VERTICAL → MARCA"
+        },
+        {
+          "title": "Mismo tipo: manda la más restrictiva",
+          "body": "Si son señales del mismo tipo y se contradicen, busca cuál limita más.",
+          "memory": "Mismo nivel → más restrictiva"
+        },
+        {
+          "title": "Agentes: aprende gestos, no dibujos",
+          "body": "Relaciona brazo, silbato y posición con detener, avanzar o moderar.",
+          "memory": "Agente = orden inmediata"
+        },
+        {
+          "title": "Semáforos: mira a quién afectan",
+          "body": "Vehículo, peatón, carril o flecha pueden tener semáforos distintos.",
+          "memory": "Primero destinatario, después color"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p020.webp",
+        "study_pages/p021.webp",
+        "study_pages/p022.webp",
+        "study_pages/p023.webp",
+        "study_pages/p024.webp",
+        "study_pages/p025.webp",
+        "study_pages/p026.webp",
+        "study_pages/p027.webp",
+        "study_pages/p028.webp",
+        "study_pages/p029.webp"
+      ],
+      "manual_page_numbers": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "3": {
+      "cards": [
+        {
+          "title": "Forma antes que texto",
+          "body": "Triángulo suele avisar peligro; círculo regula; rectángulo/cuadrado informa.",
+          "memory": "FORMA → FAMILIA → SIGNIFICADO"
+        },
+        {
+          "title": "Prohibición y obligación",
+          "body": "No basta reconocer la señal: piensa qué conducta cambia desde ese punto.",
+          "memory": "¿Qué me impide o me obliga a hacer?"
+        },
+        {
+          "title": "Fin de prohibición",
+          "body": "Una señal de fin elimina una limitación concreta, no todas las normas de la vía.",
+          "memory": "Fin de X ≠ vía sin reglas"
+        },
+        {
+          "title": "Indicación",
+          "body": "Autopista, autovía, poblado, servicios y orientación dan contexto para otras reglas.",
+          "memory": "Una indicación puede cambiar el escenario entero"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p030.webp",
+        "study_pages/p031.webp",
+        "study_pages/p032.webp",
+        "study_pages/p033.webp",
+        "study_pages/p034.webp",
+        "study_pages/p035.webp",
+        "study_pages/p036.webp",
+        "study_pages/p037.webp",
+        "study_pages/p038.webp",
+        "study_pages/p039.webp",
+        "study_pages/p040.webp",
+        "study_pages/p041.webp",
+        "study_pages/p042.webp",
+        "study_pages/p043.webp",
+        "study_pages/p044.webp",
+        "study_pages/p045.webp",
+        "study_pages/p046.webp",
+        "study_pages/p047.webp",
+        "study_pages/p048.webp",
+        "study_pages/p049.webp",
+        "study_pages/p050.webp",
+        "study_pages/p051.webp",
+        "study_pages/p052.webp",
+        "study_pages/p053.webp",
+        "study_pages/p054.webp",
+        "study_pages/p055.webp",
+        "study_pages/p056.webp",
+        "study_pages/p057.webp",
+        "study_pages/p058.webp",
+        "study_pages/p059.webp",
+        "study_pages/p060.webp",
+        "study_pages/p061.webp",
+        "study_pages/p062.webp",
+        "study_pages/p063.webp",
+        "study_pages/p064.webp",
+        "study_pages/p065.webp",
+        "study_pages/p066.webp",
+        "study_pages/p067.webp",
+        "study_pages/p068.webp",
+        "study_pages/p069.webp",
+        "study_pages/p070.webp",
+        "study_pages/p071.webp",
+        "study_pages/p072.webp",
+        "study_pages/p073.webp",
+        "study_pages/p074.webp",
+        "study_pages/p075.webp",
+        "study_pages/p076.webp",
+        "study_pages/p077.webp",
+        "study_pages/p078.webp",
+        "study_pages/p079.webp",
+        "study_pages/p080.webp",
+        "study_pages/p081.webp",
+        "study_pages/p082.webp",
+        "study_pages/p083.webp",
+        "study_pages/p084.webp",
+        "study_pages/p085.webp",
+        "study_pages/p086.webp",
+        "study_pages/p087.webp",
+        "study_pages/p088.webp",
+        "study_pages/p089.webp",
+        "study_pages/p090.webp",
+        "study_pages/p091.webp",
+        "study_pages/p092.webp",
+        "study_pages/p093.webp",
+        "study_pages/p094.webp",
+        "study_pages/p095.webp",
+        "study_pages/p096.webp",
+        "study_pages/p097.webp",
+        "study_pages/p098.webp",
+        "study_pages/p099.webp"
+      ],
+      "manual_page_numbers": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "4": {
+      "cards": [
+        {
+          "title": "Continua = no atravesar como regla general",
+          "body": "Antes de pisarla o cruzarla, busca si el supuesto permite una excepción.",
+          "memory": "Continua = barrera mental"
+        },
+        {
+          "title": "Discontinua = permiso condicionado",
+          "body": "Que puedas cruzarla no significa que la maniobra sea siempre segura o legal.",
+          "memory": "Permite ≠ obliga"
+        },
+        {
+          "title": "Marcas transversales",
+          "body": "Stop, ceda, paso de peatones y líneas de detención se interpretan con la señalización y situación.",
+          "memory": "Mira dibujo + contexto"
+        },
+        {
+          "title": "Flechas y cebreados",
+          "body": "Ordenan trayectorias y zonas que no deben ocuparse.",
+          "memory": "La calzada también habla"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p100.webp",
+        "study_pages/p101.webp",
+        "study_pages/p102.webp",
+        "study_pages/p103.webp",
+        "study_pages/p104.webp",
+        "study_pages/p105.webp",
+        "study_pages/p106.webp",
+        "study_pages/p107.webp",
+        "study_pages/p108.webp",
+        "study_pages/p109.webp",
+        "study_pages/p110.webp",
+        "study_pages/p111.webp"
+      ],
+      "manual_page_numbers": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "5": {
+      "cards": [
+        {
+          "title": "Tres funciones",
+          "body": "Las luces sirven para ver, ser visto y señalizar.",
+          "memory": "VER · SER VISTO · AVISAR"
+        },
+        {
+          "title": "Cruce vs carretera",
+          "body": "Piensa siempre en vía, hora, visibilidad y posibilidad de deslumbrar.",
+          "memory": "No memorices una luz sin su situación"
+        },
+        {
+          "title": "Antiniebla: pregunta favorita",
+          "body": "Delantera y trasera no tienen las mismas condiciones de uso.",
+          "memory": "Trasera = condiciones especialmente desfavorables"
+        },
+        {
+          "title": "Señalizar maniobras",
+          "body": "Intermitentes y otras señales comunican intención; no conceden prioridad.",
+          "memory": "Avisar no te da derecho de paso"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p112.webp",
+        "study_pages/p113.webp",
+        "study_pages/p114.webp",
+        "study_pages/p115.webp",
+        "study_pages/p116.webp",
+        "study_pages/p117.webp",
+        "study_pages/p118.webp",
+        "study_pages/p119.webp",
+        "study_pages/p120.webp"
+      ],
+      "manual_page_numbers": [
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "6": {
+      "cards": [
+        {
+          "title": "Regla base: derecha",
+          "body": "Como punto de partida circula por la derecha y usa otros carriles cuando la norma lo permita.",
+          "memory": "DERECHA primero"
+        },
+        {
+          "title": "Arcén no es un carril normal",
+          "body": "Quién debe usarlo depende del vehículo y de la situación.",
+          "memory": "Vehículo + vía deciden"
+        },
+        {
+          "title": "Autopista/autovía",
+          "body": "Hay usuarios y maniobras prohibidos; identifica si el vehículo puede entrar antes de pensar en velocidades.",
+          "memory": "¿Puede estar aquí?"
+        },
+        {
+          "title": "Carriles especiales",
+          "body": "Reversibles, adicionales y sentido contrario tienen reglas propias de luces y velocidad.",
+          "memory": "Carril especial = reglas especiales"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p121.webp",
+        "study_pages/p122.webp",
+        "study_pages/p123.webp",
+        "study_pages/p124.webp",
+        "study_pages/p125.webp",
+        "study_pages/p126.webp",
+        "study_pages/p127.webp",
+        "study_pages/p128.webp"
+      ],
+      "manual_page_numbers": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "7": {
+      "cards": [
+        {
+          "title": "Velocidad adecuada",
+          "body": "El límite máximo no significa que siempre debas circular a esa velocidad.",
+          "memory": "LEGAL no siempre = SEGURA"
+        },
+        {
+          "title": "Reacción + frenado = detención",
+          "body": "Lo que recorres antes de frenar también cuenta.",
+          "memory": "DETENCIÓN = REACCIÓN + FRENADO"
+        },
+        {
+          "title": "Más velocidad, más espacio",
+          "body": "La distancia necesaria crece con velocidad y empeora con lluvia, fatiga o mal estado del vehículo.",
+          "memory": "Velocidad sube → margen sube"
+        },
+        {
+          "title": "Distancia de seguridad",
+          "body": "Debe permitir reaccionar sin colisionar si el de delante frena de forma brusca.",
+          "memory": "Deja tiempo, no solo metros"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p129.webp",
+        "study_pages/p130.webp",
+        "study_pages/p131.webp",
+        "study_pages/p132.webp",
+        "study_pages/p133.webp",
+        "study_pages/p134.webp"
+      ],
+      "manual_page_numbers": [
+        129,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "8": {
+      "cards": [
+        {
+          "title": "RSM",
+          "body": "Toda maniobra: Retrovisor, Señalización y Maniobra.",
+          "memory": "R · S · M"
+        },
+        {
+          "title": "Incorporarse no da prioridad",
+          "body": "Quien entra debe comprobar que puede hacerlo sin obligar a otros a frenar bruscamente.",
+          "memory": "ENTRAS → CEDES"
+        },
+        {
+          "title": "Adelantar = ver + espacio + retorno",
+          "body": "Antes de salir piensa si podrás volver al carril con margen.",
+          "memory": "SALIR no basta; hay que VOLVER"
+        },
+        {
+          "title": "Ciclistas y usuarios vulnerables",
+          "body": "Las distancias y la forma de adelantar exigen especial precaución.",
+          "memory": "Más vulnerable → más margen"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p135.webp",
+        "study_pages/p136.webp",
+        "study_pages/p137.webp",
+        "study_pages/p138.webp"
+      ],
+      "manual_page_numbers": [
+        135,
+        136,
+        137,
+        138
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "9": {
+      "cards": [
+        {
+          "title": "Giro: colócate antes",
+          "body": "Señaliza y sitúate correctamente antes de llegar al punto de giro.",
+          "memory": "PREPARA → AVISA → GIRA"
+        },
+        {
+          "title": "Cambio de sentido",
+          "body": "No es un giro cualquiera: visibilidad, lugar y señalización condicionan si está permitido.",
+          "memory": "Si dudas por visibilidad, mala señal"
+        },
+        {
+          "title": "Marcha atrás: excepcional",
+          "body": "Úsala solo en los supuestos permitidos y el recorrido imprescindible.",
+          "memory": "ATRÁS = excepción, no atajo"
+        },
+        {
+          "title": "No confundas maniobras",
+          "body": "Giro, cambio de sentido y marcha atrás tienen objetivos y límites distintos.",
+          "memory": "Nombra la maniobra antes de responder"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p139.webp",
+        "study_pages/p140.webp"
+      ],
+      "manual_page_numbers": [
+        139,
+        140
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "10": {
+      "cards": [
+        {
+          "title": "Detención, parada, estacionamiento",
+          "body": "Detención suele ser involuntaria; parada es breve y voluntaria; estacionamiento es lo demás.",
+          "memory": "D · P · E"
+        },
+        {
+          "title": "Dos minutos no lo explican todo",
+          "body": "En una parada también importa no abandonar el vehículo.",
+          "memory": "PARADA = breve + conductor disponible"
+        },
+        {
+          "title": "Dónde no inmovilizar",
+          "body": "Visibilidad, cruces, carriles, pasos y zonas reservadas suelen ser claves.",
+          "memory": "Si estorba o crea riesgo, sospecha"
+        },
+        {
+          "title": "Avería y V16",
+          "body": "Primero protege la escena y evita exponerte al tráfico.",
+          "memory": "Hazte visible sin convertirte en otra víctima"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p141.webp",
+        "study_pages/p142.webp",
+        "study_pages/p143.webp",
+        "study_pages/p144.webp",
+        "study_pages/p145.webp",
+        "study_pages/p146.webp"
+      ],
+      "manual_page_numbers": [
+        141,
+        142,
+        143,
+        144,
+        145,
+        146
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "11": {
+      "cards": [
+        {
+          "title": "Sin señal: derecha",
+          "body": "En una intersección sin señalización, la derecha es la regla de partida, con excepciones.",
+          "memory": "SIN SEÑAL → DERECHA"
+        },
+        {
+          "title": "Excepciones cambian el resultado",
+          "body": "Vía pavimentada/no pavimentada, autopista, glorieta y vehículos especiales pueden alterar la prioridad.",
+          "memory": "Busca primero la excepción"
+        },
+        {
+          "title": "Peatones y ciclistas",
+          "body": "Hay situaciones donde su prioridad está expresamente protegida.",
+          "memory": "Usuario vulnerable = máxima atención"
+        },
+        {
+          "title": "Estrechamientos",
+          "body": "La señalización, quién entró primero y la dificultad de maniobra pueden decidir.",
+          "memory": "No resuelvas todos los estrechamientos igual"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p147.webp",
+        "study_pages/p148.webp",
+        "study_pages/p149.webp",
+        "study_pages/p150.webp"
+      ],
+      "manual_page_numbers": [
+        147,
+        148,
+        149,
+        150
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "12": {
+      "cards": [
+        {
+          "title": "Ocupantes seguros",
+          "body": "Personas y equipaje deben colocarse sin limitar visión ni movimientos del conductor.",
+          "memory": "Nada suelto, nada bloqueando"
+        },
+        {
+          "title": "SRI",
+          "body": "Edad/talla, plaza y sistema adecuado son los datos que cambian la respuesta.",
+          "memory": "NIÑO → TALLA → PLAZA → SRI"
+        },
+        {
+          "title": "Carga: estabilidad y señalización",
+          "body": "La carga no debe comprometer estabilidad, visibilidad ni caer a la vía.",
+          "memory": "SUJETA · REPARTE · SEÑALIZA"
+        },
+        {
+          "title": "Remolques",
+          "body": "Ligero/no ligero cambia documentación, velocidad y otras obligaciones.",
+          "memory": "Primero identifica el remolque"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p151.webp",
+        "study_pages/p152.webp",
+        "study_pages/p153.webp",
+        "study_pages/p154.webp",
+        "study_pages/p155.webp",
+        "study_pages/p156.webp",
+        "study_pages/p157.webp",
+        "study_pages/p158.webp",
+        "study_pages/p159.webp",
+        "study_pages/p160.webp",
+        "study_pages/p161.webp",
+        "study_pages/p162.webp"
+      ],
+      "manual_page_numbers": [
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "13": {
+      "cards": [
+        {
+          "title": "Activa evita; pasiva reduce daño",
+          "body": "Frenos/neumáticos/dirección ayudan a evitar; cinturón/airbag/casco reducen consecuencias.",
+          "memory": "ACTIVA = antes · PASIVA = después"
+        },
+        {
+          "title": "Neumático = contacto con la carretera",
+          "body": "Presión, dibujo y estado influyen en agarre y frenado.",
+          "memory": "4 huellas pequeñas sostienen todo el coche"
+        },
+        {
+          "title": "Frenos y dirección",
+          "body": "Si fallan, el problema es control del vehículo; aprende síntomas y mantenimiento básico.",
+          "memory": "Control = dirección + frenado + adherencia"
+        },
+        {
+          "title": "Cinturón y airbag trabajan juntos",
+          "body": "El airbag complementa, no sustituye, al cinturón.",
+          "memory": "AIRBAG + CINTURÓN"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p163.webp",
+        "study_pages/p164.webp",
+        "study_pages/p165.webp",
+        "study_pages/p166.webp",
+        "study_pages/p167.webp",
+        "study_pages/p168.webp",
+        "study_pages/p169.webp",
+        "study_pages/p170.webp",
+        "study_pages/p171.webp",
+        "study_pages/p172.webp",
+        "study_pages/p173.webp",
+        "study_pages/p174.webp"
+      ],
+      "manual_page_numbers": [
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "14": {
+      "cards": [
+        {
+          "title": "Motor: reconoce lo básico",
+          "body": "Gasolina y diésel producen la combustión de forma diferente, pero en test importa sobre todo identificar sistemas y mantenimiento.",
+          "memory": "No conviertas el teórico en mecánica avanzada"
+        },
+        {
+          "title": "Testigos y niveles",
+          "body": "Aceite, refrigerante, batería y frenos avisan de problemas distintos.",
+          "memory": "COLOR + SÍMBOLO + SISTEMA"
+        },
+        {
+          "title": "Conducción eficiente",
+          "body": "Anticipar, usar marchas adecuadas y evitar aceleraciones innecesarias reduce consumo.",
+          "memory": "SUAVE = seguro + eficiente"
+        },
+        {
+          "title": "Mantenimiento preventivo",
+          "body": "Revisar antes de fallar evita averías y mejora seguridad.",
+          "memory": "MANTENER cuesta menos que REPARAR"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p175.webp",
+        "study_pages/p176.webp",
+        "study_pages/p177.webp",
+        "study_pages/p178.webp",
+        "study_pages/p179.webp"
+      ],
+      "manual_page_numbers": [
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "15": {
+      "cards": [
+        {
+          "title": "Tu estado cambia tu conducción",
+          "body": "Alcohol, drogas, fatiga, sueño y estrés afectan percepción, decisión y reacción.",
+          "memory": "Si cambia tu mente, cambia tu distancia de seguridad"
+        },
+        {
+          "title": "Alcohol: no busques trucos",
+          "body": "Comida, café o ducha no eliminan el alcohol de forma rápida.",
+          "memory": "Solo el tiempo reduce la alcoholemia"
+        },
+        {
+          "title": "Fatiga y sueño",
+          "body": "Más errores, reacción más lenta y peor percepción: la solución eficaz es parar y descansar.",
+          "memory": "SUEÑO → PARAR"
+        },
+        {
+          "title": "Distracción",
+          "body": "Móvil, manipular dispositivos o apartar la vista multiplica el tiempo sin controlar la vía.",
+          "memory": "2 segundos mirando fuera = muchos metros a ciegas"
+        },
+        {
+          "title": "Zona de incertidumbre",
+          "body": "Niños, peatones, animales o vehículos que pueden invadir tu trayectoria exigen anticipación.",
+          "memory": "Si puede pasar algo, deja margen antes"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p180.webp",
+        "study_pages/p181.webp",
+        "study_pages/p182.webp",
+        "study_pages/p183.webp",
+        "study_pages/p184.webp",
+        "study_pages/p185.webp",
+        "study_pages/p186.webp",
+        "study_pages/p187.webp",
+        "study_pages/p188.webp",
+        "study_pages/p189.webp",
+        "study_pages/p190.webp",
+        "study_pages/p191.webp"
+      ],
+      "manual_page_numbers": [
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "16": {
+      "cards": [
+        {
+          "title": "PAS",
+          "body": "Protege, Avisa, Socorre: ese orden evita empeorar el accidente.",
+          "memory": "P · A · S"
+        },
+        {
+          "title": "No muevas por mover",
+          "body": "A una víctima no se la desplaza salvo necesidad justificada por un peligro mayor.",
+          "memory": "Primero no hacer más daño"
+        },
+        {
+          "title": "Viaje preparado",
+          "body": "Descanso, documentación y revisión del vehículo reducen problemas antes de salir.",
+          "memory": "El viaje seguro empieza antes de arrancar"
+        },
+        {
+          "title": "Civismo vial",
+          "body": "Convivencia, paciencia y respeto por usuarios vulnerables también son seguridad vial.",
+          "memory": "Conducir bien es convivir"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p192.webp",
+        "study_pages/p193.webp",
+        "study_pages/p194.webp",
+        "study_pages/p195.webp",
+        "study_pages/p196.webp",
+        "study_pages/p197.webp",
+        "study_pages/p198.webp",
+        "study_pages/p199.webp",
+        "study_pages/p200.webp",
+        "study_pages/p201.webp"
+      ],
+      "manual_page_numbers": [
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    },
+    "17": {
+      "cards": [
+        {
+          "title": "ADAS ayudan, tú conduces",
+          "body": "Las ayudas reducen errores o sus consecuencias, pero no sustituyen atención ni responsabilidad.",
+          "memory": "AYUDA ≠ PILOTO AUTOMÁTICO"
+        },
+        {
+          "title": "AEB y avisos de colisión",
+          "body": "Detectan riesgo y pueden avisar o frenar para evitar/reducir una colisión.",
+          "memory": "DETECTA → AVISA → ACTÚA"
+        },
+        {
+          "title": "Carril y ángulo muerto",
+          "body": "Avisos de salida de carril o vehículos fuera de tu campo visual sirven como segunda capa de vigilancia.",
+          "memory": "Espejos primero, ADAS después"
+        },
+        {
+          "title": "Start-Stop y eficiencia",
+          "body": "Algunos sistemas actúan sobre consumo; no todos los ADAS tienen la misma función.",
+          "memory": "Pregunta siempre: ¿qué problema intenta resolver?"
+        }
+      ],
+      "manual_pages": [
+        "study_pages/p174.webp"
+      ],
+      "manual_page_numbers": [
+        174
+      ],
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+    }
+  }
+}

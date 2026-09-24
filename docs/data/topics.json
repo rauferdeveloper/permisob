@@ -2,196 +2,147 @@
   "topics": [
     {
       "id": 0,
-      "title": "Conceptos básicos",
+      "title": "Definiciones, vehículos, masas y tipos de vía",
       "icon": "🚘",
-      "description": "Vehículos, vías y palabras que cambian una respuesta.",
-      "aeol_temas": [
-        1
-      ]
+      "description": "El diccionario del examen: quién, qué vehículo y por qué vía.",
+      "question_count": 23,
+      "bank_pdf_title": "Definiciones, vehículos, masas y tipos de vía"
     },
     {
       "id": 1,
-      "title": "Señales y prioridad",
-      "icon": "🚦",
-      "description": "Quién manda y en qué orden.",
-      "aeol_temas": [
-        2
-      ]
+      "title": "Documentación, permisos, puntos, ITV, seguro y remolques",
+      "icon": "📄",
+      "description": "Papeles, vigencia, puntos y obligaciones administrativas.",
+      "question_count": 104,
+      "bank_pdf_title": "Documentación, permisos, puntos, ITV, seguro y"
     },
     {
       "id": 2,
-      "title": "Velocidad y vías",
-      "icon": "🛣️",
-      "description": "Límites y casos que más confunden.",
-      "aeol_temas": [
-        3
-      ]
+      "title": "Señalización general: prioridad, agentes, semáforos y balizamiento",
+      "icon": "🚦",
+      "description": "Quién manda cuando coinciden varias órdenes y señales.",
+      "question_count": 60,
+      "bank_pdf_title": "Señalización general: prioridad, agentes,"
     },
     {
       "id": 3,
-      "title": "Maniobras",
-      "icon": "↔️",
-      "description": "Giros, cambios de carril, marcha atrás y adelantamientos.",
-      "aeol_temas": [
-        4
-      ]
+      "title": "Señales verticales y de indicación",
+      "icon": "🛑",
+      "description": "Peligro, prohibición, obligación e indicaciones que cambian tu conducta.",
+      "question_count": 298,
+      "bank_pdf_title": "Señales verticales y de indicación"
     },
     {
       "id": 4,
-      "title": "Alumbrado",
-      "icon": "💡",
-      "description": "Qué luces usar y cuándo.",
-      "aeol_temas": [
-        5
-      ]
+      "title": "Marcas viales",
+      "icon": "〰️",
+      "description": "Líneas, flechas, pasos, cebreados y marcas sobre la calzada.",
+      "question_count": 35,
+      "bank_pdf_title": "Marcas viales"
     },
     {
       "id": 5,
-      "title": "Alcohol y drogas",
-      "icon": "🍺",
-      "description": "Tasas, riesgos y preguntas trampa.",
-      "aeol_temas": [
-        6
-      ]
+      "title": "Alumbrado y señalización del vehículo",
+      "icon": "💡",
+      "description": "Qué luz usar, cuándo y para qué: ver, ser visto y señalizar.",
+      "question_count": 112,
+      "bank_pdf_title": "Alumbrado y señalización del vehículo"
     },
     {
       "id": 6,
-      "title": "Seguridad",
-      "icon": "🛡️",
-      "description": "Cinturón, casco, SRI y protección.",
-      "aeol_temas": [
-        7
-      ]
+      "title": "Utilización de la vía: posición, carriles, arcén y autopistas",
+      "icon": "🛣️",
+      "description": "Dónde debes circular y cómo elegir carril según vehículo y vía.",
+      "question_count": 258,
+      "bank_pdf_title": "Utilización de la vía: posición, carriles, arcén y"
     },
     {
       "id": 7,
-      "title": "Vehículo",
-      "icon": "🔧",
-      "description": "Neumáticos, frenos, mantenimiento y averías.",
-      "aeol_temas": [
-        8
-      ]
+      "title": "Velocidades, distancias y frenado",
+      "icon": "⏱️",
+      "description": "Límites, adaptación de velocidad y espacio para reaccionar y detenerte.",
+      "question_count": 108,
+      "bank_pdf_title": "Velocidades, distancias y frenado"
     },
     {
       "id": 8,
-      "title": "Documentación",
-      "icon": "📄",
-      "description": "Permisos, ITV, seguro y puntos.",
-      "aeol_temas": [
-        9
-      ]
+      "title": "Incorporaciones, desplazamientos y adelantamientos",
+      "icon": "↔️",
+      "description": "RSM, cambios de carril, incorporación y adelantamiento seguro.",
+      "question_count": 197,
+      "bank_pdf_title": "Incorporaciones, desplazamientos y"
     },
     {
       "id": 9,
-      "title": "Accidentes",
-      "icon": "🚑",
-      "description": "PAS, emergencias y primeros pasos.",
-      "aeol_temas": [
-        10
-      ]
+      "title": "Cambios de dirección, cambio de sentido y marcha atrás",
+      "icon": "↩️",
+      "description": "Cómo girar, invertir el sentido y usar la marcha atrás correctamente.",
+      "question_count": 66,
+      "bank_pdf_title": "Cambios de dirección, cambio de sentido y"
     },
     {
       "id": 10,
-      "title": "Conducción adversa",
-      "icon": "🌧️",
-      "description": "Lluvia, nieve, niebla y viento.",
-      "keywords": [
-        "lluvia",
-        "nieve",
-        "niebla",
-        "hielo",
-        "viento",
-        "adherencia"
-      ]
+      "title": "Detención, parada, estacionamiento, averías y V16",
+      "icon": "🅿️",
+      "description": "Distinguir inmovilizaciones y actuar ante una avería sin crear otro riesgo.",
+      "question_count": 71,
+      "bank_pdf_title": "Detención, parada, estacionamiento, averías y"
     },
     {
       "id": 11,
-      "title": "Usuarios vulnerables",
-      "icon": "🚶",
-      "description": "Peatones, ciclistas y motos.",
-      "keywords": [
-        "peatón",
-        "peatones",
-        "ciclista",
-        "ciclistas",
-        "bicicleta",
-        "ciclomotor",
-        "motocicleta"
-      ]
+      "title": "Prioridad de paso",
+      "icon": "🔀",
+      "description": "Intersecciones, glorietas, estrechamientos, peatones y excepciones.",
+      "question_count": 79,
+      "bank_pdf_title": "Prioridad de paso"
     },
     {
       "id": 12,
-      "title": "Conducción segura",
-      "icon": "🧠",
-      "description": "Fatiga, distracciones y percepción.",
-      "keywords": [
-        "fatiga",
-        "sueño",
-        "distracción",
-        "móvil",
-        "telefono",
-        "teléfono",
-        "somnolencia"
-      ]
+      "title": "Personas, carga, mercancías y remolques",
+      "icon": "📦",
+      "description": "Ocupantes, SRI, casco, carga, dimensiones y señalización.",
+      "question_count": 162,
+      "bank_pdf_title": "Personas, carga, mercancías y remolques"
     },
     {
       "id": 13,
-      "title": "ADAS",
-      "icon": "🤖",
-      "description": "Ayudas a la conducción y sus límites.",
-      "keywords": [
-        "ADAS",
-        "sistema",
-        "asistente",
-        "frenado automático",
-        "ángulo muerto",
-        "carril"
-      ]
+      "title": "Seguridad del vehículo: neumáticos, frenos, dirección y protección",
+      "icon": "🛡️",
+      "description": "Seguridad activa y pasiva, elementos del vehículo y protección de ocupantes.",
+      "question_count": 182,
+      "bank_pdf_title": "Seguridad del vehículo: neumáticos, frenos,"
     },
     {
       "id": 14,
-      "title": "Carga y pasajeros",
-      "icon": "🚚",
-      "description": "Colocación, dimensiones y seguridad.",
-      "keywords": [
-        "carga",
-        "pasajero",
-        "ocupante",
-        "equipaje",
-        "transportar"
-      ]
+      "title": "Motor, mantenimiento, conducción eficiente y medio ambiente",
+      "icon": "🔧",
+      "description": "Mecánica básica, mantenimiento preventivo y conducción eficiente.",
+      "question_count": 108,
+      "bank_pdf_title": "Motor, mantenimiento, conducción eficiente y"
     },
     {
       "id": 15,
-      "title": "Parada y estacionamiento",
-      "icon": "🅿️",
-      "description": "Dónde se puede, dónde no y por qué.",
-      "keywords": [
-        "parada",
-        "estacionamiento",
-        "estacionar",
-        "detención"
-      ]
+      "title": "Estado psicofísico y situaciones de riesgo",
+      "icon": "🧠",
+      "description": "Alcohol, drogas, fatiga, distracciones, percepción y zonas de incertidumbre.",
+      "question_count": 711,
+      "bank_pdf_title": "Estado psicofísico y situaciones de riesgo"
     },
     {
       "id": 16,
-      "title": "Señalización especial",
-      "icon": "🔺",
-      "description": "Obras, agentes, balizamiento y V16.",
-      "keywords": [
-        "obras",
-        "agente",
-        "balizamiento",
-        "V16",
-        "emergencia"
-      ]
+      "title": "Accidentes, viajes, civismo y primeros auxilios",
+      "icon": "🚑",
+      "description": "PAS, actuación ante víctimas, preparación del viaje y comportamiento seguro.",
+      "question_count": 57,
+      "bank_pdf_title": "Accidentes, viajes y primeros auxilios"
     },
     {
       "id": 17,
-      "title": "Repaso final",
-      "icon": "🏁",
-      "description": "Trampas recurrentes y mezcla de todos los temas.",
-      "all": true
+      "title": "ADAS: ayudas a la conducción",
+      "icon": "🤖",
+      "description": "Sistemas que ayudan a prevenir errores sin sustituir al conductor.",
+      "question_count": 9,
+      "bank_pdf_title": "ADAS: ayudas a la conducción"
     }
   ]
 }

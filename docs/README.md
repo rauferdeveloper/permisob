@@ -40,3 +40,7 @@ images/
 ## Turso / Worker
 La web funciona sin servidor para estudiar; el progreso se guarda en `localStorage`.
 Si quieres recuperar el progreso remoto entre dispositivos, configura `apiBase` y `userKey` en `config.js` con el Worker que ya uses.
+
+
+## v10 · práctica por temas
+Los temas y cantidades coinciden con el banco AEOL/PDF: 23, 425, 372, 393, 112, 152, 104, 861, 56, 45 y 93 preguntas, más 4 sin tema. Cada tema permite 5/10/30, cantidad personalizada, todas las pendientes o solo falladas. No se repite una pregunta dentro de la misma vuelta hasta completar todas las del tema; al terminar comienza una nueva vuelta.
