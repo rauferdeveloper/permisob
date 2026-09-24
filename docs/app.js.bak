@@ -61,7 +61,7 @@
 
   function freshState(){
     return {
-      version:12, xp:0, streak:0, bestStreak:0, lastActive:null, lastActivityDate:null, activityDates:[], dailyXp:0, dailyDate:todayKey(), level:1,
+      version:11, xp:0, streak:0, lastActive:null, dailyXp:0, dailyDate:todayKey(),
       currentTopic:0, topics:{}, topicPractice:{}, simulators:{}, mistakes:[], history:[], lastSync:null,
       diagnostics:{local:"OK",remote:"No configurado",merge:"Pendiente",bank:"Cargando…"}
     };
@@ -74,13 +74,6 @@
     const out = Object.assign(freshState(), s || {});
     out.topics ||= {}; out.topicPractice ||= {}; out.simulators ||= {}; out.mistakes ||= []; out.history ||= []; out.diagnostics ||= {};
     if(out.dailyDate !== todayKey()){ out.dailyXp=0; out.dailyDate=todayKey(); }
-    out.activityDates = Array.isArray(out.activityDates) ? [...new Set(out.activityDates)] : [];
-    if(!out.lastActivityDate && out.lastActive){ out.lastActivityDate=String(out.lastActive).slice(0,10); }
-    if(!out.activityDates.length && out.lastActivityDate) out.activityDates=[out.lastActivityDate];
-    const calculated=streakFromDates(out.activityDates);
-    out.streak = calculated || ((out.version||0)<12 ? Number(out.streak)||0 : 0);
-    out.bestStreak = Math.max(Number(out.bestStreak)||0, Number(out.streak)||0);
-    out.version = 12;
     return out;
   }
   function saveState({sync=true}={}){
@@ -119,37 +112,7 @@
       return false;
     }finally{remoteWriteInProgress=false;}
   }
-  function todayKey(d=new Date()){
-    const y=d.getFullYear(), m=String(d.getMonth()+1).padStart(2,"0"), day=String(d.getDate()).padStart(2,"0");
-    return `${y}-${m}-${day}`;
-  }
-  function dateKeyOffset(days){const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+days);return todayKey(d);}
-  function streakFromDates(dates){
-    const active=new Set(dates||[]);
-    let offset=active.has(todayKey())?0:(active.has(dateKeyOffset(-1))?-1:null);
-    if(offset===null)return 0;
-    let count=0;while(active.has(dateKeyOffset(offset))){count++;offset--;}return count;
-  }
-  function registerActivity(xp=0, reason="actividad"){
-    const today=todayKey(), yesterday=dateKeyOffset(-1);
-    if(state.dailyDate!==today){state.dailyDate=today;state.dailyXp=0;}
-    if(xp>0){state.xp=(state.xp||0)+xp;state.dailyXp=(state.dailyXp||0)+xp;}
-    if(state.lastActivityDate!==today){
-      state.lastActivityDate=today;
-      state.activityDates=[...new Set([...(state.activityDates||[]),today])].sort().slice(-120);
-    }
-    state.streak=streakFromDates(state.activityDates);
-    state.bestStreak=Math.max(state.bestStreak||0,state.streak||0);
-    state.lastActive=new Date().toISOString();
-    state.level=Math.max(1,Math.floor((state.xp||0)/250)+1);
-    return {xp,reason};
-  }
-  function addXp(n,reason="actividad"){return registerActivity(Math.max(0,Number(n)||0),reason);}
-  function levelInfo(){
-    const xp=state.xp||0, level=Math.max(1,Math.floor(xp/250)+1), inLevel=xp%250;
-    const labels=["Arrancando","Cogiendo ritmo","Conductor atento","Buen criterio","Modo examen","Casi listo","A por el aprobado","Dominando el teórico"];
-    return {level,inLevel,next:250,label:labels[Math.min(labels.length-1,level-1)]};
-  }
+  function todayKey(){ return new Date().toISOString().slice(0,10); }
 
   function bindNavigation(){
     document.querySelectorAll("[data-route]").forEach(el=>el.addEventListener("click",()=>route(el.dataset.route)));
@@ -178,20 +141,17 @@
 
   function renderAll(){ renderHeader(); renderWeek(); renderPath(); renderTopics(); renderSimulators(); renderMistakes(); renderProgress(); }
   function renderHeader(){
-    const info=levelInfo();
     $("xpTop").textContent=state.xp||0; $("streakTop").textContent=state.streak||0; $("streakCard").textContent=`${state.streak||0} días`;
-    if($("bestStreakTop")) $("bestStreakTop").textContent=state.bestStreak||0;
-    const goal=CFG.dailyGoalXp||100, d=Math.min(state.dailyXp||0,goal);
-    $("dailyText").textContent=`${state.dailyXp||0} / ${goal} XP`; $("dailyBar").style.width=`${Math.min(100,(d/goal)*100)}%`;
-    $("levelNumber").textContent=info.level; $("levelLabel").textContent=info.label;
+    const goal=CFG.dailyGoalXp||20, d=Math.min(state.dailyXp||0,goal);
+    $("dailyText").textContent=`${d} / ${goal} XP`; $("dailyBar").style.width=`${Math.min(100,(d/goal)*100)}%`;
+    const level=Math.max(1,Math.floor((state.xp||0)/100)+1); $("levelNumber").textContent=level;
+    $("levelLabel").textContent=level<3?"Empezando":level<7?"Cogiendo ritmo":"A por el aprobado";
     $("mistakesBadge").textContent=state.mistakes.length;
     $("syncMini").textContent=state.lastSync?"Sincronizado":"Guardado local";
   }
   function renderWeek(){
-    const wrap=$("weekDots"); wrap.innerHTML=""; const letters=["L","M","X","J","V","S","D"];
-    const now=new Date(), monday=new Date(now); monday.setHours(12,0,0,0); monday.setDate(now.getDate()-((now.getDay()+6)%7));
-    const active=new Set(state.activityDates||[]);
-    letters.forEach((l,i)=>{const dt=new Date(monday);dt.setDate(monday.getDate()+i);const key=todayKey(dt),done=active.has(key);const d=document.createElement("div");d.className="week-day"+(done?" done":"");d.innerHTML=`<i>${done?"✓":""}</i><span>${l}</span>`;wrap.appendChild(d);});
+    const wrap=$("weekDots"); wrap.innerHTML=""; const letters=["L","M","X","J","V","S","D"]; const day=(new Date().getDay()+6)%7;
+    letters.forEach((l,i)=>{const d=document.createElement("div");d.className="week-day"+(i<=day&&(state.streak||0)>0?" done":"");d.innerHTML=`<i>${i<=day&&(state.streak||0)>0?"✓":""}</i><span>${l}</span>`;wrap.appendChild(d);});
   }
   function topicState(i){
     const base=state.topics[i] || {};
@@ -229,9 +189,6 @@
   }
   function renderProgress(){
     $("xpMetric").textContent=state.xp||0; $("streakMetric").textContent=`${state.streak||0} días`; const sims=Object.values(state.simulators).filter(x=>x.done); $("testsMetric").textContent=sims.length;
-    if($("bestStreakMetric")) $("bestStreakMetric").textContent=`${state.bestStreak||0} días`;
-    if($("todayXpMetric")) $("todayXpMetric").textContent=`${state.dailyXp||0} XP`;
-    if($("levelMetric")) $("levelMetric").textContent=`Nivel ${levelInfo().level}`;
     const hist=state.history||[], total=hist.reduce((a,x)=>a+(x.total||0),0), right=hist.reduce((a,x)=>a+(x.correct||0),0); $("accuracyMetric").textContent=total?`${Math.round((right/total)*100)}%`:"—";
     $("topicProgressList").innerHTML=topics.map((t,i)=>{const s=topicState(t.id),p=Math.min(100,s.progress||0);return `<div class="topic-progress-row"><div><span>${t.unassigned?"Extra":`Tema ${t.id}`} · ${esc(t.title)} <small>${s.answered||0}/${s.total||0}</small></span><b>${p}%</b></div><div class="mini-track"><i style="width:${p}%"></i></div></div>`;}).join("");
     renderDiagnostics();
@@ -287,10 +244,7 @@
   }
   function bindStudyControls(t,slides,st){
     $("prevStudy")?.addEventListener("click",()=>{if(currentSlide>0){currentSlide--;$("modalContent").innerHTML=renderStudySlide(t,slides,st);bindStudyControls(t,slides,st);}});
-    $("nextStudy")?.addEventListener("click",()=>{
-      if(currentSlide<slides.length-1){markStudyCard(t.id,currentSlide);currentSlide++;$("modalContent").innerHTML=renderStudySlide(t,slides,st);bindStudyControls(t,slides,st);}
-      else{markStudyCard(t.id,currentSlide);markLessonProgress(t.id);openTopicPracticeMenu(t);}
-    });
+    $("nextStudy")?.addEventListener("click",()=>{if(currentSlide<slides.length-1){currentSlide++;$("modalContent").innerHTML=renderStudySlide(t,slides,st);bindStudyControls(t,slides,st);}else{markLessonProgress(t.id);openTopicPracticeMenu(t);}});
     $("openPracticeFromStudy")?.addEventListener("click",()=>{markLessonProgress(t.id);openTopicPracticeMenu(t);});
     $("openManualGallery")?.addEventListener("click",()=>openManualGallery(t,st));
   }
@@ -301,13 +255,7 @@
     $("backToStudy").onclick=()=>{renderStudyLesson(t);};
     $("manualPractice").onclick=()=>{markLessonProgress(t.id);openTopicPracticeMenu(t);};
   }
-  function markStudyCard(id,cardIndex){
-    const s=state.topics[id]||{};s.studyCards=Array.isArray(s.studyCards)?s.studyCards:[];const key=String(cardIndex);
-    if(!s.studyCards.includes(key)){s.studyCards.push(key);addXp(4,"tarjeta de teoría");}
-    else registerActivity(1,"repaso de teoría");
-    state.topics[id]=s;saveState();renderHeader();renderWeek();
-  }
-  function markLessonProgress(id){const s=state.topics[id]||{};if(!s.lessonDone){s.lessonDone=true;addXp(12,"tema estudiado");}else registerActivity(0,"repaso de tema");state.topics[id]=s;state.currentTopic=Math.max(Number(state.currentTopic)||0,Number(id));saveState();renderAll();}
+  function markLessonProgress(id){const s=state.topics[id]||{};if(!s.lessonDone){s.lessonDone=true;addXp(5);}state.topics[id]=s;state.currentTopic=Math.max(Number(state.currentTopic)||0,Number(id));saveState();renderAll();}
 
   function openTopicPracticeMenu(t){
     const total=getTopicQuestions(t).length, pending=pendingTopicQuestions(t).length, r=practiceRecord(t.id), done=total-pending;
@@ -354,12 +302,9 @@
     if(!selected||quiz.answered)return; const q=quiz.questions[quiz.index], correct=String(selected)===String(q.correcta);quiz.answers.push({preguntaCodigo:q.preguntaCodigo,selected,correct,correctAnswer:q.correcta});quiz.answered=true;
     if(quiz.meta.mode==="exam") return nextQuestion();
     document.querySelectorAll(".answer-option").forEach(b=>{const k=b.dataset.answer;b.disabled=true;if(k===String(q.correcta))b.classList.add("correct");if(k===selected&&!correct)b.classList.add("wrong");});
-    const wasMistake=state.mistakes.some(m=>String(m.preguntaCodigo)===String(q.preguntaCodigo));
     if(correct) removeMistake(q.preguntaCodigo); else addMistake(q);
     if(quiz.meta.topicId!=null) markTopicQuestionSeen(quiz.meta.topicId,q,correct);
-    const earned=correct ? (wasMistake?5:3) : 1;
-    addXp(earned, correct?(wasMistake?"fallo corregido":"pregunta correcta"):"pregunta intentada");
-    const f=$("feedbackArea");f.innerHTML=`<div class="answer-feedback ${correct?"ok":"bad"}"><strong>${correct?"✅ Correcto":"❌ Incorrecto"} <small>+${earned} XP</small></strong><p>${esc(q.explicacion||`La respuesta correcta es ${q.correcta}.`)}</p>${!correct?`<small>Respuesta correcta: <b>${esc(q.correcta)}. ${esc(q[q.correcta]||"")}</b></small>`:""}</div>`;
+    const f=$("feedbackArea");f.innerHTML=`<div class="answer-feedback ${correct?"ok":"bad"}"><strong>${correct?"✅ Correcto":"❌ Incorrecto"}</strong><p>${esc(q.explicacion||`La respuesta correcta es ${q.correcta}.`)}</p>${!correct?`<small>Respuesta correcta: <b>${esc(q.correcta)}. ${esc(q[q.correcta]||"")}</b></small>`:""}</div>`;
     $("quizCheck").textContent=quiz.index===quiz.questions.length-1?"Ver resultado":"Continuar";$("quizCheck").disabled=false;$("quizCheck").onclick=nextQuestion;
     saveState(); renderHeader(); renderMistakes();
   }
@@ -372,10 +317,10 @@
     if(quiz.meta.mode==="exam"){
       quiz.questions.forEach((q,i)=>{const a=quiz.answers[i];if(a?.correct)removeMistake(q.preguntaCodigo);else addMistake(q);});
       state.simulators[quiz.meta.simulator]={done:true,errors,correct,total,date:new Date().toISOString()};
-      addXp(10 + correct*2 + (errors<=3?20:0), errors<=3?"simulacro aprobado":"simulacro completado");
+      addXp(Math.max(5,correct));
     }else{
       if(quiz.meta.topicId!=null){const s=state.topics[quiz.meta.topicId]||{};const ts=topicState(quiz.meta.topicId);s.completed=ts.completed;state.topics[quiz.meta.topicId]=s;state.currentTopic=Math.max(Number(state.currentTopic)||0,Number(quiz.meta.topicId));}
-      addXp(5,"tanda de práctica completada");
+      addXp(Math.max(3,correct*2));
     }
     state.history.push({date:new Date().toISOString(),type:quiz.meta.mode,title:quiz.meta.title,total,correct,errors}); if(state.history.length>100)state.history=state.history.slice(-100);
     saveState(); renderAll();
@@ -394,6 +339,7 @@
   function showError(msg){showModal(`<div class="result-card"><div class="result-emoji">ℹ️</div><h2 id="modalTitle">Información</h2><p>${esc(msg)}</p><button class="btn primary" id="resultClose">Cerrar</button></div>`);$("resultClose").onclick=closeModal;}
   function showModal(html){$("modalContent").innerHTML=html;$("modalBackdrop").hidden=false;document.body.style.overflow="hidden";}
   function closeModal(){$("modalBackdrop").hidden=true;document.body.style.overflow="";quiz=null;}
+  function addXp(n){const last=(state.lastActive||"").slice(0,10), today=todayKey();state.xp=(state.xp||0)+n;state.dailyXp=(state.dailyXp||0)+n;state.dailyDate=today;if(last!==today)state.streak=Math.max(1,(state.streak||0)+1);}
 
   async function syncFromRemote({silent=false}={}){
     state.diagnostics.local="OK";state.diagnostics.remote=CFG.apiBase?"Conectando…":"No configurado";state.diagnostics.merge="Pendiente";renderDiagnostics();
@@ -407,10 +353,7 @@
   }
   function mergeStates(local,remote){
     const out=normalizeState({...remote,...local});
-    out.xp=Math.max(local.xp||0,remote.xp||0);out.streak=Math.max(local.streak||0,remote.streak||0);out.bestStreak=Math.max(local.bestStreak||0,remote.bestStreak||0,out.streak);out.dailyXp=Math.max(local.dailyXp||0,remote.dailyXp||0);out.currentTopic=Math.max(local.currentTopic||0,remote.currentTopic||0);
-    out.lastActivityDate=[local.lastActivityDate,remote.lastActivityDate].filter(Boolean).sort().pop()||null;
-    out.activityDates=[...new Set([...(remote.activityDates||[]),...(local.activityDates||[])])].sort().slice(-120);
-    out.streak=streakFromDates(out.activityDates);out.bestStreak=Math.max(out.bestStreak||0,out.streak||0);
+    out.xp=Math.max(local.xp||0,remote.xp||0);out.streak=Math.max(local.streak||0,remote.streak||0);out.dailyXp=Math.max(local.dailyXp||0,remote.dailyXp||0);out.currentTopic=Math.max(local.currentTopic||0,remote.currentTopic||0);
     out.topics={...(remote.topics||{}),...(local.topics||{})};out.simulators={...(remote.simulators||{}),...(local.simulators||{}) };
     out.topicPractice={};
     const pkeys=new Set([...Object.keys(remote.topicPractice||{}),...Object.keys(local.topicPractice||{})]);

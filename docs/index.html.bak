@@ -44,7 +44,7 @@
         <div class="top-stats">
           <button class="stat-chip" title="Racha"><span>🔥</span><b id="streakTop">0</b></button>
           <button class="stat-chip" title="Puntos"><span>⚡</span><b id="xpTop">0</b></button>
-          <button class="stat-chip" title="Mejor racha"><span>🏆</span><b id="bestStreakTop">0</b></button>
+          <button class="stat-chip" title="Corazones"><span>❤️</span><b>5</b></button>
         </div>
       </header>
 
@@ -58,7 +58,7 @@
               <button class="btn primary" id="continueButton">Continuar</button>
               <button class="btn ghost" data-route="simulators">Hacer simulacro</button>
             </div>
-            <div class="today-line"><span>Meta de hoy</span><strong id="dailyText">0 / 100 XP</strong></div>
+            <div class="today-line"><span>Meta de hoy</span><strong id="dailyText">0 / 20 XP</strong></div>
             <div class="progress-track"><i id="dailyBar"></i></div>
           </div>
 
@@ -129,13 +129,9 @@
           <div class="metric-card"><span>🔥</span><div><small>RACHA</small><strong id="streakMetric">0 días</strong></div></div>
           <div class="metric-card"><span>✅</span><div><small>TEST HECHOS</small><strong id="testsMetric">0</strong></div></div>
           <div class="metric-card"><span>🎯</span><div><small>ACIERTO</small><strong id="accuracyMetric">—</strong></div></div>
-          <div class="metric-card"><span>🏆</span><div><small>MEJOR RACHA</small><strong id="bestStreakMetric">0 días</strong></div></div>
-          <div class="metric-card"><span>☀️</span><div><small>XP HOY</small><strong id="todayXpMetric">0 XP</strong></div></div>
-          <div class="metric-card"><span>🧠</span><div><small>NIVEL</small><strong id="levelMetric">Nivel 1</strong></div></div>
         </div>
         <div class="progress-grid">
           <div class="panel"><h3>Temas</h3><div id="topicProgressList"></div></div>
-          <div class="panel"><h3>Cómo ganas XP</h3><div class="xp-rules"><p><b>📚 Teoría:</b> +4 XP por tarjeta nueva y +12 XP al completar un tema.</p><p><b>✅ Preguntas:</b> +3 XP si aciertas, +1 XP si fallas pero la trabajas.</p><p><b>🎯 Corregir un fallo:</b> +5 XP cuando aciertas una pregunta que tenías fallada.</p><p><b>📝 Simulacro:</b> +10 XP por terminar, +2 XP por acierto y +20 XP extra si apruebas.</p><p><b>🔥 Racha:</b> cuenta cualquier día en que estudies teoría, respondas preguntas o completes un simulacro.</p></div></div>
           <div class="panel sync-panel"><div class="panel-head"><h3>Sincronización</h3><button class="btn tiny ghost" id="syncButton2">Sincronizar ahora</button></div><div id="syncDiagnostics"></div></div>
         </div>
       </section>

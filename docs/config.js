@@ -7,7 +7,7 @@ window.PERMISOB_CONFIG = {
   // Si esta web va a ser pública para varias personas, conviene añadir login/PIN por usuario.
   userKey: "permisob_personal_raul",
 
-  dailyGoalXp: 20,
+  dailyGoalXp: 100,
   questionsUrl: "data/questions.json",
   topicsUrl: "data/topics.json"
 };
