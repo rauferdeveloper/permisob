@@ -9,6 +9,8 @@
   let state = loadLocalState();
   let currentSlide = 0;
   let quiz = null;
+  let remotePushTimer = null;
+  let remoteWriteInProgress = false;
 
   document.addEventListener("DOMContentLoaded", init);
 
@@ -64,9 +66,41 @@
     if(out.dailyDate !== todayKey()){ out.dailyXp=0; out.dailyDate=todayKey(); }
     return out;
   }
-  function saveState(){
+  function saveState({sync=true}={}){
     state.lastActive = new Date().toISOString();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    if(sync && CFG.apiBase) scheduleRemotePush();
+  }
+  function scheduleRemotePush(){
+    clearTimeout(remotePushTimer);
+    remotePushTimer=setTimeout(()=>pushRemoteState({silent:true}),700);
+  }
+  function remoteStatePayload(){
+    const copy=JSON.parse(JSON.stringify(state));
+    delete copy.diagnostics;
+    return copy;
+  }
+  async function pushRemoteState({silent=false}={}){
+    if(!CFG.apiBase || remoteWriteInProgress) return false;
+    remoteWriteInProgress=true;
+    try{
+      const userHash=await sha256(CFG.userKey||"aeol_local"), base=CFG.apiBase.replace(/\/$/,"");
+      const res=await fetch(`${base}/api/state`,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({user:userHash,state:remoteStatePayload()})});
+      const data=await res.json().catch(()=>({}));
+      if(!res.ok || data.ok===false) throw new Error(data.error||`HTTP ${res.status}`);
+      state.lastSync=new Date().toISOString();
+      state.diagnostics={...state.diagnostics,local:"OK",remote:"OK · guardado en Turso",merge:state.diagnostics?.merge||"OK"};
+      localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+      renderHeader(); renderDiagnostics();
+      return true;
+    }catch(err){
+      state.diagnostics.remote=`Error · ${err.message}`;
+      state.diagnostics.merge="Se conserva el estado local";
+      localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+      renderDiagnostics();
+      if(!silent) showError(`No se pudo guardar en Turso, pero tu progreso local sigue intacto. ${err.message}`);
+      return false;
+    }finally{remoteWriteInProgress=false;}
   }
   function todayKey(){ return new Date().toISOString().slice(0,10); }
 
@@ -234,7 +268,7 @@
       const userHash=await sha256(CFG.userKey||"aeol_local"), base=CFG.apiBase.replace(/\/$/,"");
       const res=await fetch(`${base}/api/state?user=${encodeURIComponent(userHash)}`,{headers:{Accept:"application/json"}});if(!res.ok)throw new Error(`HTTP ${res.status}`);
       const p=await res.json(), remote=p.state||p.state_json||p.data||p, parsed=typeof remote==="string"?JSON.parse(remote):remote;
-      state=normalizeState(mergeStates(state,normalizeState(parsed)));state.lastSync=new Date().toISOString();state.diagnostics={...state.diagnostics,local:"OK",remote:"OK · estado recuperado",merge:"OK · local + remoto"};saveState();renderAll();if(!silent)showError("Sincronización completada: se ha fusionado el progreso remoto con el local.");
+      state=normalizeState(mergeStates(state,normalizeState(parsed)));state.lastSync=new Date().toISOString();state.diagnostics={...state.diagnostics,local:"OK",remote:"OK · estado recuperado",merge:"OK · local + remoto"};saveState({sync:false});await pushRemoteState({silent:true});renderAll();if(!silent)showError("Sincronización completada: se ha fusionado el progreso remoto con el local y se ha guardado en Turso.");
     }catch(err){state.diagnostics.remote=`Error · ${err.message}`;state.diagnostics.merge="Se conserva el estado local";saveState();renderDiagnostics();if(!silent)showError(`No se pudo sincronizar, pero tu progreso local sigue intacto. ${err.message}`);}
   }
   function mergeStates(local,remote){const out=normalizeState({...remote,...local});out.xp=Math.max(local.xp||0,remote.xp||0);out.streak=Math.max(local.streak||0,remote.streak||0);out.dailyXp=Math.max(local.dailyXp||0,remote.dailyXp||0);out.currentTopic=Math.max(local.currentTopic||0,remote.currentTopic||0);out.topics={...(remote.topics||{}),...(local.topics||{})};out.simulators={...(remote.simulators||{}),...(local.simulators||{})};const seen=new Set();out.mistakes=[...(remote.mistakes||[]),...(local.mistakes||[])].filter(m=>{const k=String(m.preguntaCodigo||m.id||m.question||"");if(seen.has(k))return false;seen.add(k);return true;});return out;}
