@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="enhancements.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -27,6 +28,7 @@
         <button class="nav-item" data-route="simulators"><span>📝</span><b>Simulacros</b></button>
         <button class="nav-item" data-route="mistakes"><span>🎯</span><b>Falladas</b><em id="mistakesBadge">0</em></button>
         <button class="nav-item" data-route="progress"><span>📈</span><b>Progreso</b></button>
+        <button class="nav-item" data-route="materials"><span>📚</span><b>Biblioteca</b></button>
       </nav>
 
       <div class="sidebar-bottom">
@@ -53,7 +55,7 @@
           <div class="hero-card">
             <div class="eyebrow">TU RUTA AL TEÓRICO</div>
             <h1>Entiende una idea.<br><span>Úsala hasta recordarla.</span></h1>
-            <p>El temario convertido en tarjetas fáciles, cuadros e imágenes del manual, preguntas por tema y 88 simulacros.</p>
+            <p>18 temas fáciles, 15 fichas visuales, dos manuales, preguntas explicadas y los 87 simulacros que ya tenías.</p>
             <div class="hero-actions">
               <button class="btn primary" id="continueButton">Continuar</button>
               <button class="btn ghost" data-route="simulators">Hacer simulacro</button>
@@ -71,6 +73,12 @@
               <div><span class="level-icon">🏁</span><div><small>NIVEL ACTUAL</small><strong id="levelLabel">Empezando</strong></div></div>
               <div class="level-number" id="levelNumber">1</div>
             </div>
+            <div class="compact-card readiness-card">
+                <div class="ready-head"><span>🎯 TU OBJETIVO</span><strong id="homeReadyLabel">Sin datos todavía</strong></div>
+                <div class="ready-metrics"><div><b id="homeMean">—</b><small>Media de fallos</small></div><div><b id="homeLast">—</b><small>Últimos 5 tests</small></div></div>
+                <p id="homeReadyAdvice">Haz tu primer simulacro para empezar a medir tus resultados.</p>
+                <button class="text-button" data-route="progress">Ver mi evolución →</button>
+              </div>
           </aside>
         </div>
 
@@ -106,9 +114,9 @@
       </section>
 
       <section id="view-simulators" class="view">
-        <div class="page-heading"><div><span class="section-kicker">MODO EXAMEN</span><h1>88 simulacros AEOL</h1><p>30 preguntas por test. Corrige al final y convierte cada fallo en una regla.</p></div></div>
+        <div class="page-heading"><div><span class="section-kicker">MODO EXAMEN</span><h1>87 simulacros AEOL</h1><p>30 preguntas por test. Corrige al final y convierte cada fallo en una regla.</p></div></div>
         <div class="simulator-toolbar">
-          <div class="filter-pill active">Todos</div><div class="filter-pill">Pendientes</div><div class="filter-pill">Hechos</div><div class="filter-pill">Aprobados</div>
+          <button class="filter-pill active" data-filter="all">Todos</button><button class="filter-pill" data-filter="pending">Pendientes</button><button class="filter-pill" data-filter="done">Hechos</button><button class="filter-pill" data-filter="approved">Aprobados</button>
         </div>
         <div class="sim-grid" id="simGrid"></div>
       </section>
@@ -124,6 +132,20 @@
 
       <section id="view-progress" class="view">
         <div class="page-heading"><div><span class="section-kicker">TU EVOLUCIÓN</span><h1>Progreso y estadísticas</h1><p>Datos locales + estado remoto recuperado desde Turso cuando esté disponible.</p></div></div>
+        <div class="goal-intro"><strong>La meta del examen: 3 fallos como máximo.</strong> Para ir con margen, el objetivo de entrenamiento será <b>0–1 fallos</b> en cada test de 30 preguntas. Las medias se calculan solo con simulacros terminados, nunca mezclando prácticas cortas.</div>
+        <div class="stats-grid goal-stats">
+          <div class="metric-card metric-important"><span>📉</span><div><small>MEDIA GENERAL · SIMULACROS</small><strong id="avgErrorsMetric">—</strong><em>fallos por test</em></div></div>
+          <div class="metric-card"><span>🕐</span><div><small>MEDIA · ÚLTIMOS 5</small><strong id="avgRecentMetric">—</strong></div></div>
+          <div class="metric-card"><span>🏆</span><div><small>SIMULACROS APROBADOS</small><strong id="passRateMetric">—</strong></div></div>
+          <div class="metric-card"><span>🌟</span><div><small>TESTS CON 0–1 FALLOS</small><strong id="idealRateMetric">—</strong></div></div>
+        </div>
+        <div class="progress-grid analysis-grid">
+          <div class="panel dashboard-panel"><h3>¿Estoy cerca de aprobar?</h3><p id="readinessMessage" class="readiness-copy">Todavía sin resultados de simulacros.</p><div class="milestone-list" id="milestoneList"></div></div>
+          <div class="panel dashboard-panel"><h3>Cómo van bajando mis fallos</h3><div id="errorsTrend" class="errors-trend"><p>Haz tu primer test para ver la evolución.</p></div><small class="chart-caption">Cada barra representa un simulacro completo, ordenados por fecha. Línea orientativa: 3 fallos.</small></div>
+          <div class="panel dashboard-panel"><h3>Temas que más me cuestan</h3><div id="weakTopicList">Empieza a responder para encontrar tus puntos débiles.</div></div>
+          <div class="panel dashboard-panel"><h3>Mis últimos simulacros</h3><div id="attemptHistory"></div></div>
+        </div>
+        <div class="backup-panel panel"><div><h3>Mis datos no se pierden</h3><p>El progreso anterior de esta misma dirección web se conserva. Descarga una copia para cambiar de navegador o de móvil.</p></div><div><button class="btn ghost" id="exportProgress">⬇ Descargar progreso</button><label class="btn ghost import-label">⬆ Importar copia <input type="file" accept=".json,application/json" id="importProgress" hidden></label></div></div>
         <div class="stats-grid">
           <div class="metric-card"><span>⚡</span><div><small>XP TOTAL</small><strong id="xpMetric">0</strong></div></div>
           <div class="metric-card"><span>🔥</span><div><small>RACHA</small><strong id="streakMetric">0 días</strong></div></div>
@@ -139,6 +161,13 @@
           <div class="panel sync-panel"><div class="panel-head"><h3>Sincronización</h3><button class="btn tiny ghost" id="syncButton2">Sincronizar ahora</button></div><div id="syncDiagnostics"></div></div>
         </div>
       </section>
+      <section id="view-materials" class="view">
+        <div class="page-heading"><div><span class="section-kicker">BIBLIOTECA DE ESTUDIO</span><h1>Entiende la norma, luego haz el test</h1><p>Recursos añadidos a tu página: apuntes visuales de 18 temas, manual de clases intensivas y fichas de repaso. Usa las fotos para memorizar y vuelve a las preguntas para comprobarlo.</p></div></div>
+        <div class="library-docs" id="libraryDocs"></div>
+        <div class="section-head library-title"><div><span class="section-kicker">REPASO VISUAL</span><h2>Fichas por tema</h2></div><button class="text-button" data-route="topics">Estudiar por temas →</button></div>
+        <div class="library-grid" id="libraryGrid"></div>
+        <div class="library-footnote">Los materiales son recursos de estudio aportados para esta web. Ante cualquier diferencia de redacción, consulta la normativa y la información vigente de la DGT.</div>
+      </section>
     </main>
   </div>
 
@@ -148,6 +177,7 @@
     <button data-route="simulators">📝<span>Tests</span></button>
     <button data-route="mistakes">🎯<span>Fallos</span></button>
     <button data-route="progress">📈<span>Progreso</span></button>
+    <button data-route="materials">📚<span>Biblioteca</span></button>
   </nav>
 
   <div class="modal-backdrop" id="modalBackdrop" hidden>

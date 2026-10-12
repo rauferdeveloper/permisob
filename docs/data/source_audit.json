@@ -1,0 +1,180 @@
+{
+  "version": "v13.2",
+  "updated_at": "2026-10-12",
+  "total_simulacros": 87,
+  "total_questions": 2610,
+  "recent_source_simulacros": 87,
+  "recent_source_questions": 2610,
+  "original_v12_simulacros_preserved": [],
+  "replaced_question_positions": 35,
+  "source_missing_explanation": [
+    {
+      "simulacro": 12,
+      "pregunta": 30,
+      "codigo": 7098
+    },
+    {
+      "simulacro": 21,
+      "pregunta": 26,
+      "codigo": 320349
+    },
+    {
+      "simulacro": 21,
+      "pregunta": 30,
+      "codigo": 847529
+    },
+    {
+      "simulacro": 23,
+      "pregunta": 25,
+      "codigo": 824732
+    },
+    {
+      "simulacro": 32,
+      "pregunta": 11,
+      "codigo": 891997
+    },
+    {
+      "simulacro": 45,
+      "pregunta": 12,
+      "codigo": 100086816
+    },
+    {
+      "simulacro": 58,
+      "pregunta": 27,
+      "codigo": 320251
+    },
+    {
+      "simulacro": 71,
+      "pregunta": 21,
+      "codigo": 7508610
+    },
+    {
+      "simulacro": 74,
+      "pregunta": 1,
+      "codigo": 321087
+    },
+    {
+      "simulacro": 76,
+      "pregunta": 18,
+      "codigo": 841048
+    },
+    {
+      "simulacro": 87,
+      "pregunta": 18,
+      "codigo": 100010681
+    }
+  ],
+  "remaining_without_explanation": [
+    {
+      "simulacro": 21,
+      "pregunta": 26,
+      "codigo": 320349
+    },
+    {
+      "simulacro": 21,
+      "pregunta": 30,
+      "codigo": 847529
+    },
+    {
+      "simulacro": 23,
+      "pregunta": 25,
+      "codigo": 824732
+    },
+    {
+      "simulacro": 32,
+      "pregunta": 11,
+      "codigo": 891997
+    },
+    {
+      "simulacro": 45,
+      "pregunta": 12,
+      "codigo": 100086816
+    },
+    {
+      "simulacro": 58,
+      "pregunta": 27,
+      "codigo": 320251
+    },
+    {
+      "simulacro": 71,
+      "pregunta": 21,
+      "codigo": 7508610
+    },
+    {
+      "simulacro": 74,
+      "pregunta": 1,
+      "codigo": 321087
+    },
+    {
+      "simulacro": 76,
+      "pregunta": 18,
+      "codigo": 841048
+    },
+    {
+      "simulacro": 87,
+      "pregunta": 18,
+      "codigo": 100010681
+    }
+  ],
+  "study_pdf_files": [
+    "materiales/Temas_PermisoB.pdf",
+    "materiales/Intensivo_PermisoB.pdf"
+  ],
+  "excluded_prior_test": 88,
+  "excluded_prior_test_reason": "El material mas reciente contiene 87 simulacros; se retira el 88 de la v12.",
+  "image_audit": {
+    "updated_images_from_latest_source": 2585,
+    "questions_without_source_image": 25,
+    "removed_unbacked_previous_images": 4,
+    "last_fixed_image_mismatches": [
+      {
+        "simulacro": 26,
+        "pregunta": 13,
+        "codigo": 320850,
+        "image": "images/320850.jpg",
+        "origen": "imagenes/sim26_q13_320850.jpg"
+      },
+      {
+        "simulacro": 33,
+        "pregunta": 17,
+        "codigo": 321426,
+        "image": "images/321426.jpg",
+        "origen": "imagenes/sim33_q17_321426.jpg"
+      },
+      {
+        "simulacro": 49,
+        "pregunta": 9,
+        "codigo": 6749,
+        "image": "images/6749.jpg",
+        "origen": "imagenes/sim49_q09_6749.jpg"
+      }
+    ],
+    "last_removed_old_image_links": [
+      {
+        "simulacro": 1,
+        "pregunta": 18,
+        "codigo": 100023073,
+        "image_previa": "images/100057587.jpg"
+      },
+      {
+        "simulacro": 33,
+        "pregunta": 6,
+        "codigo": 6990,
+        "image_previa": "images/6990.jpg"
+      },
+      {
+        "simulacro": 43,
+        "pregunta": 3,
+        "codigo": 100020424,
+        "image_previa": "images/85209515.jpg"
+      },
+      {
+        "simulacro": 75,
+        "pregunta": 14,
+        "codigo": 8027,
+        "image_previa": "images/8027.jpg"
+      }
+    ],
+    "verified_exact_source_image_matches": 2585
+  }
+}

@@ -21,6 +21,16 @@
           "title": "Peatón también puede empujar",
           "body": "Una persona que empuja determinados vehículos puede tener consideración de peatón.",
           "memory": "No respondas por apariencia; responde por definición"
+        },
+        {
+          "title": "Tres palabras que no son iguales",
+          "body": "Plataforma: calzada y arcenes. Calzada: donde circulan los vehículos. Carril: espacio para una fila.",
+          "memory": "Plataforma > calzada > carril"
+        },
+        {
+          "title": "Qué vehículo es",
+          "body": "Un ciclomotor y un patinete tienen motor, pero no siempre son legalmente «vehículos de motor». Comprueba la categoría antes de elegir.",
+          "memory": "Tener motor ≠ vehículo de motor"
         }
       ],
       "manual_pages": [
@@ -49,7 +59,8 @@
         11,
         12
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 2
     },
     "1": {
       "cards": [
@@ -72,6 +83,16 @@
           "title": "Seguro: piensa en responsabilidad",
           "body": "El obligatorio protege frente a daños a terceros dentro de sus límites.",
           "memory": "Seguro obligatorio → terceros"
+        },
+        {
+          "title": "No confundas los documentos",
+          "body": "Permiso de conducción: autoriza a la persona. Permiso de circulación: al vehículo. Tarjeta ITV: acredita las inspecciones.",
+          "memory": "Persona · Vehículo · Inspección"
+        },
+        {
+          "title": "Tres conceptos",
+          "body": "La ITV comprueba el estado técnico, el seguro cubre la responsabilidad exigida y el permiso B determina lo que puedes conducir.",
+          "memory": "Un documento no sustituye a otro"
         }
       ],
       "manual_pages": [
@@ -92,7 +113,8 @@
         18,
         19
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 2
     },
     "2": {
       "cards": [
@@ -115,6 +137,16 @@
           "title": "Semáforos: mira a quién afectan",
           "body": "Vehículo, peatón, carril o flecha pueden tener semáforos distintos.",
           "memory": "Primero destinatario, después color"
+        },
+        {
+          "title": "Quién manda sobre quién",
+          "body": "Agente → balizamiento circunstancial → semáforo → señal vertical → marca vial. Entre señales del mismo tipo contradictorias, manda la más restrictiva.",
+          "memory": "A · B · S · V · M"
+        },
+        {
+          "title": "Semáforo amarillo fijo",
+          "body": "Hay que detenerse salvo que no pueda hacerse en condiciones de seguridad. Una flecha de carril amarilla indica que debes abandonarlo.",
+          "memory": "Amarillo fijo ≠ acelerar"
         }
       ],
       "manual_pages": [
@@ -141,7 +173,8 @@
         28,
         29
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 7
     },
     "3": {
       "cards": [
@@ -164,6 +197,16 @@
           "title": "Indicación",
           "body": "Autopista, autovía, poblado, servicios y orientación dan contexto para otras reglas.",
           "memory": "Una indicación puede cambiar el escenario entero"
+        },
+        {
+          "title": "Distingue por forma y color",
+          "body": "Triangular roja suele advertir peligro, circular roja normalmente prohíbe o restringe, circular azul normalmente obliga. La forma y su símbolo son importantes.",
+          "memory": "PELIGRO · PROHIBICIÓN · OBLIGACIÓN"
+        },
+        {
+          "title": "No confundas dos pasos",
+          "body": "Una señal triangular de peatones ADVIERTE de un paso próximo; la azul cuadrada puede indicar la situación del paso.",
+          "memory": "Aviso ≠ ubicación"
         }
       ],
       "manual_pages": [
@@ -310,7 +353,8 @@
         98,
         99
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 13
     },
     "4": {
       "cards": [
@@ -333,6 +377,16 @@
           "title": "Flechas y cebreados",
           "body": "Ordenan trayectorias y zonas que no deben ocuparse.",
           "memory": "La calzada también habla"
+        },
+        {
+          "title": "Continua y discontinua",
+          "body": "Línea continua junto a tu lado: no atravesarla como regla general; línea discontinua: maniobra permitida cuando sea segura.",
+          "memory": "Mira TU lado"
+        },
+        {
+          "title": "Marcas amarillas",
+          "body": "Una amarilla continua junto al borde prohíbe parar y estacionar; un zigzag reserva zonas para determinados usos.",
+          "memory": "Amarillo no significa siempre obras"
         }
       ],
       "manual_pages": [
@@ -363,7 +417,8 @@
         110,
         111
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 25
     },
     "5": {
       "cards": [
@@ -386,6 +441,16 @@
           "title": "Señalizar maniobras",
           "body": "Intermitentes y otras señales comunican intención; no conceden prioridad.",
           "memory": "Avisar no te da derecho de paso"
+        },
+        {
+          "title": "Luces: tres funciones",
+          "body": "Las luces permiten ver, ser vistos y señalizar. Las de posición no iluminan lo suficiente para circular solas.",
+          "memory": "Ver · Ser visto · Avisar"
+        },
+        {
+          "title": "Nunca deslumbres",
+          "body": "Las largas iluminan más, pero hay que cambiarlas cuando puedan deslumbrar. La antiniebla trasera no debe utilizarse sin necesidad.",
+          "memory": "La luz más fuerte no es siempre la correcta"
         }
       ],
       "manual_pages": [
@@ -410,7 +475,8 @@
         119,
         120
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 30
     },
     "6": {
       "cards": [
@@ -433,6 +499,16 @@
           "title": "Carriles especiales",
           "body": "Reversibles, adicionales y sentido contrario tienen reglas propias de luces y velocidad.",
           "memory": "Carril especial = reglas especiales"
+        },
+        {
+          "title": "Carril normal",
+          "body": "La norma general es circular por la derecha. El resto de carriles se usa cuando la maniobra lo permita.",
+          "memory": "Derecha como punto de partida"
+        },
+        {
+          "title": "Autovía y autopista",
+          "body": "Los vehículos de movilidad personal no circulan por autopistas ni autovías. Comprueba si la pregunta se refiere a una excepción concreta.",
+          "memory": "No todo vale en toda vía"
         }
       ],
       "manual_pages": [
@@ -455,7 +531,8 @@
         127,
         128
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 35
     },
     "7": {
       "cards": [
@@ -478,6 +555,16 @@
           "title": "Distancia de seguridad",
           "body": "Debe permitir reaccionar sin colisionar si el de delante frena de forma brusca.",
           "memory": "Deja tiempo, no solo metros"
+        },
+        {
+          "title": "Velocidad máxima ≠ adecuada",
+          "body": "Aunque vayas dentro de la velocidad permitida, puede ser excesivo para lluvia, visibilidad o tráfico.",
+          "memory": "Legal no siempre es seguro"
+        },
+        {
+          "title": "Seguridad y reacción",
+          "body": "Mantén la distancia suficiente para detenerte si el de delante frena. En túneles hay reglas específicas de distancia.",
+          "memory": "Más velocidad = más distancia"
         }
       ],
       "manual_pages": [
@@ -496,7 +583,8 @@
         133,
         134
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 42
     },
     "8": {
       "cards": [
@@ -519,6 +607,16 @@
           "title": "Ciclistas y usuarios vulnerables",
           "body": "Las distancias y la forma de adelantar exigen especial precaución.",
           "memory": "Más vulnerable → más margen"
+        },
+        {
+          "title": "Antes de cualquier maniobra",
+          "body": "Observa los espejos y la circulación, señaliza con antelación y después realiza la maniobra cuando sea segura.",
+          "memory": "O · S · M"
+        },
+        {
+          "title": "Adelantar",
+          "body": "Como norma general se adelanta por la izquierda y hay excepciones previstas; no contestes nunca «siempre» sin revisar la situación.",
+          "memory": "Regla general + excepciones"
         }
       ],
       "manual_pages": [
@@ -533,7 +631,8 @@
         137,
         138
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 48
     },
     "9": {
       "cards": [
@@ -556,6 +655,16 @@
           "title": "No confundas maniobras",
           "body": "Giro, cambio de sentido y marcha atrás tienen objetivos y límites distintos.",
           "memory": "Nombra la maniobra antes de responder"
+        },
+        {
+          "title": "Girar o cambiar de sentido",
+          "body": "Girar hacia otra calle no es lo mismo que dar media vuelta. Lee exactamente qué maniobra se pregunta.",
+          "memory": "Dirección ≠ sentido"
+        },
+        {
+          "title": "Marcha atrás",
+          "body": "Es una maniobra excepcional y limitada. No puede utilizarse para circular marcha atrás como si fuera una marcha normal.",
+          "memory": "Solo cuando esté permitida y segura"
         }
       ],
       "manual_pages": [
@@ -566,7 +675,8 @@
         139,
         140
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 54
     },
     "10": {
       "cards": [
@@ -589,6 +699,16 @@
           "title": "Avería y V16",
           "body": "Primero protege la escena y evita exponerte al tráfico.",
           "memory": "Hazte visible sin convertirte en otra víctima"
+        },
+        {
+          "title": "Tres palabras que caen en el test",
+          "body": "Detención por emergencia o necesidad; parada voluntaria de corta duración; estacionamiento cuando no es detención ni parada.",
+          "memory": "Emergencia · Parada · Aparcar"
+        },
+        {
+          "title": "Averías",
+          "body": "Señaliza, protege la zona y evita exponerte al tráfico. Lee las exigencias aplicables a la V16 y luces de emergencia.",
+          "memory": "Primero tu seguridad"
         }
       ],
       "manual_pages": [
@@ -607,7 +727,8 @@
         145,
         146
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 60
     },
     "11": {
       "cards": [
@@ -630,6 +751,16 @@
           "title": "Estrechamientos",
           "body": "La señalización, quién entró primero y la dificultad de maniobra pueden decidir.",
           "memory": "No resuelvas todos los estrechamientos igual"
+        },
+        {
+          "title": "Intersecciones",
+          "body": "Obedece primero la señalización. Si no hay señales, analiza la regla general de prioridad por la derecha y sus excepciones.",
+          "memory": "Señal antes que preferencia"
+        },
+        {
+          "title": "Peatones y ciclistas",
+          "body": "Hay situaciones donde debes cederles el paso. Nunca presupongas prioridad solo porque seas un vehículo más grande.",
+          "memory": "Detecta al usuario vulnerable"
         }
       ],
       "manual_pages": [
@@ -644,7 +775,8 @@
         149,
         150
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 67
     },
     "12": {
       "cards": [
@@ -667,6 +799,16 @@
           "title": "Remolques",
           "body": "Ligero/no ligero cambia documentación, velocidad y otras obligaciones.",
           "memory": "Primero identifica el remolque"
+        },
+        {
+          "title": "Niños y seguridad",
+          "body": "La colocación y el sistema de retención dependen de la estatura y circunstancias permitidas. No basta fijarse solo en la edad.",
+          "memory": "Talla y sistema correcto"
+        },
+        {
+          "title": "Carga",
+          "body": "La carga debe ir bien sujeta y distribuida para no poner en peligro a ocupantes y otros usuarios.",
+          "memory": "Sujetar · Distribuir · No obstaculizar"
         }
       ],
       "manual_pages": [
@@ -697,7 +839,8 @@
         161,
         162
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 74
     },
     "13": {
       "cards": [
@@ -720,6 +863,16 @@
           "title": "Cinturón y airbag trabajan juntos",
           "body": "El airbag complementa, no sustituye, al cinturón.",
           "memory": "AIRBAG + CINTURÓN"
+        },
+        {
+          "title": "Seguridad activa y pasiva",
+          "body": "Activa intenta evitar el accidente (frenos, neumáticos). Pasiva intenta reducir daños cuando ya sucede (cinturón, airbag, apoyacabezas).",
+          "memory": "Evitar ≠ proteger"
+        },
+        {
+          "title": "Neumáticos",
+          "body": "Fíjate en dibujo, presión y desgaste. Su estado influye directamente en frenado y adherencia.",
+          "memory": "Neumático = contacto con la vía"
         }
       ],
       "manual_pages": [
@@ -750,7 +903,8 @@
         173,
         174
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 80
     },
     "14": {
       "cards": [
@@ -773,6 +927,16 @@
           "title": "Mantenimiento preventivo",
           "body": "Revisar antes de fallar evita averías y mejora seguridad.",
           "memory": "MANTENER cuesta menos que REPARAR"
+        },
+        {
+          "title": "Mantenimiento preventivo",
+          "body": "Revisa fluidos, neumáticos y elementos de seguridad antes de viajar, no únicamente cuando se averíen.",
+          "memory": "Prevenir antes de reparar"
+        },
+        {
+          "title": "Conducción eficiente",
+          "body": "Anticípate, mantén la suavidad de mandos y evita aceleraciones y frenadas innecesarias.",
+          "memory": "Anticiparse ahorra y da margen"
         }
       ],
       "manual_pages": [
@@ -789,7 +953,8 @@
         178,
         179
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 89
     },
     "15": {
       "cards": [
@@ -817,6 +982,16 @@
           "title": "Zona de incertidumbre",
           "body": "Niños, peatones, animales o vehículos que pueden invadir tu trayectoria exigen anticipación.",
           "memory": "Si puede pasar algo, deja margen antes"
+        },
+        {
+          "title": "Alcohol, drogas y fatiga",
+          "body": "Todos pueden perjudicar tu reacción y percepción. La opción segura es no conducir bajo sus efectos.",
+          "memory": "Tu cerebro también conduce"
+        },
+        {
+          "title": "Riesgo",
+          "body": "La somnolencia, el estrés y las distracciones reducen la atención incluso cuando el coche está en buenas condiciones.",
+          "memory": "El problema puede ser el conductor"
         }
       ],
       "manual_pages": [
@@ -847,7 +1022,8 @@
         190,
         191
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 103
     },
     "16": {
       "cards": [
@@ -870,6 +1046,16 @@
           "title": "Civismo vial",
           "body": "Convivencia, paciencia y respeto por usuarios vulnerables también son seguridad vial.",
           "memory": "Conducir bien es convivir"
+        },
+        {
+          "title": "En un accidente",
+          "body": "Protege la zona, avisa a los servicios de emergencia y socorre solo de forma segura.",
+          "memory": "P · A · S"
+        },
+        {
+          "title": "Civismo vial",
+          "body": "Evita maniobras bruscas, respeta a usuarios vulnerables y adapta tu conducta al entorno.",
+          "memory": "Menos sorpresas = más seguridad"
         }
       ],
       "manual_pages": [
@@ -896,7 +1082,8 @@
         200,
         201
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 124
     },
     "17": {
       "cards": [
@@ -919,6 +1106,16 @@
           "title": "Start-Stop y eficiencia",
           "body": "Algunos sistemas actúan sobre consumo; no todos los ADAS tienen la misma función.",
           "memory": "Pregunta siempre: ¿qué problema intenta resolver?"
+        },
+        {
+          "title": "Qué es un ADAS",
+          "body": "Son ayudas electrónicas a la conducción: avisan o intervienen en determinadas situaciones, pero no reemplazan al conductor.",
+          "memory": "Ayuda ≠ piloto automático"
+        },
+        {
+          "title": "Cuando intervienen las ayudas",
+          "body": "Control de crucero adaptativo, frenada automática o aviso de carril pueden tener límites por condiciones de la vía y sensores.",
+          "memory": "Conductor siempre responsable"
         }
       ],
       "manual_pages": [
@@ -927,7 +1124,8 @@
       "manual_page_numbers": [
         174
       ],
-      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales."
+      "source_note": "Contenido reorganizado a partir del manual facilitado; las láminas conservan cuadros e imágenes originales.",
+      "temas_page": 96
     }
   }
 }

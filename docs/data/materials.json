@@ -1,0 +1,124 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "temas_pdf_page": 2,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=2",
+      "infografia": "materiales/ficha_tema_01.webp"
+    },
+    {
+      "id": 2,
+      "temas_pdf_page": 7,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=7",
+      "infografia": "materiales/ficha_tema_02.webp"
+    },
+    {
+      "id": 3,
+      "temas_pdf_page": 13,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=13",
+      "infografia": "materiales/ficha_tema_03.webp"
+    },
+    {
+      "id": 4,
+      "temas_pdf_page": 19,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=19",
+      "infografia": "materiales/ficha_tema_04.webp"
+    },
+    {
+      "id": 5,
+      "temas_pdf_page": 25,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=25",
+      "infografia": "materiales/ficha_tema_05.webp"
+    },
+    {
+      "id": 6,
+      "temas_pdf_page": 30,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=30",
+      "infografia": "materiales/ficha_tema_06.webp"
+    },
+    {
+      "id": 7,
+      "temas_pdf_page": 35,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=35",
+      "infografia": "materiales/ficha_tema_07.webp"
+    },
+    {
+      "id": 8,
+      "temas_pdf_page": 42,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=42",
+      "infografia": "materiales/ficha_tema_08.webp"
+    },
+    {
+      "id": 9,
+      "temas_pdf_page": 48,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=48",
+      "infografia": "materiales/ficha_tema_09.webp"
+    },
+    {
+      "id": 10,
+      "temas_pdf_page": 54,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=54",
+      "infografia": "materiales/ficha_tema_10.webp"
+    },
+    {
+      "id": 11,
+      "temas_pdf_page": 60,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=60",
+      "infografia": "materiales/ficha_tema_11.webp"
+    },
+    {
+      "id": 12,
+      "temas_pdf_page": 67,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=67",
+      "infografia": "materiales/ficha_tema_12.webp"
+    },
+    {
+      "id": 13,
+      "temas_pdf_page": 74,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=74",
+      "infografia": "materiales/ficha_tema_13.webp"
+    },
+    {
+      "id": 14,
+      "temas_pdf_page": 80,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=80",
+      "infografia": "materiales/ficha_tema_14.webp"
+    },
+    {
+      "id": 15,
+      "temas_pdf_page": 103,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=103",
+      "infografia": "materiales/ficha_tema_15.webp"
+    },
+    {
+      "id": 16,
+      "temas_pdf_page": 109,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=109",
+      "infografia": ""
+    },
+    {
+      "id": 17,
+      "temas_pdf_page": 116,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=116",
+      "infografia": ""
+    },
+    {
+      "id": 18,
+      "temas_pdf_page": 124,
+      "temas_pdf_url": "materiales/Temas_PermisoB.pdf#page=124",
+      "infografia": ""
+    }
+  ],
+  "pdfs": [
+    {
+      "title": "Temario visual completo (18 temas)",
+      "path": "materiales/Temas_PermisoB.pdf",
+      "pages": 140
+    },
+    {
+      "title": "Clases intensivas y esquemas",
+      "path": "materiales/Intensivo_PermisoB.pdf",
+      "pages": 93
+    }
+  ]
+}
