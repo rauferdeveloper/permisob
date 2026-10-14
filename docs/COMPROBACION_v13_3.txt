@@ -1,0 +1,73 @@
+PERMISOB v13.3 — COMPROBACIÓN DE ENTREGA
+Fecha: 14/10/2026
+
+RESULTADO DEL BANCO
+87 simulacros completos x 30 preguntas = 2.610 preguntas únicas.
+18 temas; suma de los temas = 2.610; sin preguntas sin tema ni duplicadas entre temas.
+Se corrigen 522 asignaciones y se actualizan todos los contadores de metadatos.
+
+ACLARACIÓN SOBRE LAS 630 PREGUNTAS
+El ZIP v13.2 aportado ya tiene 2.610 preguntas con un study_topic válido.
+Su index.json suma 2.610; sus contadores de topics.json estaban desactualizados y sumaban 2.640.
+No se reproduce en este archivo la suma comunicada de 1.980 ni un conjunto de 630 preguntas sin tema.
+Sí se detectan errores de clasificación por contenido, corregidos en esta versión.
+La v13.3 expone las 2.610 preguntas, una vez cada una, en los 18 temas.
+
+CONTENIDO CONSERVADO
+Identificadores, orden de los simulacros, enunciados, opciones, respuestas y explicaciones: idénticos al origen.
+2.585 preguntas con imagen: archivo existente e idéntico byte a byte.
+Las 25 preguntas sin imagen ya carecían de ella en la fuente; se mantienen así.
+Estilos, configuración, Worker, láminas y PDFs: idénticos al origen.
+2.843 archivos originales ajenos a los cambios previstos: verificados byte a byte.
+
+PROGRESO
+Misma clave local permisob_state_v11 y mismo identificador remoto.
+Se mantienen los registros antiguos de práctica y se copian los identificadores ya vistos al tema correcto.
+El contador de cada tema solo cuenta preguntas que realmente pertenecen a ese tema.
+No se alteran XP, historial, respuestas individuales ni registros de fallos durante la migración.
+La migración se hace una vez por estado; no rellena de nuevo las vueltas reiniciadas.
+El progreso real del usuario reside en su navegador/Turso y no dentro del ZIP.
+Para continuar: publicar todo el contenido en el mismo proyecto y dominio.
+Antes de actualizar, descargar una copia desde Progreso; si cambia el dominio o navegador, importarla.
+
+REPARTO FINAL (se conserva la numeración interna 0–17 de la web)
+Tema 00:   26 — Definiciones, vehículos, masas y tipos de vía
+Tema 01:  109 — Documentación, permisos, puntos, ITV, seguro y remolques
+Tema 02:   97 — Señalización general: prioridad, agentes, semáforos y balizamiento
+Tema 03:  234 — Señales verticales y de indicación
+Tema 04:   66 — Marcas viales
+Tema 05:  168 — Alumbrado y señalización del vehículo
+Tema 06:  146 — Utilización de la vía: posición, carriles, arcén y autopistas
+Tema 07:  210 — Velocidades, distancias y frenado
+Tema 08:  139 — Incorporaciones, desplazamientos y adelantamientos
+Tema 09:   75 — Cambios de dirección, cambio de sentido y marcha atrás
+Tema 10:  100 — Detención, parada, estacionamiento, averías y V16
+Tema 11:   95 — Prioridad de paso
+Tema 12:  154 — Personas, carga, mercancías y remolques
+Tema 13:  242 — Seguridad del vehículo: neumáticos, frenos, dirección y protección
+Tema 14:  109 — Motor, mantenimiento, conducción eficiente y medio ambiente
+Tema 15:  484 — Estado psicofísico y situaciones de riesgo
+Tema 16:  142 — Accidentes, viajes, civismo y primeros auxilios
+Tema 17:   14 — ADAS: ayudas a la conducción
+
+Auditoría completa: data/classification_audit_v13_3.json
+Detalle de traslados: data/topic_changes_v13_3.json
+
+PRUEBAS DE FUNCIONAMIENTO EN CHROMIUM
+- Carga del script definitivo y de los 18 temas: correcta.
+- Suma de tarjetas y selección de todas las pendientes en cada uno de los 18 temas: correcta.
+- Cada una de las 2.610 preguntas se alcanza por un único tema.
+- Migración con 522 preguntas trasladadas ya hechas: conserva las 522, sin duplicar contadores.
+- XP, historial, respuestas, fallos, racha histórica y resultados de simulacros: conservados.
+- Nueva vuelta: no se repueblan las preguntas por repetir la migración.
+- Importación de copia antigua y exportación de copia fusionada: correctas.
+- Simulacro completo de 30 preguntas mediante botones de respuesta: correcto; historial previo conservado.
+- Práctica de preguntas, feedback y registro de fallos: correctos.
+- Clase visual, carga de láminas del manual y biblioteca: correctas.
+- Recuperación de un estado antiguo solo remoto y envío del estado migrado: correctos, con API simulada.
+- Errores JavaScript durante estas pruebas: 0.
+
+ALCANCE
+La API remota se simula en las pruebas: no se ha accedido a la base Turso real ni al navegador personal.
+El Worker, la configuración y el identificador remoto se conservan idénticos al origen.
+El ZIP no incluye los datos ficticios utilizados para las pruebas ni modifica el progreso real del usuario.

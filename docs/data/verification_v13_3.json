@@ -1,0 +1,52 @@
+{
+  "integrity": {
+    "questions": 2610,
+    "simulators": 87,
+    "topics": 18,
+    "question_images": 2585,
+    "questions_without_source_image": 25,
+    "reclassified": 522,
+    "unchanged_original_files_verified": 2843,
+    "all_other_question_fields_unchanged": true,
+    "all_questions_in_exactly_one_topic": true,
+    "topic_counts": {
+      "0": 26,
+      "1": 109,
+      "2": 97,
+      "3": 234,
+      "4": 66,
+      "5": 168,
+      "6": 146,
+      "7": 210,
+      "8": 139,
+      "9": 75,
+      "10": 100,
+      "11": 95,
+      "12": 154,
+      "13": 242,
+      "14": 109,
+      "15": 484,
+      "16": 142,
+      "17": 14
+    }
+  },
+  "browser_tests": {
+    "migration": {
+      "movedSeenPreserved": 522,
+      "xpHistoryMistakesAndAnswersPreserved": true,
+      "rawTopicRecordsRetained": true
+    },
+    "newCycleNotRepopulated": true,
+    "importExport": true,
+    "exam30Questions": true,
+    "practiceAndMistakes": true,
+    "visualLessonAndManual": true,
+    "materials": true,
+    "browserErrors": [],
+    "remoteSavedMigratedProgress": true,
+    "productionScriptLoads": true,
+    "remoteOnlyLegacyMigration": true
+  },
+  "remote_test_scope": "API simulada; se conserva el Worker y la configuración originales. No se accede a la base Turso real del usuario.",
+  "user_progress_scope": "Datos de prueba en navegador aislado. El ZIP no contiene ni sustituye el progreso real del usuario."
+}

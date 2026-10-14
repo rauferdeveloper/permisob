@@ -5,6 +5,7 @@
   const STORAGE_KEY = "permisob_state_v11";
   let topics = [];
   let questions = [];
+  let topicChanges = [];
   let study = {topics:{}};
   let materials = {books:[],pdfs:[]};
   let simulatorFilter = "all";
@@ -22,6 +23,7 @@
     bindNavigation();
     bindActions();
     await Promise.all([loadTopics(), loadQuestions(), loadStudy(), loadMaterials()]);
+    validateTopicCoverage();
     renderAll();
     route(location.hash.replace("#","") || "home", false);
     if (CFG.apiBase) syncFromRemote({silent:true});
@@ -62,6 +64,11 @@
       byCode = new Map(questions.map(q => [String(q.preguntaCodigo), q]));
       availableSimulators = new Set(questions.map(q => Number(q.simulacro)));
       await migrateQuestionIds();
+      const changesResponse = await fetch('data/topic_changes_v13_3.json', {cache:"no-store"});
+      if(!changesResponse.ok) throw new Error('No se pudo cargar la revisión de temas v13.3');
+      topicChanges = await changesResponse.json();
+      migrateTopicPractice(state);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       state.diagnostics.bank = `OK · ${questions.length} preguntas`;
     } catch(e){
       state.diagnostics.bank = `Error · ${e.message}`;
@@ -80,6 +87,32 @@
       if(state.perQuestion){for(const [key,val] of Object.entries(state.perQuestion)){const newKey=fix(key);if(key!==newKey){const old=state.perQuestion[newKey]||{};state.perQuestion[newKey]={correct:(old.correct||0)+(val.correct||0),wrong:(old.wrong||0)+(val.wrong||0),lastDate:val.lastDate||old.lastDate};delete state.perQuestion[key];}}}
       state.questionIdsMigratedV13=true;saveState({sync:false});
     }catch(e){console.warn('No se pudo migrar el historial de preguntas',e);}
+  }
+  // Solo se trasladan los identificadores vistos: no se inventan intentos ni XP.
+  // Los registros originales permanecen para conservar historial y contadores.
+  function migrateTopicPractice(s){
+    if(s.topicAssignmentsMigratedV133 || !questions.length || !topicChanges.length) return;
+    s.topicPractice ||= {};
+    for(const change of topicChanges){
+      const code=String(change.preguntaCodigo);
+      const source=s.topicPractice[String(change.anterior)];
+      if(!(source?.seen||[]).some(id=>String(id)===code)) continue;
+      const key=String(change.nuevo);
+      const target=s.topicPractice[key] ||= {cycle:1,seen:[],correct:0,wrong:0};
+      target.seen=[...new Set([...(target.seen||[]).map(String),code])];
+    }
+    s.topicAssignmentsMigratedV133=true;
+  }
+  function validateTopicCoverage(){
+    const ids=new Set(topics.map(t=>Number(t.id)));
+    const unique=new Set(questions.map(q=>String(q.preguntaCodigo)));
+    const missing=questions.filter(q=>q.study_topic==null||!ids.has(Number(q.study_topic))).length;
+    const counts=new Map();
+    for(const q of questions) counts.set(Number(q.study_topic),(counts.get(Number(q.study_topic))||0)+1);
+    for(const t of topics) t.question_count=counts.get(Number(t.id))||0;
+    const ok=questions.length===2610&&unique.size===2610&&ids.size===18&&!missing;
+    state.diagnostics.bank=`${ok?"OK":"Error"} · ${questions.length} preguntas · ${ids.size} temas · ${missing} sin clasificar · v13.3`;
+    if(!ok) console.error('El banco no cumple la cobertura completa v13.3');
   }
   function freshState(){
     return {
@@ -357,7 +390,12 @@
     r.cycle=Math.max(1,Number(r.cycle)||1);r.correct=Number(r.correct)||0;r.wrong=Number(r.wrong)||0;
     state.topicPractice[key]=r;return r;
   }
-  function getPracticeSeen(topicId){return practiceRecord(topicId).seen;}
+  function getPracticeSeen(topicId){
+    return [...new Set(practiceRecord(topicId).seen)].filter(code=>{
+      const q=byCode.get(String(code));
+      return q && Number(q.study_topic)===Number(topicId);
+    });
+  }
   function pendingTopicQuestions(t){
     const seen=new Set(getPracticeSeen(t.id).map(String));
     return getTopicQuestions(t).filter(q=>!seen.has(String(q.preguntaCodigo)));
@@ -515,6 +553,7 @@
     }catch(err){state.diagnostics.remote=`Error · ${err.message}`;state.diagnostics.merge="Se conserva el estado local";saveState();renderDiagnostics();if(!silent)showError(`No se pudo sincronizar, pero tu progreso local sigue intacto. ${err.message}`);}
   }
   function mergeStates(local,remote){
+    migrateTopicPractice(local); migrateTopicPractice(remote);
     const out=normalizeState({...remote,...local});
     out.xp=Math.max(local.xp||0,remote.xp||0);out.streak=Math.max(local.streak||0,remote.streak||0);out.bestStreak=Math.max(local.bestStreak||0,remote.bestStreak||0,out.streak);out.dailyXp=Math.max(local.dailyXp||0,remote.dailyXp||0);out.currentTopic=Math.max(local.currentTopic||0,remote.currentTopic||0);
     out.lastActivityDate=[local.lastActivityDate,remote.lastActivityDate].filter(Boolean).sort().pop()||null;

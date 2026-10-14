@@ -1,6 +1,16 @@
-# PermisoB · Duolingo v13.2 · 87 simulacros, estadísticas y biblioteca
+# PermisoB · Duolingo v13.3 · 87 simulacros, estadísticas y biblioteca
 
 Actualización **sobre la web v12**, manteniendo su diseño y la estructura para publicar en Cloudflare Pages.
+
+## Corrección de temas v13.3
+
+- Los 18 temas contienen exactamente **2.610 preguntas**, cada una en un único tema; los 87 simulacros conservan sus 30 preguntas.
+- Se han corregido **522 asignaciones temáticas** y sincronizado los contadores del banco. Se conservan textos, respuestas, explicaciones, identificadores e imágenes.
+- El ZIP v13.2 recibido ya tenía 2.610 asignaciones: no se reproduce en ese archivo la suma comunicada de 1.980. Sus contadores de `topics.json` estaban desactualizados (sumaban 2.640); existían además preguntas asignadas al bloque equivocado. No se han inventado ni duplicado 630 preguntas.
+- Se conservan XP, estadísticas, intentos, falladas, clases completadas y respuestas registradas. Las preguntas hechas que cambian de tema se reconocen en su nuevo tema. Los registros antiguos se conservan, pero las preguntas trasladadas no inflan el contador de su tema anterior.
+- La migración se aplica una sola vez a cada estado antiguo, también al importar una copia o recuperar progreso remoto. Una nueva vuelta no recupera preguntas antiguas por error.
+- Se mantiene la clave local `permisob_state_v11`, el identificador remoto y el Worker/Turso. **Publica en el mismo dominio y navegador** para continuar con el guardado local. En un dominio nuevo, exporta e importa tu copia de progreso desde Progreso.
+- `COMPROBACION_v13_3.txt` documenta las verificaciones; `data/topic_changes_v13_3.json` detalla cada traslado y `data/classification_audit_v13_3.json` permite comprobar las 2.610 asignaciones.
 
 ## Novedades principales
 

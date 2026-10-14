@@ -1,6 +1,6 @@
 {
-  "version": "v13.2",
-  "updated_at": "2026-10-12",
+  "version": "v13.3",
+  "updated_at": "2026-10-14",
   "total_simulacros": 87,
   "total_questions": 2610,
   "recent_source_simulacros": 87,
@@ -176,5 +176,19 @@
       }
     ],
     "verified_exact_source_image_matches": 2585
+  },
+  "classification_audit": {
+    "previous_archive": "PermisoB_WEB_DUOLINGO_v13_2_IMAGENES_ACTUALIZADAS_87_SIMULACROS.zip",
+    "previous_assigned": 2610,
+    "previous_unassigned": 0,
+    "reported_missing": 630,
+    "reported_missing_reproduced": false,
+    "reclassified": 522,
+    "current_assigned": 2610,
+    "current_unassigned": 0,
+    "topics": 18,
+    "counts_synchronized": true,
+    "question_identifiers_preserved": true,
+    "all_non_topic_question_fields_preserved": true
   }
 }

@@ -5,7 +5,7 @@
       "title": "Definiciones, vehículos, masas y tipos de vía",
       "icon": "🚘",
       "description": "El diccionario del examen: quién, qué vehículo y por qué vía.",
-      "question_count": 23,
+      "question_count": 26,
       "bank_pdf_title": "Definiciones, vehículos, masas y tipos de vía"
     },
     {
@@ -13,7 +13,7 @@
       "title": "Documentación, permisos, puntos, ITV, seguro y remolques",
       "icon": "📄",
       "description": "Papeles, vigencia, puntos y obligaciones administrativas.",
-      "question_count": 104,
+      "question_count": 109,
       "bank_pdf_title": "Documentación, permisos, puntos, ITV, seguro y"
     },
     {
@@ -21,7 +21,7 @@
       "title": "Señalización general: prioridad, agentes, semáforos y balizamiento",
       "icon": "🚦",
       "description": "Quién manda cuando coinciden varias órdenes y señales.",
-      "question_count": 60,
+      "question_count": 97,
       "bank_pdf_title": "Señalización general: prioridad, agentes,"
     },
     {
@@ -29,7 +29,7 @@
       "title": "Señales verticales y de indicación",
       "icon": "🛑",
       "description": "Peligro, prohibición, obligación e indicaciones que cambian tu conducta.",
-      "question_count": 298,
+      "question_count": 234,
       "bank_pdf_title": "Señales verticales y de indicación"
     },
     {
@@ -37,7 +37,7 @@
       "title": "Marcas viales",
       "icon": "〰️",
       "description": "Líneas, flechas, pasos, cebreados y marcas sobre la calzada.",
-      "question_count": 35,
+      "question_count": 66,
       "bank_pdf_title": "Marcas viales"
     },
     {
@@ -45,7 +45,7 @@
       "title": "Alumbrado y señalización del vehículo",
       "icon": "💡",
       "description": "Qué luz usar, cuándo y para qué: ver, ser visto y señalizar.",
-      "question_count": 112,
+      "question_count": 168,
       "bank_pdf_title": "Alumbrado y señalización del vehículo"
     },
     {
@@ -53,7 +53,7 @@
       "title": "Utilización de la vía: posición, carriles, arcén y autopistas",
       "icon": "🛣️",
       "description": "Dónde debes circular y cómo elegir carril según vehículo y vía.",
-      "question_count": 258,
+      "question_count": 146,
       "bank_pdf_title": "Utilización de la vía: posición, carriles, arcén y"
     },
     {
@@ -61,7 +61,7 @@
       "title": "Velocidades, distancias y frenado",
       "icon": "⏱️",
       "description": "Límites, adaptación de velocidad y espacio para reaccionar y detenerte.",
-      "question_count": 108,
+      "question_count": 210,
       "bank_pdf_title": "Velocidades, distancias y frenado"
     },
     {
@@ -69,7 +69,7 @@
       "title": "Incorporaciones, desplazamientos y adelantamientos",
       "icon": "↔️",
       "description": "RSM, cambios de carril, incorporación y adelantamiento seguro.",
-      "question_count": 197,
+      "question_count": 139,
       "bank_pdf_title": "Incorporaciones, desplazamientos y"
     },
     {
@@ -77,7 +77,7 @@
       "title": "Cambios de dirección, cambio de sentido y marcha atrás",
       "icon": "↩️",
       "description": "Cómo girar, invertir el sentido y usar la marcha atrás correctamente.",
-      "question_count": 66,
+      "question_count": 75,
       "bank_pdf_title": "Cambios de dirección, cambio de sentido y"
     },
     {
@@ -85,7 +85,7 @@
       "title": "Detención, parada, estacionamiento, averías y V16",
       "icon": "🅿️",
       "description": "Distinguir inmovilizaciones y actuar ante una avería sin crear otro riesgo.",
-      "question_count": 71,
+      "question_count": 100,
       "bank_pdf_title": "Detención, parada, estacionamiento, averías y"
     },
     {
@@ -93,7 +93,7 @@
       "title": "Prioridad de paso",
       "icon": "🔀",
       "description": "Intersecciones, glorietas, estrechamientos, peatones y excepciones.",
-      "question_count": 79,
+      "question_count": 95,
       "bank_pdf_title": "Prioridad de paso"
     },
     {
@@ -101,7 +101,7 @@
       "title": "Personas, carga, mercancías y remolques",
       "icon": "📦",
       "description": "Ocupantes, SRI, casco, carga, dimensiones y señalización.",
-      "question_count": 162,
+      "question_count": 154,
       "bank_pdf_title": "Personas, carga, mercancías y remolques"
     },
     {
@@ -109,7 +109,7 @@
       "title": "Seguridad del vehículo: neumáticos, frenos, dirección y protección",
       "icon": "🛡️",
       "description": "Seguridad activa y pasiva, elementos del vehículo y protección de ocupantes.",
-      "question_count": 182,
+      "question_count": 242,
       "bank_pdf_title": "Seguridad del vehículo: neumáticos, frenos,"
     },
     {
@@ -117,7 +117,7 @@
       "title": "Motor, mantenimiento, conducción eficiente y medio ambiente",
       "icon": "🔧",
       "description": "Mecánica básica, mantenimiento preventivo y conducción eficiente.",
-      "question_count": 108,
+      "question_count": 109,
       "bank_pdf_title": "Motor, mantenimiento, conducción eficiente y"
     },
     {
@@ -125,7 +125,7 @@
       "title": "Estado psicofísico y situaciones de riesgo",
       "icon": "🧠",
       "description": "Alcohol, drogas, fatiga, distracciones, percepción y zonas de incertidumbre.",
-      "question_count": 711,
+      "question_count": 484,
       "bank_pdf_title": "Estado psicofísico y situaciones de riesgo"
     },
     {
@@ -133,7 +133,7 @@
       "title": "Accidentes, viajes, civismo y primeros auxilios",
       "icon": "🚑",
       "description": "PAS, actuación ante víctimas, preparación del viaje y comportamiento seguro.",
-      "question_count": 57,
+      "question_count": 142,
       "bank_pdf_title": "Accidentes, viajes y primeros auxilios"
     },
     {
@@ -141,7 +141,7 @@
       "title": "ADAS: ayudas a la conducción",
       "icon": "🤖",
       "description": "Sistemas que ayudan a prevenir errores sin sustituir al conductor.",
-      "question_count": 9,
+      "question_count": 14,
       "bank_pdf_title": "ADAS: ayudas a la conducción"
     }
   ]

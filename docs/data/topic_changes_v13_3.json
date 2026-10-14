@@ -1,0 +1,4178 @@
+[
+  {
+    "preguntaCodigo": 6587,
+    "simulacro": 1,
+    "numero_pregunta": 6,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100023073,
+    "simulacro": 1,
+    "numero_pregunta": 18,
+    "anterior": 6,
+    "nuevo": 1,
+    "motivo": "Permisos, puntos, documentación del vehículo o responsabilidades del titular."
+  },
+  {
+    "preguntaCodigo": 85209266,
+    "simulacro": 1,
+    "numero_pregunta": 25,
+    "anterior": 6,
+    "nuevo": 1,
+    "motivo": "Obligaciones administrativas o prohibición de dispositivos de radar."
+  },
+  {
+    "preguntaCodigo": 100086790,
+    "simulacro": 1,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85209398,
+    "simulacro": 2,
+    "numero_pregunta": 14,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 6415,
+    "simulacro": 2,
+    "numero_pregunta": 20,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 851150,
+    "simulacro": 2,
+    "numero_pregunta": 23,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 7454765,
+    "simulacro": 2,
+    "numero_pregunta": 27,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852114641,
+    "simulacro": 2,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100007706,
+    "simulacro": 3,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 320040,
+    "simulacro": 3,
+    "numero_pregunta": 4,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 100058466,
+    "simulacro": 3,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Adaptación de velocidad o distancia de frenado/seguridad."
+  },
+  {
+    "preguntaCodigo": 100057157,
+    "simulacro": 3,
+    "numero_pregunta": 9,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Distancia de seguridad, frenado o efecto de la velocidad."
+  },
+  {
+    "preguntaCodigo": 100057177,
+    "simulacro": 3,
+    "numero_pregunta": 19,
+    "anterior": 6,
+    "nuevo": 9,
+    "motivo": "Posición o señalización para giro, cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 100034580,
+    "simulacro": 3,
+    "numero_pregunta": 23,
+    "anterior": 6,
+    "nuevo": 2,
+    "motivo": "Obligación de obedecer la señalización o a los agentes."
+  },
+  {
+    "preguntaCodigo": 886035,
+    "simulacro": 3,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 892228,
+    "simulacro": 4,
+    "numero_pregunta": 11,
+    "anterior": 6,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 90008643,
+    "simulacro": 4,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 90006808,
+    "simulacro": 4,
+    "numero_pregunta": 27,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 90006529,
+    "simulacro": 4,
+    "numero_pregunta": 29,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 8520185,
+    "simulacro": 5,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Distancia de seguridad, frenado o efecto de la velocidad."
+  },
+  {
+    "preguntaCodigo": 886904,
+    "simulacro": 5,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 90006738,
+    "simulacro": 5,
+    "numero_pregunta": 28,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100058036,
+    "simulacro": 5,
+    "numero_pregunta": 29,
+    "anterior": 6,
+    "nuevo": 14,
+    "motivo": "Repostaje seguro, emisiones, mantenimiento o tratamiento del vehículo al final de su vida útil."
+  },
+  {
+    "preguntaCodigo": 321463,
+    "simulacro": 6,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 6180,
+    "simulacro": 6,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90006622,
+    "simulacro": 6,
+    "numero_pregunta": 17,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 85209653,
+    "simulacro": 6,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Adaptación de velocidad o distancia de frenado/seguridad."
+  },
+  {
+    "preguntaCodigo": 100057130,
+    "simulacro": 7,
+    "numero_pregunta": 5,
+    "anterior": 6,
+    "nuevo": 14,
+    "motivo": "Repostaje seguro, emisiones, mantenimiento o tratamiento del vehículo al final de su vida útil."
+  },
+  {
+    "preguntaCodigo": 893122,
+    "simulacro": 7,
+    "numero_pregunta": 8,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 8520356,
+    "simulacro": 7,
+    "numero_pregunta": 10,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 320238,
+    "simulacro": 7,
+    "numero_pregunta": 20,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 90006805,
+    "simulacro": 7,
+    "numero_pregunta": 21,
+    "anterior": 6,
+    "nuevo": 3,
+    "motivo": "Interpretación de señal vertical."
+  },
+  {
+    "preguntaCodigo": 893865,
+    "simulacro": 7,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852116074,
+    "simulacro": 7,
+    "numero_pregunta": 28,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 85208796,
+    "simulacro": 8,
+    "numero_pregunta": 3,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 852114140,
+    "simulacro": 8,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 320224,
+    "simulacro": 8,
+    "numero_pregunta": 6,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 100010869,
+    "simulacro": 8,
+    "numero_pregunta": 10,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 100087221,
+    "simulacro": 8,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100007980,
+    "simulacro": 8,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85209391,
+    "simulacro": 8,
+    "numero_pregunta": 26,
+    "anterior": 6,
+    "nuevo": 3,
+    "motivo": "Interpretación de señal vertical."
+  },
+  {
+    "preguntaCodigo": 321057,
+    "simulacro": 8,
+    "numero_pregunta": 28,
+    "anterior": 6,
+    "nuevo": 16,
+    "motivo": "Auxilio y traslado excepcional de heridos."
+  },
+  {
+    "preguntaCodigo": 835979,
+    "simulacro": 9,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Adaptación de velocidad o distancia de frenado/seguridad."
+  },
+  {
+    "preguntaCodigo": 826543,
+    "simulacro": 9,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852117203,
+    "simulacro": 9,
+    "numero_pregunta": 4,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 6208,
+    "simulacro": 9,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 100007548,
+    "simulacro": 9,
+    "numero_pregunta": 13,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 85208810,
+    "simulacro": 9,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85208975,
+    "simulacro": 9,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 8,
+    "motivo": "Riesgo durante el adelantamiento con viento o salpicaduras."
+  },
+  {
+    "preguntaCodigo": 8510399,
+    "simulacro": 10,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 887603,
+    "simulacro": 10,
+    "numero_pregunta": 3,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 847516,
+    "simulacro": 10,
+    "numero_pregunta": 7,
+    "anterior": 6,
+    "nuevo": 12,
+    "motivo": "Ocupantes, cinturones, animales y carga transportada."
+  },
+  {
+    "preguntaCodigo": 852117547,
+    "simulacro": 10,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 100011410,
+    "simulacro": 10,
+    "numero_pregunta": 23,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 852116057,
+    "simulacro": 10,
+    "numero_pregunta": 26,
+    "anterior": 15,
+    "nuevo": 8,
+    "motivo": "Riesgo durante el adelantamiento con viento o salpicaduras."
+  },
+  {
+    "preguntaCodigo": 100057119,
+    "simulacro": 11,
+    "numero_pregunta": 7,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 100007976,
+    "simulacro": 11,
+    "numero_pregunta": 17,
+    "anterior": 15,
+    "nuevo": 8,
+    "motivo": "Riesgo durante el adelantamiento con viento o salpicaduras."
+  },
+  {
+    "preguntaCodigo": 100010557,
+    "simulacro": 11,
+    "numero_pregunta": 18,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 90007969,
+    "simulacro": 11,
+    "numero_pregunta": 25,
+    "anterior": 9,
+    "nuevo": 10,
+    "motivo": "Prohibición de parar en intersecciones."
+  },
+  {
+    "preguntaCodigo": 85209002,
+    "simulacro": 11,
+    "numero_pregunta": 28,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 90005496,
+    "simulacro": 12,
+    "numero_pregunta": 4,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 85209460,
+    "simulacro": 12,
+    "numero_pregunta": 6,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 85209412,
+    "simulacro": 12,
+    "numero_pregunta": 7,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100007986,
+    "simulacro": 12,
+    "numero_pregunta": 10,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852115882,
+    "simulacro": 12,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 881960,
+    "simulacro": 12,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 320628,
+    "simulacro": 12,
+    "numero_pregunta": 13,
+    "anterior": 14,
+    "nuevo": 15,
+    "motivo": "Percepción y zonas de incertidumbre."
+  },
+  {
+    "preguntaCodigo": 320406,
+    "simulacro": 12,
+    "numero_pregunta": 25,
+    "anterior": 6,
+    "nuevo": 8,
+    "motivo": "Incorporación, desplazamiento lateral o rebasamiento de un obstáculo."
+  },
+  {
+    "preguntaCodigo": 100041078,
+    "simulacro": 12,
+    "numero_pregunta": 26,
+    "anterior": 8,
+    "nuevo": 9,
+    "motivo": "Posición o señalización para giro, cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 668002,
+    "simulacro": 13,
+    "numero_pregunta": 6,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 100086778,
+    "simulacro": 13,
+    "numero_pregunta": 9,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 887846,
+    "simulacro": 13,
+    "numero_pregunta": 13,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100111515,
+    "simulacro": 13,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 320293,
+    "simulacro": 13,
+    "numero_pregunta": 16,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100010363,
+    "simulacro": 13,
+    "numero_pregunta": 24,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 7007,
+    "simulacro": 13,
+    "numero_pregunta": 26,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 320624,
+    "simulacro": 14,
+    "numero_pregunta": 1,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 852117381,
+    "simulacro": 14,
+    "numero_pregunta": 4,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 6505,
+    "simulacro": 14,
+    "numero_pregunta": 10,
+    "anterior": 8,
+    "nuevo": 1,
+    "motivo": "Permisos, puntos, documentación del vehículo o responsabilidades del titular."
+  },
+  {
+    "preguntaCodigo": 6358,
+    "simulacro": 14,
+    "numero_pregunta": 16,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 667958,
+    "simulacro": 14,
+    "numero_pregunta": 18,
+    "anterior": 6,
+    "nuevo": 2,
+    "motivo": "Obligación de obedecer la señalización o a los agentes."
+  },
+  {
+    "preguntaCodigo": 826344,
+    "simulacro": 14,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Preparación de viajes y equipo para posible bloqueo por nieve."
+  },
+  {
+    "preguntaCodigo": 8510049,
+    "simulacro": 15,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100086697,
+    "simulacro": 15,
+    "numero_pregunta": 13,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90007328,
+    "simulacro": 15,
+    "numero_pregunta": 19,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 8510042,
+    "simulacro": 15,
+    "numero_pregunta": 25,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 85209685,
+    "simulacro": 16,
+    "numero_pregunta": 4,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85208797,
+    "simulacro": 16,
+    "numero_pregunta": 20,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 847513,
+    "simulacro": 16,
+    "numero_pregunta": 24,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 100058167,
+    "simulacro": 17,
+    "numero_pregunta": 1,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 90008435,
+    "simulacro": 17,
+    "numero_pregunta": 3,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 321699,
+    "simulacro": 17,
+    "numero_pregunta": 8,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100058462,
+    "simulacro": 17,
+    "numero_pregunta": 22,
+    "anterior": 15,
+    "nuevo": 12,
+    "motivo": "Transporte de menores, SRI o uso obligatorio del casco."
+  },
+  {
+    "preguntaCodigo": 90007305,
+    "simulacro": 17,
+    "numero_pregunta": 25,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 320101,
+    "simulacro": 17,
+    "numero_pregunta": 26,
+    "anterior": 15,
+    "nuevo": 12,
+    "motivo": "Transporte de menores, SRI o uso obligatorio del casco."
+  },
+  {
+    "preguntaCodigo": 90006521,
+    "simulacro": 17,
+    "numero_pregunta": 27,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85207973,
+    "simulacro": 18,
+    "numero_pregunta": 6,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 100087150,
+    "simulacro": 18,
+    "numero_pregunta": 12,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 320860,
+    "simulacro": 18,
+    "numero_pregunta": 23,
+    "anterior": 6,
+    "nuevo": 16,
+    "motivo": "Auxilio y traslado excepcional de heridos."
+  },
+  {
+    "preguntaCodigo": 320851,
+    "simulacro": 18,
+    "numero_pregunta": 27,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100007850,
+    "simulacro": 18,
+    "numero_pregunta": 29,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90008659,
+    "simulacro": 19,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 320571,
+    "simulacro": 19,
+    "numero_pregunta": 6,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 321647,
+    "simulacro": 19,
+    "numero_pregunta": 16,
+    "anterior": 8,
+    "nuevo": 9,
+    "motivo": "Cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 100057734,
+    "simulacro": 19,
+    "numero_pregunta": 23,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 100057180,
+    "simulacro": 19,
+    "numero_pregunta": 25,
+    "anterior": 8,
+    "nuevo": 13,
+    "motivo": "Cristales, visibilidad y elementos de protección del vehículo."
+  },
+  {
+    "preguntaCodigo": 100057585,
+    "simulacro": 19,
+    "numero_pregunta": 29,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 852116179,
+    "simulacro": 20,
+    "numero_pregunta": 8,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 278590,
+    "simulacro": 20,
+    "numero_pregunta": 14,
+    "anterior": 11,
+    "nuevo": 8,
+    "motivo": "Reglas del adelantamiento en intersecciones o glorietas."
+  },
+  {
+    "preguntaCodigo": 100041403,
+    "simulacro": 20,
+    "numero_pregunta": 15,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 893290,
+    "simulacro": 20,
+    "numero_pregunta": 23,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852117047,
+    "simulacro": 20,
+    "numero_pregunta": 27,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 85209474,
+    "simulacro": 20,
+    "numero_pregunta": 29,
+    "anterior": 8,
+    "nuevo": 9,
+    "motivo": "Cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 852114242,
+    "simulacro": 21,
+    "numero_pregunta": 6,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 320355,
+    "simulacro": 21,
+    "numero_pregunta": 9,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 320136,
+    "simulacro": 21,
+    "numero_pregunta": 10,
+    "anterior": 6,
+    "nuevo": 14,
+    "motivo": "Repostaje seguro, emisiones, mantenimiento o tratamiento del vehículo al final de su vida útil."
+  },
+  {
+    "preguntaCodigo": 100024878,
+    "simulacro": 21,
+    "numero_pregunta": 12,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 826222,
+    "simulacro": 21,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 85210420,
+    "simulacro": 21,
+    "numero_pregunta": 18,
+    "anterior": 11,
+    "nuevo": 9,
+    "motivo": "Posición o señalización para giro, cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 100057954,
+    "simulacro": 22,
+    "numero_pregunta": 4,
+    "anterior": 11,
+    "nuevo": 10,
+    "motivo": "Prohibición de parar en intersecciones."
+  },
+  {
+    "preguntaCodigo": 85209017,
+    "simulacro": 22,
+    "numero_pregunta": 6,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100121647,
+    "simulacro": 22,
+    "numero_pregunta": 8,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 321206,
+    "simulacro": 22,
+    "numero_pregunta": 26,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 100056995,
+    "simulacro": 22,
+    "numero_pregunta": 30,
+    "anterior": 6,
+    "nuevo": 16,
+    "motivo": "Civismo y obligaciones de convivencia entre los usuarios de la vía."
+  },
+  {
+    "preguntaCodigo": 321498,
+    "simulacro": 23,
+    "numero_pregunta": 3,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 100058109,
+    "simulacro": 23,
+    "numero_pregunta": 7,
+    "anterior": 6,
+    "nuevo": 12,
+    "motivo": "Ocupantes, cinturones, animales y carga transportada."
+  },
+  {
+    "preguntaCodigo": 852113864,
+    "simulacro": 23,
+    "numero_pregunta": 9,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 893860,
+    "simulacro": 23,
+    "numero_pregunta": 13,
+    "anterior": 17,
+    "nuevo": 14,
+    "motivo": "Start-Stop y parada automática del motor; no es una ayuda ADAS."
+  },
+  {
+    "preguntaCodigo": 85209372,
+    "simulacro": 23,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Adherencia, cadenas, neumáticos o componentes de seguridad del vehículo."
+  },
+  {
+    "preguntaCodigo": 824732,
+    "simulacro": 23,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852115624,
+    "simulacro": 24,
+    "numero_pregunta": 13,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 852113893,
+    "simulacro": 24,
+    "numero_pregunta": 15,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 321672,
+    "simulacro": 24,
+    "numero_pregunta": 22,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 893212,
+    "simulacro": 24,
+    "numero_pregunta": 23,
+    "anterior": 6,
+    "nuevo": 12,
+    "motivo": "Ocupantes, cinturones, animales y carga transportada."
+  },
+  {
+    "preguntaCodigo": 100087128,
+    "simulacro": 24,
+    "numero_pregunta": 29,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 85209375,
+    "simulacro": 25,
+    "numero_pregunta": 7,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 321558,
+    "simulacro": 25,
+    "numero_pregunta": 9,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100086785,
+    "simulacro": 25,
+    "numero_pregunta": 14,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 100024881,
+    "simulacro": 25,
+    "numero_pregunta": 16,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Adherencia, cadenas, neumáticos o componentes de seguridad del vehículo."
+  },
+  {
+    "preguntaCodigo": 90007918,
+    "simulacro": 25,
+    "numero_pregunta": 18,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 85209033,
+    "simulacro": 25,
+    "numero_pregunta": 25,
+    "anterior": 11,
+    "nuevo": 8,
+    "motivo": "Reglas del adelantamiento en intersecciones o glorietas."
+  },
+  {
+    "preguntaCodigo": 90011799,
+    "simulacro": 26,
+    "numero_pregunta": 6,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 100057028,
+    "simulacro": 26,
+    "numero_pregunta": 7,
+    "anterior": 8,
+    "nuevo": 13,
+    "motivo": "Cristales, visibilidad y elementos de protección del vehículo."
+  },
+  {
+    "preguntaCodigo": 852116612,
+    "simulacro": 26,
+    "numero_pregunta": 12,
+    "anterior": 8,
+    "nuevo": 13,
+    "motivo": "Cristales, visibilidad y elementos de protección del vehículo."
+  },
+  {
+    "preguntaCodigo": 100121650,
+    "simulacro": 26,
+    "numero_pregunta": 19,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 826471,
+    "simulacro": 26,
+    "numero_pregunta": 20,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 826544,
+    "simulacro": 27,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 320019,
+    "simulacro": 27,
+    "numero_pregunta": 4,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 90007995,
+    "simulacro": 27,
+    "numero_pregunta": 12,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 85209224,
+    "simulacro": 27,
+    "numero_pregunta": 15,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 85208948,
+    "simulacro": 27,
+    "numero_pregunta": 17,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 880072,
+    "simulacro": 27,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 320614,
+    "simulacro": 28,
+    "numero_pregunta": 11,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 7454857,
+    "simulacro": 28,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Adaptación de velocidad o distancia de frenado/seguridad."
+  },
+  {
+    "preguntaCodigo": 100058032,
+    "simulacro": 28,
+    "numero_pregunta": 15,
+    "anterior": 6,
+    "nuevo": 14,
+    "motivo": "Repostaje seguro, emisiones, mantenimiento o tratamiento del vehículo al final de su vida útil."
+  },
+  {
+    "preguntaCodigo": 100086783,
+    "simulacro": 28,
+    "numero_pregunta": 28,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 90001994,
+    "simulacro": 29,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 320779,
+    "simulacro": 29,
+    "numero_pregunta": 4,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 321504,
+    "simulacro": 29,
+    "numero_pregunta": 6,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 321380,
+    "simulacro": 29,
+    "numero_pregunta": 8,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 90005523,
+    "simulacro": 29,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 891904,
+    "simulacro": 29,
+    "numero_pregunta": 24,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852113982,
+    "simulacro": 29,
+    "numero_pregunta": 28,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 85209506,
+    "simulacro": 29,
+    "numero_pregunta": 29,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 90006581,
+    "simulacro": 30,
+    "numero_pregunta": 12,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100007942,
+    "simulacro": 30,
+    "numero_pregunta": 13,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90003073,
+    "simulacro": 30,
+    "numero_pregunta": 14,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 100058330,
+    "simulacro": 30,
+    "numero_pregunta": 24,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 321150,
+    "simulacro": 31,
+    "numero_pregunta": 3,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 6486,
+    "simulacro": 31,
+    "numero_pregunta": 4,
+    "anterior": 11,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 90005544,
+    "simulacro": 31,
+    "numero_pregunta": 6,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 90003111,
+    "simulacro": 31,
+    "numero_pregunta": 7,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 90007891,
+    "simulacro": 31,
+    "numero_pregunta": 11,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 100086786,
+    "simulacro": 31,
+    "numero_pregunta": 16,
+    "anterior": 15,
+    "nuevo": 17,
+    "motivo": "Función de un sistema ADAS concreto."
+  },
+  {
+    "preguntaCodigo": 320216,
+    "simulacro": 31,
+    "numero_pregunta": 17,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Adherencia, cadenas, neumáticos o componentes de seguridad del vehículo."
+  },
+  {
+    "preguntaCodigo": 884880,
+    "simulacro": 31,
+    "numero_pregunta": 30,
+    "anterior": 12,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 100056186,
+    "simulacro": 32,
+    "numero_pregunta": 4,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 7032,
+    "simulacro": 32,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100057474,
+    "simulacro": 32,
+    "numero_pregunta": 9,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 852115038,
+    "simulacro": 32,
+    "numero_pregunta": 13,
+    "anterior": 8,
+    "nuevo": 13,
+    "motivo": "Cristales, visibilidad y elementos de protección del vehículo."
+  },
+  {
+    "preguntaCodigo": 100021816,
+    "simulacro": 32,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100041224,
+    "simulacro": 32,
+    "numero_pregunta": 28,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 85209048,
+    "simulacro": 32,
+    "numero_pregunta": 30,
+    "anterior": 6,
+    "nuevo": 16,
+    "motivo": "Civismo y obligaciones de convivencia entre los usuarios de la vía."
+  },
+  {
+    "preguntaCodigo": 85208947,
+    "simulacro": 33,
+    "numero_pregunta": 9,
+    "anterior": 8,
+    "nuevo": 13,
+    "motivo": "Cristales, visibilidad y elementos de protección del vehículo."
+  },
+  {
+    "preguntaCodigo": 85209309,
+    "simulacro": 33,
+    "numero_pregunta": 15,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 8520434,
+    "simulacro": 33,
+    "numero_pregunta": 18,
+    "anterior": 6,
+    "nuevo": 14,
+    "motivo": "Repostaje seguro, emisiones, mantenimiento o tratamiento del vehículo al final de su vida útil."
+  },
+  {
+    "preguntaCodigo": 85209409,
+    "simulacro": 33,
+    "numero_pregunta": 19,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 85209252,
+    "simulacro": 33,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 17,
+    "motivo": "Función de un sistema ADAS concreto."
+  },
+  {
+    "preguntaCodigo": 8510051,
+    "simulacro": 33,
+    "numero_pregunta": 26,
+    "anterior": 6,
+    "nuevo": 16,
+    "motivo": "Civismo y obligaciones de convivencia entre los usuarios de la vía."
+  },
+  {
+    "preguntaCodigo": 893364,
+    "simulacro": 34,
+    "numero_pregunta": 6,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 8509334,
+    "simulacro": 34,
+    "numero_pregunta": 7,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 6543,
+    "simulacro": 34,
+    "numero_pregunta": 10,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852115563,
+    "simulacro": 34,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90008160,
+    "simulacro": 34,
+    "numero_pregunta": 22,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Distancia de seguridad, frenado o efecto de la velocidad."
+  },
+  {
+    "preguntaCodigo": 90003075,
+    "simulacro": 34,
+    "numero_pregunta": 24,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 100010896,
+    "simulacro": 34,
+    "numero_pregunta": 27,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100057101,
+    "simulacro": 35,
+    "numero_pregunta": 6,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 85209480,
+    "simulacro": 35,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 320032,
+    "simulacro": 35,
+    "numero_pregunta": 12,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 320030,
+    "simulacro": 35,
+    "numero_pregunta": 13,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 6648,
+    "simulacro": 35,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 8,
+    "motivo": "Adelantamiento o cambio de carril con vehículos vulnerables."
+  },
+  {
+    "preguntaCodigo": 852114312,
+    "simulacro": 35,
+    "numero_pregunta": 17,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 90006807,
+    "simulacro": 35,
+    "numero_pregunta": 20,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85209527,
+    "simulacro": 35,
+    "numero_pregunta": 25,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 90007268,
+    "simulacro": 35,
+    "numero_pregunta": 27,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 884480,
+    "simulacro": 35,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 5,
+    "motivo": "Lámparas, reglaje de faros y alumbrado."
+  },
+  {
+    "preguntaCodigo": 90007274,
+    "simulacro": 36,
+    "numero_pregunta": 3,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 847530,
+    "simulacro": 36,
+    "numero_pregunta": 8,
+    "anterior": 6,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 885173,
+    "simulacro": 36,
+    "numero_pregunta": 14,
+    "anterior": 6,
+    "nuevo": 12,
+    "motivo": "Ocupantes, cinturones, animales y carga transportada."
+  },
+  {
+    "preguntaCodigo": 838652,
+    "simulacro": 36,
+    "numero_pregunta": 16,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 321281,
+    "simulacro": 36,
+    "numero_pregunta": 21,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 100011017,
+    "simulacro": 36,
+    "numero_pregunta": 24,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100086698,
+    "simulacro": 36,
+    "numero_pregunta": 29,
+    "anterior": 15,
+    "nuevo": 6,
+    "motivo": "Vías permitidas o prohibidas para vehículos de movilidad personal."
+  },
+  {
+    "preguntaCodigo": 85208985,
+    "simulacro": 37,
+    "numero_pregunta": 3,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 100010615,
+    "simulacro": 37,
+    "numero_pregunta": 4,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85208589,
+    "simulacro": 37,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 85209447,
+    "simulacro": 37,
+    "numero_pregunta": 6,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 100041163,
+    "simulacro": 37,
+    "numero_pregunta": 8,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 8520724,
+    "simulacro": 37,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 8510060,
+    "simulacro": 37,
+    "numero_pregunta": 13,
+    "anterior": 6,
+    "nuevo": 16,
+    "motivo": "Civismo y obligaciones de convivencia entre los usuarios de la vía."
+  },
+  {
+    "preguntaCodigo": 100010831,
+    "simulacro": 37,
+    "numero_pregunta": 18,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 321682,
+    "simulacro": 37,
+    "numero_pregunta": 24,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 90007729,
+    "simulacro": 37,
+    "numero_pregunta": 28,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 90006810,
+    "simulacro": 37,
+    "numero_pregunta": 29,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 6809,
+    "simulacro": 37,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100057980,
+    "simulacro": 38,
+    "numero_pregunta": 1,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 320534,
+    "simulacro": 38,
+    "numero_pregunta": 2,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 85209422,
+    "simulacro": 38,
+    "numero_pregunta": 8,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 90007897,
+    "simulacro": 38,
+    "numero_pregunta": 11,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 85207987,
+    "simulacro": 38,
+    "numero_pregunta": 20,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 90008620,
+    "simulacro": 38,
+    "numero_pregunta": 25,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 892003,
+    "simulacro": 39,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852116367,
+    "simulacro": 39,
+    "numero_pregunta": 16,
+    "anterior": 2,
+    "nuevo": 11,
+    "motivo": "Prioridad del peatón cuando el semáforo no funciona."
+  },
+  {
+    "preguntaCodigo": 6629,
+    "simulacro": 39,
+    "numero_pregunta": 24,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Distancia de seguridad, frenado o efecto de la velocidad."
+  },
+  {
+    "preguntaCodigo": 100024885,
+    "simulacro": 39,
+    "numero_pregunta": 27,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 85208821,
+    "simulacro": 39,
+    "numero_pregunta": 29,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 6881,
+    "simulacro": 40,
+    "numero_pregunta": 4,
+    "anterior": 12,
+    "nuevo": 3,
+    "motivo": "Interpretación de señal vertical de peligro."
+  },
+  {
+    "preguntaCodigo": 100056012,
+    "simulacro": 40,
+    "numero_pregunta": 5,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 886024,
+    "simulacro": 40,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 8,
+    "motivo": "Adelantamiento o cambio de carril con vehículos vulnerables."
+  },
+  {
+    "preguntaCodigo": 320430,
+    "simulacro": 40,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 90011137,
+    "simulacro": 40,
+    "numero_pregunta": 22,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 100086706,
+    "simulacro": 40,
+    "numero_pregunta": 28,
+    "anterior": 15,
+    "nuevo": 17,
+    "motivo": "Función de un sistema ADAS concreto."
+  },
+  {
+    "preguntaCodigo": 895335,
+    "simulacro": 41,
+    "numero_pregunta": 15,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 886036,
+    "simulacro": 42,
+    "numero_pregunta": 1,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100111548,
+    "simulacro": 42,
+    "numero_pregunta": 6,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 90007894,
+    "simulacro": 42,
+    "numero_pregunta": 24,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 884373,
+    "simulacro": 43,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100020424,
+    "simulacro": 43,
+    "numero_pregunta": 3,
+    "anterior": 6,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 321631,
+    "simulacro": 43,
+    "numero_pregunta": 6,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Marcas amarillas de obras sobre la calzada."
+  },
+  {
+    "preguntaCodigo": 826489,
+    "simulacro": 43,
+    "numero_pregunta": 16,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 852114793,
+    "simulacro": 43,
+    "numero_pregunta": 18,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 90008193,
+    "simulacro": 43,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 8509355,
+    "simulacro": 43,
+    "numero_pregunta": 30,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 320931,
+    "simulacro": 44,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 321458,
+    "simulacro": 44,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90006631,
+    "simulacro": 44,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 893247,
+    "simulacro": 44,
+    "numero_pregunta": 13,
+    "anterior": 6,
+    "nuevo": 0,
+    "motivo": "Definición de peatón o parte de la vía."
+  },
+  {
+    "preguntaCodigo": 100087202,
+    "simulacro": 45,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 17,
+    "motivo": "Función de un sistema ADAS concreto."
+  },
+  {
+    "preguntaCodigo": 884490,
+    "simulacro": 45,
+    "numero_pregunta": 3,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 6018,
+    "simulacro": 45,
+    "numero_pregunta": 8,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 884849,
+    "simulacro": 45,
+    "numero_pregunta": 22,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 6356,
+    "simulacro": 46,
+    "numero_pregunta": 10,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 320038,
+    "simulacro": 46,
+    "numero_pregunta": 11,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 885127,
+    "simulacro": 46,
+    "numero_pregunta": 12,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 852116069,
+    "simulacro": 46,
+    "numero_pregunta": 26,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 320300,
+    "simulacro": 47,
+    "numero_pregunta": 6,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90007322,
+    "simulacro": 47,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 5995,
+    "simulacro": 47,
+    "numero_pregunta": 12,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 885015,
+    "simulacro": 47,
+    "numero_pregunta": 13,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100007820,
+    "simulacro": 47,
+    "numero_pregunta": 14,
+    "anterior": 8,
+    "nuevo": 16,
+    "motivo": "Costes humanos de los accidentes."
+  },
+  {
+    "preguntaCodigo": 852117414,
+    "simulacro": 47,
+    "numero_pregunta": 26,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100057922,
+    "simulacro": 48,
+    "numero_pregunta": 6,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852115838,
+    "simulacro": 48,
+    "numero_pregunta": 10,
+    "anterior": 15,
+    "nuevo": 12,
+    "motivo": "Transporte de menores, SRI o uso obligatorio del casco."
+  },
+  {
+    "preguntaCodigo": 100034351,
+    "simulacro": 48,
+    "numero_pregunta": 12,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 852114368,
+    "simulacro": 48,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 90007959,
+    "simulacro": 48,
+    "numero_pregunta": 28,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 320578,
+    "simulacro": 49,
+    "numero_pregunta": 1,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 85209291,
+    "simulacro": 49,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 6749,
+    "simulacro": 49,
+    "numero_pregunta": 9,
+    "anterior": 6,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 884402,
+    "simulacro": 49,
+    "numero_pregunta": 10,
+    "anterior": 6,
+    "nuevo": 14,
+    "motivo": "Repostaje seguro, emisiones, mantenimiento o tratamiento del vehículo al final de su vida útil."
+  },
+  {
+    "preguntaCodigo": 90007899,
+    "simulacro": 49,
+    "numero_pregunta": 18,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 885118,
+    "simulacro": 49,
+    "numero_pregunta": 22,
+    "anterior": 15,
+    "nuevo": 5,
+    "motivo": "Lámparas, reglaje de faros y alumbrado."
+  },
+  {
+    "preguntaCodigo": 90012967,
+    "simulacro": 49,
+    "numero_pregunta": 24,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 90007708,
+    "simulacro": 49,
+    "numero_pregunta": 28,
+    "anterior": 6,
+    "nuevo": 3,
+    "motivo": "Interpretación de señal vertical."
+  },
+  {
+    "preguntaCodigo": 6745,
+    "simulacro": 49,
+    "numero_pregunta": 29,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 321263,
+    "simulacro": 50,
+    "numero_pregunta": 4,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 100055571,
+    "simulacro": 50,
+    "numero_pregunta": 9,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 100010674,
+    "simulacro": 50,
+    "numero_pregunta": 17,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 6540,
+    "simulacro": 50,
+    "numero_pregunta": 18,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 90006565,
+    "simulacro": 50,
+    "numero_pregunta": 29,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 852114523,
+    "simulacro": 51,
+    "numero_pregunta": 2,
+    "anterior": 6,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 823829,
+    "simulacro": 51,
+    "numero_pregunta": 11,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 885120,
+    "simulacro": 51,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 6635,
+    "simulacro": 51,
+    "numero_pregunta": 20,
+    "anterior": 6,
+    "nuevo": 13,
+    "motivo": "Uso de espejos retrovisores y visibilidad."
+  },
+  {
+    "preguntaCodigo": 90002057,
+    "simulacro": 51,
+    "numero_pregunta": 22,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 85208842,
+    "simulacro": 51,
+    "numero_pregunta": 24,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Adaptación de velocidad o distancia de frenado/seguridad."
+  },
+  {
+    "preguntaCodigo": 884810,
+    "simulacro": 51,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 8515103,
+    "simulacro": 51,
+    "numero_pregunta": 26,
+    "anterior": 6,
+    "nuevo": 16,
+    "motivo": "Auxilio y traslado excepcional de heridos."
+  },
+  {
+    "preguntaCodigo": 852116980,
+    "simulacro": 52,
+    "numero_pregunta": 7,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 90007944,
+    "simulacro": 52,
+    "numero_pregunta": 10,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 33729,
+    "simulacro": 52,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 835973,
+    "simulacro": 52,
+    "numero_pregunta": 20,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 6765,
+    "simulacro": 52,
+    "numero_pregunta": 30,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 90006592,
+    "simulacro": 53,
+    "numero_pregunta": 7,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 85209572,
+    "simulacro": 53,
+    "numero_pregunta": 10,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 887626,
+    "simulacro": 53,
+    "numero_pregunta": 26,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 883775,
+    "simulacro": 54,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100087217,
+    "simulacro": 54,
+    "numero_pregunta": 6,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 320398,
+    "simulacro": 54,
+    "numero_pregunta": 9,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 100021865,
+    "simulacro": 54,
+    "numero_pregunta": 10,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 90008644,
+    "simulacro": 54,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 852117481,
+    "simulacro": 54,
+    "numero_pregunta": 22,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85208800,
+    "simulacro": 54,
+    "numero_pregunta": 29,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 840392,
+    "simulacro": 55,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90006811,
+    "simulacro": 55,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100087133,
+    "simulacro": 55,
+    "numero_pregunta": 24,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100111563,
+    "simulacro": 56,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 90007333,
+    "simulacro": 56,
+    "numero_pregunta": 18,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 100010142,
+    "simulacro": 56,
+    "numero_pregunta": 19,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 824598,
+    "simulacro": 56,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100058655,
+    "simulacro": 57,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 5,
+    "motivo": "Lámparas, reglaje de faros y alumbrado."
+  },
+  {
+    "preguntaCodigo": 884363,
+    "simulacro": 57,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100056015,
+    "simulacro": 57,
+    "numero_pregunta": 6,
+    "anterior": 11,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 100010898,
+    "simulacro": 57,
+    "numero_pregunta": 15,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 852116238,
+    "simulacro": 57,
+    "numero_pregunta": 23,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 824490,
+    "simulacro": 57,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 7509009,
+    "simulacro": 57,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 320718,
+    "simulacro": 58,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 852115538,
+    "simulacro": 58,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 85209394,
+    "simulacro": 58,
+    "numero_pregunta": 16,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100121682,
+    "simulacro": 58,
+    "numero_pregunta": 25,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100058156,
+    "simulacro": 58,
+    "numero_pregunta": 30,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 852115991,
+    "simulacro": 59,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 29778,
+    "simulacro": 59,
+    "numero_pregunta": 9,
+    "anterior": 15,
+    "nuevo": 8,
+    "motivo": "Adelantamiento o cambio de carril con vehículos vulnerables."
+  },
+  {
+    "preguntaCodigo": 887444,
+    "simulacro": 59,
+    "numero_pregunta": 13,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 887445,
+    "simulacro": 59,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 90007652,
+    "simulacro": 59,
+    "numero_pregunta": 19,
+    "anterior": 6,
+    "nuevo": 0,
+    "motivo": "Definición de peatón o parte de la vía."
+  },
+  {
+    "preguntaCodigo": 321450,
+    "simulacro": 59,
+    "numero_pregunta": 20,
+    "anterior": 6,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 90003042,
+    "simulacro": 59,
+    "numero_pregunta": 23,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 90008658,
+    "simulacro": 59,
+    "numero_pregunta": 29,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Distancia de seguridad, frenado o efecto de la velocidad."
+  },
+  {
+    "preguntaCodigo": 90008675,
+    "simulacro": 60,
+    "numero_pregunta": 1,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 827029,
+    "simulacro": 60,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 8510070,
+    "simulacro": 60,
+    "numero_pregunta": 13,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 886566,
+    "simulacro": 60,
+    "numero_pregunta": 15,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852114238,
+    "simulacro": 60,
+    "numero_pregunta": 19,
+    "anterior": 6,
+    "nuevo": 0,
+    "motivo": "Definición de peatón o parte de la vía."
+  },
+  {
+    "preguntaCodigo": 6342,
+    "simulacro": 61,
+    "numero_pregunta": 10,
+    "anterior": 14,
+    "nuevo": 13,
+    "motivo": "Observación por espejos y comprobación del ángulo muerto."
+  },
+  {
+    "preguntaCodigo": 826136,
+    "simulacro": 61,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 884563,
+    "simulacro": 61,
+    "numero_pregunta": 13,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 90010040,
+    "simulacro": 61,
+    "numero_pregunta": 18,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 90006813,
+    "simulacro": 61,
+    "numero_pregunta": 23,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852115958,
+    "simulacro": 62,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100041800,
+    "simulacro": 62,
+    "numero_pregunta": 8,
+    "anterior": 7,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 321614,
+    "simulacro": 62,
+    "numero_pregunta": 13,
+    "anterior": 8,
+    "nuevo": 9,
+    "motivo": "Posición o señalización para giro, cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 100041242,
+    "simulacro": 63,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100020430,
+    "simulacro": 63,
+    "numero_pregunta": 3,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 100010376,
+    "simulacro": 63,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 8509526,
+    "simulacro": 63,
+    "numero_pregunta": 17,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 100058034,
+    "simulacro": 63,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 893240,
+    "simulacro": 63,
+    "numero_pregunta": 22,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852114153,
+    "simulacro": 63,
+    "numero_pregunta": 25,
+    "anterior": 13,
+    "nuevo": 8,
+    "motivo": "Incorporación, desplazamiento lateral o rebasamiento de un obstáculo."
+  },
+  {
+    "preguntaCodigo": 6508,
+    "simulacro": 63,
+    "numero_pregunta": 27,
+    "anterior": 6,
+    "nuevo": 9,
+    "motivo": "Posición o señalización para giro, cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 90007765,
+    "simulacro": 63,
+    "numero_pregunta": 28,
+    "anterior": 8,
+    "nuevo": 13,
+    "motivo": "Uso correcto del freno de mano."
+  },
+  {
+    "preguntaCodigo": 90007775,
+    "simulacro": 64,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 12,
+    "motivo": "Transporte de menores, SRI o uso obligatorio del casco."
+  },
+  {
+    "preguntaCodigo": 852117134,
+    "simulacro": 64,
+    "numero_pregunta": 8,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 100058029,
+    "simulacro": 64,
+    "numero_pregunta": 10,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 100007988,
+    "simulacro": 64,
+    "numero_pregunta": 16,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100057294,
+    "simulacro": 64,
+    "numero_pregunta": 20,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 893273,
+    "simulacro": 64,
+    "numero_pregunta": 24,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 893363,
+    "simulacro": 64,
+    "numero_pregunta": 25,
+    "anterior": 12,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 893282,
+    "simulacro": 65,
+    "numero_pregunta": 4,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 90007768,
+    "simulacro": 65,
+    "numero_pregunta": 7,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 7454867,
+    "simulacro": 65,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100086710,
+    "simulacro": 65,
+    "numero_pregunta": 17,
+    "anterior": 15,
+    "nuevo": 6,
+    "motivo": "Vías permitidas o prohibidas para vehículos de movilidad personal."
+  },
+  {
+    "preguntaCodigo": 8520461,
+    "simulacro": 65,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Adherencia, cadenas, neumáticos o componentes de seguridad del vehículo."
+  },
+  {
+    "preguntaCodigo": 893321,
+    "simulacro": 65,
+    "numero_pregunta": 23,
+    "anterior": 8,
+    "nuevo": 9,
+    "motivo": "Posición o señalización para giro, cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 90007988,
+    "simulacro": 65,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100057021,
+    "simulacro": 66,
+    "numero_pregunta": 1,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100057301,
+    "simulacro": 66,
+    "numero_pregunta": 8,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 321671,
+    "simulacro": 66,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100057946,
+    "simulacro": 66,
+    "numero_pregunta": 14,
+    "anterior": 10,
+    "nuevo": 8,
+    "motivo": "Incorporación, desplazamiento lateral o rebasamiento de un obstáculo."
+  },
+  {
+    "preguntaCodigo": 893305,
+    "simulacro": 66,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 321139,
+    "simulacro": 66,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100021871,
+    "simulacro": 67,
+    "numero_pregunta": 2,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 321026,
+    "simulacro": 67,
+    "numero_pregunta": 10,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Adaptación de velocidad o distancia de frenado/seguridad."
+  },
+  {
+    "preguntaCodigo": 6207,
+    "simulacro": 67,
+    "numero_pregunta": 11,
+    "anterior": 8,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 90007705,
+    "simulacro": 67,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100057949,
+    "simulacro": 67,
+    "numero_pregunta": 18,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 100010784,
+    "simulacro": 67,
+    "numero_pregunta": 25,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 5997,
+    "simulacro": 68,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 90012968,
+    "simulacro": 68,
+    "numero_pregunta": 8,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 852116020,
+    "simulacro": 68,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852115965,
+    "simulacro": 68,
+    "numero_pregunta": 18,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100086714,
+    "simulacro": 68,
+    "numero_pregunta": 21,
+    "anterior": 15,
+    "nuevo": 17,
+    "motivo": "Función de un sistema ADAS concreto."
+  },
+  {
+    "preguntaCodigo": 852114544,
+    "simulacro": 68,
+    "numero_pregunta": 22,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100058016,
+    "simulacro": 68,
+    "numero_pregunta": 23,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 100111554,
+    "simulacro": 68,
+    "numero_pregunta": 24,
+    "anterior": 8,
+    "nuevo": 9,
+    "motivo": "Posición o señalización para giro, cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 100058514,
+    "simulacro": 68,
+    "numero_pregunta": 26,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Distancia de seguridad, frenado o efecto de la velocidad."
+  },
+  {
+    "preguntaCodigo": 100111543,
+    "simulacro": 69,
+    "numero_pregunta": 3,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 100058463,
+    "simulacro": 69,
+    "numero_pregunta": 4,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 33831,
+    "simulacro": 69,
+    "numero_pregunta": 8,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 846739,
+    "simulacro": 69,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 4,
+    "motivo": "Guías sonoras asociadas a las marcas longitudinales de la calzada."
+  },
+  {
+    "preguntaCodigo": 852117007,
+    "simulacro": 69,
+    "numero_pregunta": 13,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 100007599,
+    "simulacro": 69,
+    "numero_pregunta": 15,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 6015,
+    "simulacro": 69,
+    "numero_pregunta": 22,
+    "anterior": 6,
+    "nuevo": 1,
+    "motivo": "Obligaciones administrativas o prohibición de dispositivos de radar."
+  },
+  {
+    "preguntaCodigo": 90001996,
+    "simulacro": 69,
+    "numero_pregunta": 24,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 85208180,
+    "simulacro": 69,
+    "numero_pregunta": 28,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 321423,
+    "simulacro": 70,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 825349,
+    "simulacro": 70,
+    "numero_pregunta": 5,
+    "anterior": 11,
+    "nuevo": 8,
+    "motivo": "Reglas del adelantamiento en intersecciones o glorietas."
+  },
+  {
+    "preguntaCodigo": 893874,
+    "simulacro": 70,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 796999,
+    "simulacro": 70,
+    "numero_pregunta": 15,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 85208768,
+    "simulacro": 70,
+    "numero_pregunta": 25,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 6502,
+    "simulacro": 71,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100087157,
+    "simulacro": 71,
+    "numero_pregunta": 7,
+    "anterior": 6,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 320134,
+    "simulacro": 71,
+    "numero_pregunta": 8,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 893249,
+    "simulacro": 71,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 7454854,
+    "simulacro": 71,
+    "numero_pregunta": 17,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Advertencia para inmovilizar el vehículo junto al borde de la calzada."
+  },
+  {
+    "preguntaCodigo": 90008437,
+    "simulacro": 71,
+    "numero_pregunta": 20,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 852114072,
+    "simulacro": 71,
+    "numero_pregunta": 27,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 7508620,
+    "simulacro": 72,
+    "numero_pregunta": 1,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 100087216,
+    "simulacro": 72,
+    "numero_pregunta": 12,
+    "anterior": 12,
+    "nuevo": 5,
+    "motivo": "Señales instaladas en el vehículo y advertencias luminosas."
+  },
+  {
+    "preguntaCodigo": 6626,
+    "simulacro": 72,
+    "numero_pregunta": 14,
+    "anterior": 6,
+    "nuevo": 2,
+    "motivo": "Obligación de obedecer la señalización o a los agentes."
+  },
+  {
+    "preguntaCodigo": 6680,
+    "simulacro": 72,
+    "numero_pregunta": 24,
+    "anterior": 6,
+    "nuevo": 1,
+    "motivo": "Obligaciones administrativas o prohibición de dispositivos de radar."
+  },
+  {
+    "preguntaCodigo": 852113962,
+    "simulacro": 73,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 90008421,
+    "simulacro": 73,
+    "numero_pregunta": 5,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 852116618,
+    "simulacro": 73,
+    "numero_pregunta": 9,
+    "anterior": 8,
+    "nuevo": 2,
+    "motivo": "Semáforo rojo a la entrada de un túnel."
+  },
+  {
+    "preguntaCodigo": 90006627,
+    "simulacro": 73,
+    "numero_pregunta": 15,
+    "anterior": 15,
+    "nuevo": 5,
+    "motivo": "Lámparas, reglaje de faros y alumbrado."
+  },
+  {
+    "preguntaCodigo": 6339,
+    "simulacro": 73,
+    "numero_pregunta": 16,
+    "anterior": 6,
+    "nuevo": 15,
+    "motivo": "Estado del conductor, alcohol, sueño, uso del móvil o distracción."
+  },
+  {
+    "preguntaCodigo": 321087,
+    "simulacro": 74,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 17,
+    "motivo": "Función de un sistema ADAS concreto."
+  },
+  {
+    "preguntaCodigo": 100056870,
+    "simulacro": 74,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 5,
+    "motivo": "Lámparas, reglaje de faros y alumbrado."
+  },
+  {
+    "preguntaCodigo": 6736,
+    "simulacro": 74,
+    "numero_pregunta": 9,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 8510149,
+    "simulacro": 74,
+    "numero_pregunta": 10,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 823475,
+    "simulacro": 74,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100111445,
+    "simulacro": 74,
+    "numero_pregunta": 13,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 320380,
+    "simulacro": 74,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 8,
+    "motivo": "Adelantamiento o cambio de carril con vehículos vulnerables."
+  },
+  {
+    "preguntaCodigo": 852115853,
+    "simulacro": 75,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 321524,
+    "simulacro": 75,
+    "numero_pregunta": 3,
+    "anterior": 14,
+    "nuevo": 13,
+    "motivo": "Observación por espejos y comprobación del ángulo muerto."
+  },
+  {
+    "preguntaCodigo": 7454864,
+    "simulacro": 75,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 4,
+    "motivo": "Guías sonoras asociadas a las marcas longitudinales de la calzada."
+  },
+  {
+    "preguntaCodigo": 8027,
+    "simulacro": 75,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90007917,
+    "simulacro": 75,
+    "numero_pregunta": 20,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 100057156,
+    "simulacro": 75,
+    "numero_pregunta": 25,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 100010484,
+    "simulacro": 75,
+    "numero_pregunta": 28,
+    "anterior": 15,
+    "nuevo": 1,
+    "motivo": "Permisos, puntos, documentación del vehículo o responsabilidades del titular."
+  },
+  {
+    "preguntaCodigo": 90003085,
+    "simulacro": 75,
+    "numero_pregunta": 29,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 100034576,
+    "simulacro": 76,
+    "numero_pregunta": 1,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 8513129,
+    "simulacro": 76,
+    "numero_pregunta": 2,
+    "anterior": 15,
+    "nuevo": 8,
+    "motivo": "Adelantamiento o cambio de carril con vehículos vulnerables."
+  },
+  {
+    "preguntaCodigo": 320512,
+    "simulacro": 76,
+    "numero_pregunta": 7,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100057916,
+    "simulacro": 76,
+    "numero_pregunta": 9,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 852114946,
+    "simulacro": 76,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 100041184,
+    "simulacro": 77,
+    "numero_pregunta": 4,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 85208131,
+    "simulacro": 77,
+    "numero_pregunta": 8,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 85213411,
+    "simulacro": 77,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 90007595,
+    "simulacro": 77,
+    "numero_pregunta": 13,
+    "anterior": 11,
+    "nuevo": 9,
+    "motivo": "Cambio de dirección; las salidas con deceleración se revisan aparte."
+  },
+  {
+    "preguntaCodigo": 90007946,
+    "simulacro": 77,
+    "numero_pregunta": 21,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 85208147,
+    "simulacro": 77,
+    "numero_pregunta": 24,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 6827,
+    "simulacro": 78,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100041191,
+    "simulacro": 78,
+    "numero_pregunta": 6,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 90003043,
+    "simulacro": 78,
+    "numero_pregunta": 16,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 100057940,
+    "simulacro": 78,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 90002031,
+    "simulacro": 78,
+    "numero_pregunta": 25,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 891716,
+    "simulacro": 79,
+    "numero_pregunta": 8,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 6655,
+    "simulacro": 79,
+    "numero_pregunta": 11,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 6357,
+    "simulacro": 79,
+    "numero_pregunta": 17,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90007293,
+    "simulacro": 80,
+    "numero_pregunta": 4,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 847502,
+    "simulacro": 80,
+    "numero_pregunta": 7,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 100040958,
+    "simulacro": 80,
+    "numero_pregunta": 8,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 100007651,
+    "simulacro": 80,
+    "numero_pregunta": 12,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 321402,
+    "simulacro": 80,
+    "numero_pregunta": 16,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 852116196,
+    "simulacro": 80,
+    "numero_pregunta": 18,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 852115762,
+    "simulacro": 80,
+    "numero_pregunta": 24,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 6675,
+    "simulacro": 81,
+    "numero_pregunta": 4,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 6174,
+    "simulacro": 81,
+    "numero_pregunta": 12,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 90006696,
+    "simulacro": 81,
+    "numero_pregunta": 13,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 852116793,
+    "simulacro": 81,
+    "numero_pregunta": 16,
+    "anterior": 14,
+    "nuevo": 13,
+    "motivo": "Observación por espejos y comprobación del ángulo muerto."
+  },
+  {
+    "preguntaCodigo": 90006629,
+    "simulacro": 81,
+    "numero_pregunta": 18,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100057118,
+    "simulacro": 81,
+    "numero_pregunta": 21,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 100058362,
+    "simulacro": 81,
+    "numero_pregunta": 24,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 100040969,
+    "simulacro": 81,
+    "numero_pregunta": 27,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90007919,
+    "simulacro": 82,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100010835,
+    "simulacro": 82,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Adaptación de velocidad o distancia de frenado/seguridad."
+  },
+  {
+    "preguntaCodigo": 852114511,
+    "simulacro": 82,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852113623,
+    "simulacro": 83,
+    "numero_pregunta": 4,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 90007382,
+    "simulacro": 83,
+    "numero_pregunta": 9,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 887600,
+    "simulacro": 83,
+    "numero_pregunta": 17,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 320922,
+    "simulacro": 83,
+    "numero_pregunta": 18,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 90007597,
+    "simulacro": 83,
+    "numero_pregunta": 20,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 90007600,
+    "simulacro": 83,
+    "numero_pregunta": 22,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 100011102,
+    "simulacro": 83,
+    "numero_pregunta": 23,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 668089,
+    "simulacro": 83,
+    "numero_pregunta": 25,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 852114864,
+    "simulacro": 83,
+    "numero_pregunta": 26,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 321603,
+    "simulacro": 83,
+    "numero_pregunta": 29,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 90008573,
+    "simulacro": 83,
+    "numero_pregunta": 30,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 852114180,
+    "simulacro": 84,
+    "numero_pregunta": 3,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 90008565,
+    "simulacro": 84,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 6999,
+    "simulacro": 84,
+    "numero_pregunta": 20,
+    "anterior": 15,
+    "nuevo": 6,
+    "motivo": "Vías permitidas o prohibidas para vehículos de movilidad personal."
+  },
+  {
+    "preguntaCodigo": 90007632,
+    "simulacro": 84,
+    "numero_pregunta": 21,
+    "anterior": 8,
+    "nuevo": 9,
+    "motivo": "Cambio de sentido o marcha atrás."
+  },
+  {
+    "preguntaCodigo": 100041234,
+    "simulacro": 85,
+    "numero_pregunta": 1,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 321388,
+    "simulacro": 85,
+    "numero_pregunta": 9,
+    "anterior": 3,
+    "nuevo": 2,
+    "motivo": "Reglas generales de señalización, agentes, balizamiento o semáforos."
+  },
+  {
+    "preguntaCodigo": 90013033,
+    "simulacro": 85,
+    "numero_pregunta": 11,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 320842,
+    "simulacro": 85,
+    "numero_pregunta": 14,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 321369,
+    "simulacro": 85,
+    "numero_pregunta": 17,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 7067,
+    "simulacro": 85,
+    "numero_pregunta": 19,
+    "anterior": 15,
+    "nuevo": 6,
+    "motivo": "Vías permitidas o prohibidas para vehículos de movilidad personal."
+  },
+  {
+    "preguntaCodigo": 90007836,
+    "simulacro": 85,
+    "numero_pregunta": 24,
+    "anterior": 6,
+    "nuevo": 11,
+    "motivo": "Prioridad de paso en cruces, estrechamientos, peatones, animales o vehículos urgentes."
+  },
+  {
+    "preguntaCodigo": 90013020,
+    "simulacro": 85,
+    "numero_pregunta": 25,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Preparación de viajes y equipo para posible bloqueo por nieve."
+  },
+  {
+    "preguntaCodigo": 278694,
+    "simulacro": 85,
+    "numero_pregunta": 27,
+    "anterior": 15,
+    "nuevo": 13,
+    "motivo": "Elemento de seguridad activa/pasiva o manejo de los mandos del vehículo."
+  },
+  {
+    "preguntaCodigo": 320028,
+    "simulacro": 85,
+    "numero_pregunta": 30,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Moderación de velocidad ante usuarios vulnerables o peligros próximos."
+  },
+  {
+    "preguntaCodigo": 100021873,
+    "simulacro": 86,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 14,
+    "motivo": "Mantenimiento preventivo, limpiaparabrisas o sistema Start-Stop."
+  },
+  {
+    "preguntaCodigo": 90007923,
+    "simulacro": 86,
+    "numero_pregunta": 8,
+    "anterior": 3,
+    "nuevo": 4,
+    "motivo": "Interpretación de marcas viales y señales horizontales."
+  },
+  {
+    "preguntaCodigo": 842649,
+    "simulacro": 86,
+    "numero_pregunta": 21,
+    "anterior": 6,
+    "nuevo": 1,
+    "motivo": "Permisos, puntos, documentación del vehículo o responsabilidades del titular."
+  },
+  {
+    "preguntaCodigo": 100023275,
+    "simulacro": 86,
+    "numero_pregunta": 23,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852116249,
+    "simulacro": 86,
+    "numero_pregunta": 30,
+    "anterior": 14,
+    "nuevo": 7,
+    "motivo": "Velocidad, espacio de seguridad, frenado o prevención del alcance."
+  },
+  {
+    "preguntaCodigo": 100111576,
+    "simulacro": 87,
+    "numero_pregunta": 1,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 8509501,
+    "simulacro": 87,
+    "numero_pregunta": 3,
+    "anterior": 8,
+    "nuevo": 10,
+    "motivo": "Detención, parada, estacionamiento e inmovilización de emergencia."
+  },
+  {
+    "preguntaCodigo": 90011433,
+    "simulacro": 87,
+    "numero_pregunta": 4,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Adaptación de velocidad o distancia de frenado/seguridad."
+  },
+  {
+    "preguntaCodigo": 100056172,
+    "simulacro": 87,
+    "numero_pregunta": 5,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100041803,
+    "simulacro": 87,
+    "numero_pregunta": 12,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  },
+  {
+    "preguntaCodigo": 891992,
+    "simulacro": 87,
+    "numero_pregunta": 13,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 100058389,
+    "simulacro": 87,
+    "numero_pregunta": 14,
+    "anterior": 15,
+    "nuevo": 16,
+    "motivo": "Accidentalidad, consecuencias, costes sociales o actuación en una caída."
+  },
+  {
+    "preguntaCodigo": 100020401,
+    "simulacro": 87,
+    "numero_pregunta": 15,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 100020404,
+    "simulacro": 87,
+    "numero_pregunta": 20,
+    "anterior": 8,
+    "nuevo": 5,
+    "motivo": "Señales ópticas/acústicas y orden entre indicaciones del propio conductor."
+  },
+  {
+    "preguntaCodigo": 6921,
+    "simulacro": 87,
+    "numero_pregunta": 23,
+    "anterior": 15,
+    "nuevo": 7,
+    "motivo": "Velocidad, campo visual, distancia de reacción, frenado o detención sin causa psicofísica principal."
+  },
+  {
+    "preguntaCodigo": 852113714,
+    "simulacro": 87,
+    "numero_pregunta": 25,
+    "anterior": 6,
+    "nuevo": 5,
+    "motivo": "Alumbrado, advertencia de maniobras o señalización del vehículo."
+  },
+  {
+    "preguntaCodigo": 100057221,
+    "simulacro": 87,
+    "numero_pregunta": 26,
+    "anterior": 6,
+    "nuevo": 7,
+    "motivo": "Velocidad o distancia de seguridad longitudinal/lateral."
+  }
+]
